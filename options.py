@@ -346,7 +346,7 @@ class GuaranteedEscape(Toggle):
 
     This option is modifiable in the in-game options menu.
     """
-    display_name = "Guaranteed Escape."
+    display_name = "Guaranteed Escape"
 
 class TalkTrainersWithoutFight(Toggle):
     """
