@@ -41,7 +41,7 @@ from ..data.species import species, evolutions, other_learnsets, PokemonType
 if TYPE_CHECKING:
     from .. import PokemonHgssWorld
 
-WORLD_VERSION = "0.0.1"
+WORLD_VERSION = "0.0.4"
 WORLD_VERSION_NUM = sum(int(v) << s for v, s in zip(WORLD_VERSION.split('.'), (16, 8, 0)))
 
 HEARTGOLD_US_HASH = "258cea3a62ac0d6eb04b5a0fd764d788"

@@ -48,7 +48,7 @@ class RandomizeHms(DefaultOnToggle):
 
     The expectation is that this will be enabled. If not, depending on
     other options—particularly barricades—certain locations may be inaccessible,
-    or certain seeds uncompletable.
+    or certain seeds incompletable.
     """
     display_name = "Randomize HMs"
 
@@ -58,7 +58,7 @@ class RandomizeBadges(DefaultOnToggle):
 
     The expectation is that this will be enabled. If not, depending on
     other options—particularly barricades—certain locations may be inaccessible,
-    or certain seeds uncompletable.
+    or certain seeds incompletable.
     """
     display_name = "Randomize Badges"
 
@@ -113,8 +113,8 @@ class RemoveBadgeRequirement(OptionSet):
     valid_keys = ["cut", "fly", "surf", "strength", "whirlpool", "rock_smash", "waterfall", "rock_climb", "all"]
 
 class VisibilityHmLogic(DefaultOnToggle):
-    """Logically require Flash or Defog for traversing and finding locations in applicable regions."""
-    display_name = "Logically Require Flash or Defog for Applicable Regions"
+    """Logically require Flash for traversing and finding locations in applicable regions."""
+    display_name = "Logically Require Flash for Applicable Regions"
 
 class DowsingMachineLogic(DefaultOnToggle):
     """Logically require the Dowsing Machine to find hidden items."""
@@ -227,7 +227,7 @@ class GameOptions(OptionDict):
     Allowed options and values, with default first:
 
     text_speed: mid/slow/fast - Sets the text speed
-    sound: stereo/mono - Sets the shound mode
+    sound: stereo/mono - Sets the sound mode
     battle_scene: on/off - Sets whether the battle animations are shown
     battle_style: shift/set - Sets whether pokemon can be changed when the opponent's pokemon faints
     button_mode: normal/l=a - Sets the button mode
@@ -346,7 +346,7 @@ class GuaranteedEscape(Toggle):
 
     This option is modifiable in the in-game options menu.
     """
-    display_name = "Guaranteed Escape."
+    display_name = "Guaranteed Escape"
 
 class TalkTrainersWithoutFight(Toggle):
     """
@@ -359,7 +359,7 @@ class TalkTrainersWithoutFight(Toggle):
     display_name = "Talk to Trainers without Fighting Them"
 
 class RandomizeEncounters(Toggle):
-    """Randomize encountered Pokémon. This does not affect static legendaries, like Giratina."""
+    """Randomize encountered Pokémon. This does not affect static legendaries, like Ho-Oh and Lugia."""
     display_name = "Randomize Encounters"
 
 ENCOUNTER_METHOD_MAP: Mapping[str, Set[str]] = {
@@ -430,14 +430,14 @@ class RequireTwoLevelEvolutionStarters(Toggle):
     """
     If the starters are randomized, require that they all be two-level-evolution species.
     This option only applies to the blacklist. If the whitelist is nonempty,
-    it is ignore.
+    it is ignored.
     """
     display_name = "Require Two Level Evolution Starters"
 
 class StarterWhitelist(OptionSet):
     """
     Specify the possible starters that can be randomized.
-    This has precedence over the blacklist and the require two-level-evolution
+    This has precedence over the blacklist and requiring two-level-evolution
     species.
     This has no effect if starters are not randomized.
 
@@ -778,7 +778,7 @@ class AddHMReader(Choice):
 
 class HMReaderMode(Choice):
     """
-    Mode for the HM Reader. The HM Reader is an item that letse you use field moves without teaching them.
+    Mode for the HM Reader. The HM Reader is an item that lets you use field moves without teaching them.
 
     Options:
     - req_mon: require a Pokemon in your party to which you can teach the move, in order for the HM reader to use it.
@@ -852,8 +852,8 @@ class IcyRockLocations(RegionEvoRequirement):
     Where icy rocks appear. In vanilla, icy rocks are used to evolve Eevee into Glaceon.
 
     Options:
-    - option_kanto: a icy rock will appear in Viridian Forest.
-    - option_johto: a icy rock will appear in Ilex Forest.
+    - option_kanto: an icy rock will appear in Seafoam Islands.
+    - option_johto: an icy rock will appear in Ice Path.
     - option_both: both of the above will apply.
     """
     option_kanto = 1

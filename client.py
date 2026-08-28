@@ -30,8 +30,13 @@ from worlds._bizhawk.client import BizHawkClient
 if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext, BizHawkClientCommandProcessor
 
-AP_SUPPORTED_VERSIONS = {1}
+def version_int(version: str) -> int:
+    major, minor, rev = (int(s) for s in version.split('.'))
+    return (major << 16) | (minor << 8) | rev
+
 AP_MAGIC = b' AP '
+
+prev_version_data: "VersionData" = None # type: ignore
 
 @dataclass(frozen=True)
 class VersionData:
@@ -54,8 +59,12 @@ class VersionData:
     remote_item_queue_size: int
     remote_item_queue_flags_offset_in_queue: int
 
+    def __post_init__(self) -> None:
+        global prev_version_data
+        prev_version_data = self
+
 AP_VERSION_DATA: Mapping[int, VersionData] = {
-    1: VersionData(
+    version_int("0.0.1"): VersionData(
         savedata_ptr_offset=16,
         deathlink_tx_offset=21,
         player_pos_offset=24,
@@ -78,6 +87,9 @@ AP_VERSION_DATA: Mapping[int, VersionData] = {
         pokedex_offset_in_save=0x12D4,
         pokedex_size=832,
     ),
+    version_int("0.0.2"): prev_version_data,
+    version_int("0.0.3"): prev_version_data,
+    version_int("0.0.4"): prev_version_data,
 }
 
 @dataclass(frozen=True)
@@ -261,7 +273,7 @@ class PokemonHgssClient(BizHawkClient):
             ap_bin_start, = unpack_from("<I", fatb, ap_bin_id * 8)
             ap_bin_bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(ap_bin_start, 97, "ROM")]))[0]
             name_end = ap_bin_bytes[:64].find(b'\0')
-            remote_items = ap_bin_bytes[96] != 0
+            remote_items = ap_bin_bytes[64] != 0
             if name_end != -1:
                 player_name = ap_bin_bytes[:name_end].decode()
             else:
@@ -291,7 +303,7 @@ class PokemonHgssClient(BizHawkClient):
             elif rom_name.startswith("TRB HGAP") or rom_name.startswith("TRB SSAP"):
                 version_bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(0x1000, 4, "ROM")]))[0]
                 version = int.from_bytes(version_bytes, 'little')
-                if version in AP_SUPPORTED_VERSIONS:
+                if version in AP_VERSION_DATA:
                     self.rom_version = version
                 else:
                     logger.info("ERROR: The patch file used to create this ROM is not compatible with "

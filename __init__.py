@@ -246,7 +246,7 @@ class PokemonHgssWorld(World):
         ret["generated_encounters"].update({f"{region}_{table}_{i}":speciesdata.species[spec].id for (region, table, i), spec in self.ool_encounters.items()})
         ret["generated_trainer_parties"] = {f"{tr}_{i}":speciesdata.species[spec].id for (tr, i), spec in self.generated_trainer_parties.items()}
         ret["added_hm_compatibility"] = {spec:[hm.name.lower() for hm in compat] for spec, compat in self.added_hm_compatibility.items()}
-        ret["world_version"] = "0.0.1"
+        ret["world_version"] = "0.0.4"
         pfx = "hg" if self.options.version == Version.option_heartgold else "ss"
         ret["possible_ap_struct_addresses"] = [v for k, v in AP_STRUCT_ADDRESS.items() if k.startswith(pfx)]
         return ret

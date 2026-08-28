@@ -229,14 +229,11 @@ route_19 = "event_defeat_blaine & surf"
 [exits.route_19]
 route_19_from_fuchia = "event_defeat_blaine"
 
-[exits.route_2_east]
-diglett_cave = "cut"
-route_2 = "cut"
-route_2_house = "cut"
-route_2_southeast_gatehouse = "cut"
-
-[exits.route_2_southeast_gatehouse]
+[exits.route_2]
 route_2_east = "cut"
+
+[exits.route_2_east]
+route_2 = "cut"
 
 [exits.route_20_west]
 cinnabar_island = "surf"
@@ -261,7 +258,7 @@ route_27_center = "surf"
 mount_silver = "cut"
 
 [exits.route_30]
-route_31 = "event_get_mystery_egg | cut"
+route_30_northwest = "event_get_mystery_egg | cut"
 
 [exits.route_31]
 dark_cave_route_31_side_west = "flash_if_opt"
@@ -331,7 +328,7 @@ ruins_of_alph = "surf"
 ruins_of_alph_southwest_entrance_first_room = "surf & strength"
 
 [exits.ruins_of_alph_northeast_entrance_first_room]
-ruins_of_alph_northeast_entrance_second_room = "badges(1) | event_goldenrod_store"
+ruins_of_alph_northeast_entrance_second_room = "badges(1) | event_goldenrod_store | event_celadon_store"
 
 [exits.ruins_of_alph_northwest_entrance_first_room]
 ruins_of_alph_northwest_entrance_second_room = "rainbow_wing"
@@ -486,6 +483,7 @@ overworld_d03r0103_dusk_stone = "rock_climb"
 overworld_d03r0103_electirizer = "rock_climb"
 overworld_d03r0103_black_sludge = "surf"
 overworld_d03r0103_ultra_ball = "surf | rock_climb"
+hidden_t04_nugget = "surf"
 cerulean_badge_cascade = "event_ruin_mistys_date"
 cerulean_tm03 = "event_ruin_mistys_date"
 cerulean_machine_part = "event_route_24_defeat_kanto_grunt"

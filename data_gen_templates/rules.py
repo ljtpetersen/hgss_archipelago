@@ -109,7 +109,7 @@ class Rules:
         elif mthd == "level_ice_rock":
             reqd_items.append("event_ice_rock")
         if mthd in {"level_atk_gt_def", "level_atk_eq_def", "level_atk_lt_def"}:
-            reqd_items.append("event_goldenrod_store")
+            reqd_items.append("event_vitamins")
         if "beauty" in mthd or "happiness" in mthd:
             reqd_items.append("event_beauty")
 

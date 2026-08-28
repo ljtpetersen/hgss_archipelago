@@ -303,7 +303,7 @@ exits = [
     "cherrygrove",
     "route_30_apricorn_house",
     "route_30_mr_pokemon_house",
-    "route_31",
+    "route_30_northwest",
 ]
 encounters = "r30"
 header = "route_30"
@@ -315,6 +315,16 @@ locs = [
 ]
 trainers = [
     "youngster_joey",
+]
+
+[route_30_northwest]
+exits = [
+    "route_30",
+    "route_31",
+]
+encounters = "r30"
+header = "route_30"
+trainers = [
     "youngster_mikey",
     "bug_catcher_don",
 ]
@@ -560,7 +570,7 @@ header = "cherrygrove_pokecenter_b1f"
 [route_31]
 exits = [
     "dark_cave_route_31_side_west",
-    "route_30",
+    "route_30_northwest",
     "route_31_violet_gatehouse",
 ]
 encounters = "r31"
@@ -916,6 +926,8 @@ trainers = [
 exits = [
     "route_2_viridian_forest_south_gatehouse",
     "viridian",
+    "pewter",
+    "route_2_east",
     "route_2_viridian_forest_north_gatehouse",
 ]
 encounters = "r02"
@@ -923,6 +935,7 @@ header = "route_2"
 trainers = [
     "bug_catcher_rob",
     "bug_catcher_doug",
+    "bug_catcher_ed",
 ]
 
 [violet_pokemart]
@@ -1468,7 +1481,6 @@ header = "mahogany_souvenir_shop"
 [route_2_east]
 exits = [
     "diglett_cave",
-    "pewter",
     "route_2",
     "route_2_house",
     "route_2_southeast_gatehouse",
@@ -1479,9 +1491,7 @@ locs = [
     "overworld_r02r0101_carbos",
     "overworld_r02_elixir",
 ]
-trainers = [
-    "bug_catcher_ed",
-]
+accessible_encounters = []
 
 [ruins_of_alph_southwest_entrance_first_room]
 exits = [
@@ -1836,7 +1846,7 @@ header = "ruins_of_alph_underground_hall_sinjoh_event_2"
 
 [route_2_viridian_forest_north_gatehouse]
 exits = [
-    "route_2_east",
+    "route_2",
     "viridian_forest",
 ]
 header = "route_2_viridian_forest_north_gatehouse"
@@ -2158,7 +2168,7 @@ exits = [
     "pewter_pokecenter_1f",
     "pewter_pokemart",
     "pewter_southwest_house",
-    "route_2_east",
+    "route_2",
     "route_3",
 ]
 header = "pewter"
@@ -4174,6 +4184,7 @@ exits = [
     "goldenrod_department_store_3f",
     "goldenrod_department_store_5f",
     "goldenrod_department_store_elevator",
+    "virt_vitamins",
 ]
 header = "goldenrod_department_store_4f"
 
@@ -5358,6 +5369,9 @@ exits = [
     "celadon_department_store_elevator",
 ]
 header = "celadon_department_store_1f"
+events = [
+    "event_celadon_store"
+]
 
 [route_16_east]
 exits = [
@@ -5715,6 +5729,7 @@ exits = [
     "route_48",
     "safari_zone_entrance_interior",
     "safari_zone_gate_pokecenter_1f",
+    "virt_vitamins",
 ]
 header = "safari_zone_gate"
 locs = [
@@ -5818,6 +5833,7 @@ exits = [
     "celadon_department_store_4f",
     "celadon_department_store_elevator",
     "celadon_department_store_roof",
+    "virt_vitamins",
 ]
 header = "celadon_department_store_5f"
 
@@ -5971,4 +5987,11 @@ header = "virt"
 exits = []
 locs = [
     "fly_map_battle_frontier",
+]
+
+[virt_vitamins]
+header = "virt"
+exits = []
+events = [
+    "event_vitamins"
 ]
