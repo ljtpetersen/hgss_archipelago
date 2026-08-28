@@ -333,7 +333,7 @@ check = 1233
 
 [overworld_d44r0102_dragon_fang]
 original_item = "dragon_fang"
-label = "Dragon’s Den - Item Up Southeast Stairs"
+label = "Dragon's Den - Item Up Southeast Stairs"
 id = 159
 table = "overworld"
 type = "overworld"
@@ -341,7 +341,7 @@ check = 1112
 
 [overworld_d44r0102_calcium]
 original_item = "calcium"
-label = "Dragon’s Den - Item in Northeast Corner"
+label = "Dragon's Den - Item in Northeast Corner"
 id = 157
 table = "overworld"
 type = "overworld"
@@ -349,7 +349,7 @@ check = 1210
 
 [overworld_d44r0102_max_elixir]
 original_item = "max_elixir"
-label = "Dragon’s Den - Item By Twins"
+label = "Dragon's Den - Item By Twins"
 id = 158
 table = "overworld"
 type = "overworld"
@@ -517,7 +517,7 @@ check = 1198
 
 [overworld_r02r0101_carbos]
 original_item = "carbos"
-label = "Route 2 - Item Behind DIGLETT's Tunnel"
+label = "Route 2 - Item Behind DIGLETT's Cave"
 id = 212
 table = "overworld"
 type = "overworld"
@@ -549,7 +549,7 @@ check = 1172
 
 [overworld_r42_dubious_disc]
 original_item = "dubious_disc"
-label = "Route 42 - Item Down Rock Climb Slope From Mt. Mortar"
+label = "Route 42 - Item Down Rock Climb Slope from Mt. Mortar"
 id = 109
 table = "overworld"
 type = "overworld"
@@ -741,7 +741,7 @@ check = 1238
 
 [overworld_d01r0101_pp_max]
 original_item = "pp_max"
-label = "DIGLETT’s Cave - Item on Rock Climb Hill Below Bridges"
+label = "DIGLETT's Cave - Item on Rock Climb Hill Below Bridges"
 id = 189
 table = "overworld"
 type = "overworld"
@@ -749,7 +749,7 @@ check = 1297
 
 [overworld_d01r0101_rock_incense]
 original_item = "rock_incense"
-label = "DIGLETT’s Cave - Item Across Bridge"
+label = "DIGLETT's Cave - Item Across Bridge"
 id = 190
 table = "overworld"
 type = "overworld"
@@ -837,7 +837,7 @@ check = 1083
 
 [overworld_d38r0101_ether]
 original_item = "ether"
-label = "Mt. Mortar 1F - Item From 2F West Ladder"
+label = "Mt. Mortar 1F - Item Accessed from 2F West Ladder"
 id = 111
 table = "overworld"
 type = "overworld"
@@ -845,7 +845,7 @@ check = 1173
 
 [overworld_d38r0101_revive]
 original_item = "revive"
-label = "Mt. Mortar 1F - Item From 2F East Ladder"
+label = "Mt. Mortar 1F - Item Accessed from 2F East Ladder"
 id = 112
 table = "overworld"
 type = "overworld"
@@ -1277,7 +1277,7 @@ check = 1295
 
 [overworld_d37r0104_full_heal]
 original_item = "full_heal"
-label = "Goldenrod Underground - Item North of Door Puzzle"
+label = "Goldenrod Tunnel B2F - Item North of Door Puzzle"
 id = 56
 table = "overworld"
 type = "overworld"
@@ -1285,7 +1285,7 @@ check = 1095
 
 [overworld_d37r0104_smoke_ball]
 original_item = "smoke_ball"
-label = "Goldenrod Underground - Item in Southwest Puzzle Room"
+label = "Goldenrod Tunnel B2F - Item in Southwest Puzzle Room"
 id = 57
 table = "overworld"
 type = "overworld"
@@ -1373,7 +1373,7 @@ check = 1299
 
 [overworld_d37r0105_tm82]
 original_item = "tm82"
-label = "Goldenrod Underground - Item By Director"
+label = "Goldenrod Tunnel Warehouse - Item Near Director"
 id = 49
 table = "overworld"
 type = "overworld"
@@ -1381,7 +1381,7 @@ check = 1078
 
 [overworld_d37r0105_max_ether]
 original_item = "max_ether"
-label = "Goldenrod Underground - Item in Southeast Corner"
+label = "Goldenrod Tunnel Warehouse - Item in Southeast Corner"
 id = 50
 table = "overworld"
 type = "overworld"
@@ -1389,7 +1389,7 @@ check = 1079
 
 [overworld_d37r0105_ultra_ball]
 original_item = "ultra_ball"
-label = "Goldenrod Underground - Item in Northwest Corner"
+label = "Goldenrod Tunnel Warehouse - Item in Northwest Corner"
 id = 51
 table = "overworld"
 type = "overworld"
@@ -2061,7 +2061,7 @@ check = 982
 
 [hidden_r26_r27_nugget]
 original_item = "nugget"
-label = "Route 27 - Hidden Item on Eastern shore South of Stairs"
+label = "Route 27 - Hidden Item on Eastern Shore South of Stairs"
 id = 183
 table = "hidden"
 type = "hidden"
@@ -2237,7 +2237,7 @@ check = 1000
 
 [hidden_t22_hyper_potion]
 original_item = "hyper_potion"
-label = "Violet City - Hidden Item at end of Path North of Pokemon Center"
+label = "Violet City - Hidden Item at End of Path North of Pokemon Center"
 id = 3
 table = "hidden"
 type = "hidden"
@@ -2277,7 +2277,7 @@ check = 1001
 
 [hidden_d44r0102_revive]
 original_item = "revive"
-label = "Dragon’s Den - Hidden Item on Rock in Northwest Corner"
+label = "Dragon's Den - Hidden Item on Rock in Northwest Corner"
 id = 81
 table = "hidden"
 type = "hidden"
@@ -2285,7 +2285,7 @@ check = 881
 
 [hidden_d44r0102_max_elixir]
 original_item = "max_elixir"
-label = "Dragon’s Den - Hidden Item in Corner of Shrine"
+label = "Dragon's Den - Hidden Item in Corner of Shrine"
 id = 83
 table = "hidden"
 type = "hidden"
@@ -2293,7 +2293,7 @@ check = 883
 
 [hidden_d44r0102_max_potion]
 original_item = "max_potion"
-label = "Dragon’s Den - Hidden Item on West Rock Near Ace Trainer"
+label = "Dragon's Den - Hidden Item on West Rock Near Ace Trainer"
 id = 82
 table = "hidden"
 type = "hidden"
@@ -2597,7 +2597,7 @@ check = 1020
 
 [hidden_d01r0101_max_revive]
 original_item = "max_revive"
-label = "DIGLETT’s Cave - Hidden Item on Rock in Corner"
+label = "DIGLETT's Cave - Hidden Item on Rock in Corner"
 id = 56
 table = "hidden"
 type = "hidden"
@@ -2605,7 +2605,7 @@ check = 856
 
 [hidden_d01r0101_calcium]
 original_item = "calcium"
-label = "DIGLETT’s Cave - Hidden Item on Rock Climb Hill Between Bridges"
+label = "DIGLETT's Cave - Hidden Item on Rock Climb Hill Between Bridges"
 id = 224
 table = "hidden"
 type = "hidden"
@@ -2613,7 +2613,7 @@ check = 1024
 
 [hidden_d25r0103_ultra_ball]
 original_item = "ultra_ball"
-label = "Union Cave B2F - Hidden Item on Stalagmite beside Southern Ace Trainer"
+label = "Union Cave B2F - Hidden Item on Stalagmite Beside Southern Ace Trainer"
 id = 156
 table = "hidden"
 type = "hidden"
@@ -2949,7 +2949,7 @@ check = 942
 
 [hidden_d35r0103_full_heal]
 original_item = "full_heal"
-label = "Team Rocket HQ B2F - Hidden Item on middle of 3 Southwestern Boxes"
+label = "Team Rocket HQ B2F - Hidden Item in Middle of 3 Southwestern Boxes"
 id = 54
 table = "hidden"
 type = "hidden"
@@ -3293,7 +3293,7 @@ check = 906
 
 [hidden_d37r0105_max_potion]
 original_item = "max_potion"
-label = "Goldenrod Underground - Hidden Item in Small Box in West Hallway"
+label = "Goldenrod Tunnel Warehouse - Hidden Item in Small Box in West Hallway"
 id = 68
 table = "hidden"
 type = "hidden"
@@ -3301,7 +3301,7 @@ check = 868
 
 [hidden_d37r0105_revive]
 original_item = "revive"
-label = "Goldenrod Underground - Hidden Item in Small Box in East Hallway"
+label = "Goldenrod Tunnel Warehouse - Hidden Item in Small Box in East Hallway"
 id = 69
 table = "hidden"
 type = "hidden"
@@ -4411,7 +4411,7 @@ original_item = "hm08"
 id = 67
 table = "base"
 type = "hm"
-label = "Oak's Lab - Gift from Oak after Eight Kanto Badges"
+label = "Oak's Lab - Gift from Prof. Oak after Eight Kanto Badges"
 check = 389
 
 [olivine_northwest_house_good_rod]
@@ -4463,7 +4463,7 @@ original_item = "radio"
 id = 73
 table = "base"
 type = "pokegear_card"
-label = "Lavender Town Radio Station - Expansion Card From Director"
+label = "Lavender Town Radio Station - Expansion Card from Director"
 check = 2957
 
 [goldenrod_radio_tower_1f_radio]
@@ -4503,7 +4503,7 @@ original_item = "charcoal"
 id = 78
 table = "base"
 type = "npc_gift"
-label = "Charcoal Kiln - Charcoal from Assistant"
+label = "Azalea Town Charcoal Kiln - Charcoal from Assistant"
 check = 129
 
 [kurt_fast_ball_gift]
@@ -4511,7 +4511,7 @@ original_item = "fast_ball"
 id = 79
 table = "base"
 type = "npc_gift"
-label = "Kurt's House - Fast Ball from Kurt"
+label = "Azalea Town Kurt's House - Fast Ball from Kurt"
 check = 124
 
 [cherrygrove_running_shoes]
@@ -4580,7 +4580,7 @@ check = 223
 
 [d37r0105_cardkey]
 original_item = "card_key"
-label = "Goldenrod Underground - Card Key From Director"
+label = "Goldenrod Tunnel Warehouse - Card Key from Director"
 id = 87
 table = "base"
 type = "key_item"
@@ -4599,7 +4599,7 @@ value = 1
 
 [power_plant_tm57]
 original_item = "tm57"
-label = "Power Plant - Gift from Manager"
+label = "Route 10 Power Plant - Gift from Manager"
 id = 89
 table = "base"
 type = "npc_gift"
@@ -4671,7 +4671,7 @@ check = 217
 
 [underground_fashion_case]
 original_item = "fashion_case"
-label = "Goldenrod Underground Entrance - Fashion Case from Lyra/Ethan"
+label = "Goldenrod Tunnel Entrance - Fashion Case from Lyra/Ethan"
 id = 97
 table = "base"
 type = "key_item"
@@ -4715,7 +4715,7 @@ check = 206
 
 [r05r0202_tm64]
 original_item = "tm64"
-label = "Underground Path - Gift From Man For RageCandyBar"
+label = "Underground Path - Gift from Man For RageCandyBar"
 id = 102
 table = "base"
 type = "npc_gift"
@@ -4779,7 +4779,7 @@ check = 302
 
 [r29_tuscany_gift]
 original_item = "twistedspoon"
-label = "Route 29 - Gift From Tuscany"
+label = "Route 29 - Gift from Tuscany"
 id = 110
 table = "base"
 type = "npc_gift"
@@ -4795,7 +4795,7 @@ check = 201
 
 [new_bark_elms_lab_1f_everstone]
 original_item = "everstone"
-label = "Elm's Lab - Gift from Elm after Togepi Egg Hatches"
+label = "Elm's Lab - Gift from Prof. Elm after Togepi Egg Hatches"
 id = 112
 table = "base"
 type = "npc_gift"
@@ -4899,7 +4899,7 @@ check = 233
 
 [r28r0101_tm47]
 original_item = "tm47"
-label = "Route 28 - Bribe From Celebrity"
+label = "Route 28 - Bribe from Celebrity"
 id = 124
 table = "base"
 type = "npc_gift"
@@ -4915,7 +4915,7 @@ check = 110
 
 [r34r0201_tm12]
 original_item = "tm12"
-label = "Route 34 - Gift From Woman With Butterfree"
+label = "Route 34 - Gift from Woman With Butterfree"
 id = 126
 table = "base"
 type = "npc_gift"
@@ -4923,7 +4923,7 @@ check = 131
 
 [r35r0101_kenya_gift]
 original_item = "hp_up"
-label = "Route 35 - Gift From Guard After Delivering Kenya"
+label = "Route 35 - Gift from Guard After Delivering Kenya"
 id = 127
 table = "base"
 type = "npc_gift"
@@ -4935,7 +4935,7 @@ op = "ge"
 
 [r36_arthur_gift]
 original_item = "hard_stone"
-label = "Route 36 - Gift From Arthur"
+label = "Route 36 - Gift from Arthur"
 id = 128
 table = "base"
 type = "npc_gift"
@@ -4943,7 +4943,7 @@ check = 177
 
 [r37_sunny_gift]
 original_item = "magnet"
-label = "Route 37 - Gift From Sunny"
+label = "Route 37 - Gift from Sunny"
 id = 129
 table = "base"
 type = "npc_gift"
@@ -4967,7 +4967,7 @@ check = 171
 
 [w40_monica_gift]
 original_item = "sharp_beak"
-label = "Route 40 - Gift From Monica"
+label = "Route 40 - Gift from Monica"
 id = 132
 table = "base"
 type = "npc_gift"
@@ -4975,7 +4975,7 @@ check = 215
 
 [r05r0401_cleanse_tag]
 original_item = "cleanse_tag"
-label = "Route 5 - Gift From Superstitious Woman in House"
+label = "Route 5 - Gift from Superstitious Woman in House"
 id = 133
 table = "base"
 type = "npc_gift"
@@ -5007,7 +5007,7 @@ check = 2969
 
 [goldenrod_radio_tower_observation_deck_rainbow_wing]
 original_item = "rainbow_wing"
-label = "Goldenrod Radio Tower Observatory Deck - Item from Directory (HeartGold)"
+label = "Goldenrod Radio Tower Observatory Deck - Item from Director (HeartGold)"
 id = 137
 table = "base"
 type = "key_item_hg"
@@ -5018,7 +5018,7 @@ value = 5
 
 [goldenrod_radio_tower_observation_deck_silver_wing]
 original_item = "silver_wing"
-label = "Goldenrod Radio Tower Observatory Deck - Item from Directory (SoulSilver)"
+label = "Goldenrod Radio Tower Observatory Deck - Item from Director (SoulSilver)"
 id = 138
 table = "base"
 type = "key_item_ss"
@@ -5295,7 +5295,7 @@ op = "ge"
 
 [t30_santos_gift]
 original_item = "soft_sand"
-label = "Blackthorn City - Gift From Santos"
+label = "Blackthorn City - Gift from Santos"
 id = 163
 table = "base"
 type = "npc_gift"
@@ -5382,7 +5382,7 @@ check = 304
 
 [saffron_mr_psychic_house_tm29]
 original_item = "tm29"
-label = "Saffron Mr Psychic's House - Item from Mr Psychic"
+label = "Saffron Mr. Psychic's House - Item from Mr. Psychic"
 id = 172
 table = "base"
 type = "npc_gift"

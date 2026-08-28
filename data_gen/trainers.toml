@@ -1660,7 +1660,7 @@ party = [
 
 [hiker_leonard]
 id = 204
-label = "Union Cav B1F - Hiker Leonard"
+label = "Union Cave B1F - Hiker Leonard"
 party = [
     { species = "geodude", level = 23 },
     { species = "machop", level = 25 },
@@ -2911,7 +2911,7 @@ party = [
 
 [pokefan_m_robert]
 id = 348
-label = "Route 10 - Pokefan Robert"
+label = "Route 10 South - Pokefan Robert"
 party = [
     { species = "quagsire", level = 43 },
 ]
@@ -3008,7 +3008,7 @@ party = [
 
 [hiker_jim]
 id = 359
-label = "Route 10 - Hiker Jim"
+label = "Route 10 South - Hiker Jim"
 party = [
     { species = "machamp", level = 45 },
 ]
