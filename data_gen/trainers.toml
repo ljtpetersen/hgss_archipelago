@@ -100,7 +100,7 @@ party = [
 
 [team_rocket_grunt]
 id = 12
-label = "Slowpoke Well B1F - Team Rocket Grunt"
+label = "Slowpoke Well B1F - Team Rocket Grunt Below Proton"
 party = [
     { species = "rattata", level = 7 },
     { species = "zubat", level = 9 },
@@ -109,7 +109,7 @@ party = [
 
 [team_rocket_f_grunt]
 id = 13
-label = "Slowpoke Well B1F - Team Rocket Grunt F"
+label = "Slowpoke Well B1F - Team Rocket Grunt F on Upper Ledge"
 party = [
     { species = "zubat", level = 9 },
     { species = "ekans", level = 11 },
@@ -823,7 +823,7 @@ party = [
 
 [team_rocket_grunt_2]
 id = 101
-label = "Slowpoke Well B1F - Team Rocket Grunt 2"
+label = "Slowpoke Well B1F - Team Rocket Grunt in East"
 party = [
     { species = "rattata", level = 9 },
     { species = "rattata", level = 9 },
@@ -1503,7 +1503,7 @@ party = [
 
 [team_rocket_grunt_3]
 id = 185
-label = "Goldenrod Radio Tower 1F - Grunt Blocking Stairs"
+label = "Goldenrod Radio Tower 1F - Team Rocket Grunt Blocking Stairs"
 party = [
     { species = "raticate", level = 24 },
     { species = "raticate", level = 24 },
@@ -1511,7 +1511,7 @@ party = [
 
 [team_rocket_grunt_4]
 id = 186
-label = "Goldenrod Radio Tower 2F - Team Rocket Grunt 4"
+label = "Goldenrod Radio Tower 2F - Team Rocket Grunt in Southwest"
 party = [
     { species = "grimer", level = 23 },
     { species = "grimer", level = 23 },
@@ -1520,7 +1520,7 @@ party = [
 
 [team_rocket_grunt_5]
 id = 187
-label = "Goldenrod Radio Tower 2F - Team Rocket Grunt 5"
+label = "Goldenrod Radio Tower 2F - Team Rocket Grunt in North"
 party = [
     { species = "rattata", level = 21 },
     { species = "rattata", level = 21 },
@@ -1531,7 +1531,7 @@ party = [
 
 [team_rocket_grunt_6]
 id = 188
-label = "Goldenrod Radio Tower 2F - Team Rocket Grunt 6"
+label = "Goldenrod Radio Tower 2F - Team Rocket Grunt Near Bookshelf"
 party = [
     { species = "zubat", level = 26 },
     { species = "zubat", level = 26 },
@@ -1539,7 +1539,7 @@ party = [
 
 [team_rocket_grunt_7]
 id = 189
-label = "Goldenrod Radio Tower 3F - Team Rocket Grunt 7"
+label = "Goldenrod Radio Tower 3F - Team Rocket Grunt Near Signs"
 party = [
     { species = "koffing", level = 23 },
     { species = "grimer", level = 23 },
@@ -1549,14 +1549,14 @@ party = [
 
 [team_rocket_grunt_8]
 id = 190
-label = "Goldenrod Radio Tower 3F - Team Rocket Grunt 8"
+label = "Goldenrod Radio Tower 3F - Team Rocket Grunt Below Painting"
 party = [
     { species = "weezing", level = 26 },
 ]
 
 [team_rocket_grunt_9]
 id = 191
-label = "Goldenrod Radio Tower 3F - Team Rocket Grunt 9"
+label = "Goldenrod Radio Tower 3F - Team Rocket Grunt after Card Key Door"
 party = [
     { species = "raticate", level = 24 },
     { species = "koffing", level = 26 },
@@ -1564,7 +1564,7 @@ party = [
 
 [team_rocket_grunt_10]
 id = 192
-label = "Goldenrod Radio Tower 4F - Team Rocket Grunt 10"
+label = "Goldenrod Radio Tower 4F - Team Rocket Grunt in Northwest"
 party = [
     { species = "zubat", level = 22 },
     { species = "golbat", level = 24 },
@@ -1573,7 +1573,7 @@ party = [
 
 [team_rocket_grunt_11]
 id = 193
-label = "Goldenrod Tunnel B2F - Team Rocket Grunt 11"
+label = "Goldenrod Tunnel B2F - Team Rocket Grunt Across from Stairs"
 party = [
     { species = "muk", level = 23 },
     { species = "koffing", level = 23 },
@@ -1589,14 +1589,14 @@ party = [
 
 [team_rocket_grunt_12]
 id = 195
-label = "Goldenrod Tunnel B2F - Team Rocket Grunt 12"
+label = "Goldenrod Tunnel B2F - Team Rocket Grunt Above Shortcut Door"
 party = [
     { species = "rattata", level = 27 },
 ]
 
 [team_rocket_grunt_13]
 id = 196
-label = "Goldenrod Tunnel Warehouse - Team Rocket Grunt 13"
+label = "Goldenrod Tunnel Warehouse - Team Rocket Grunt Above South Box"
 party = [
     { species = "raticate", level = 24 },
     { species = "golbat", level = 24 },
@@ -1604,7 +1604,7 @@ party = [
 
 [team_rocket_grunt_14]
 id = 197
-label = "Goldenrod Tunnel Warehouse - Team Rocket Grunt 14"
+label = "Goldenrod Tunnel Warehouse - Team Rocket Grunt Circling Boxes"
 party = [
     { species = "grimer", level = 26 },
     { species = "weezing", level = 23 },
@@ -1612,14 +1612,14 @@ party = [
 
 [team_rocket_f_grunt_2]
 id = 198
-label = "Goldenrod Radio Tower 2F - Team Rocket Grunt 2"
+label = "Goldenrod Radio Tower 2F - Team Rocket Grunt F Near Studio"
 party = [
     { species = "arbok", level = 26 },
 ]
 
 [team_rocket_f_grunt_3]
 id = 199
-label = "Goldenrod Tunnel B2F - Team Rocket Grunt 3"
+label = "Goldenrod Tunnel B2F - Team Rocket Grunt F Before Warehouse"
 party = [
     { species = "gloom", level = 25 },
     { species = "gloom", level = 25 },
@@ -1627,7 +1627,7 @@ party = [
 
 [team_rocket_f_grunt_4]
 id = 200
-label = "Goldenrod Radio Tower 4F - Female Grunt in Corner"
+label = "Goldenrod Radio Tower 4F - Team Rocket Grunt F in Studio"
 party = [
     { species = "ekans", level = 21 },
     { species = "oddish", level = 23 },
@@ -1757,7 +1757,7 @@ party = [
 
 [team_rocket_grunt_15]
 id = 216
-label = "Team Rocket HQ B1F - Team Rocket Grunt 15"
+label = "Team Rocket HQ B1F - Team Rocket Grunt Above Trapped Floor"
 party = [
     { species = "rattata", level = 16 },
     { species = "rattata", level = 16 },
@@ -1776,14 +1776,14 @@ party = [
 
 [team_rocket_grunt_16]
 id = 218
-label = "Team Rocket HQ B2F - Team Rocket Grunt 16"
+label = "Team Rocket HQ B2F - Team Rocket Grunt Near Boxes"
 party = [
     { species = "golbat", level = 18 },
 ]
 
 [team_rocket_grunt_17]
 id = 219
-label = "Team Rocket HQ B2F - Team Rocket Grunt 17"
+label = "Team Rocket HQ B2F - Team Rocket Grunt by Northwest Stairs"
 party = [
     { species = "rattata", level = 17 },
     { species = "zubat", level = 17 },
@@ -1792,7 +1792,7 @@ party = [
 
 [team_rocket_grunt_18]
 id = 220
-label = "Team Rocket HQ B2F - Team Rocket Grunt 18"
+label = "Team Rocket HQ B2F - Team Rocket Grunt Below Generator Room"
 party = [
     { species = "venonat", level = 18 },
     { species = "venonat", level = 18 },
@@ -1807,14 +1807,14 @@ party = [
 
 [team_rocket_grunt_19]
 id = 222
-label = "Team Rocket HQ B2F - Team Rocket Grunt 19"
+label = "Team Rocket HQ B3F - Team Rocket Grunt Near Plants"
 party = [
     { species = "raticate", level = 19 },
 ]
 
 [team_rocket_grunt_20]
 id = 223
-label = "Team Rocket HQ B1F - Trap Team Rocket Grunt 1"
+label = "Team Rocket HQ B1F - Team Rocket Grunt from Trap 1"
 party = [
     { species = "drowzee", level = 17 },
     { species = "zubat", level = 19 },
@@ -1822,7 +1822,7 @@ party = [
 
 [team_rocket_grunt_21]
 id = 224
-label = "Team Rocket HQ B1F - Trap Team Rocket Grunt 2"
+label = "Team Rocket HQ B1F - Team Rocket Grunt from Trap 2"
 party = [
     { species = "zubat", level = 16 },
     { species = "grimer", level = 17 },
@@ -1845,7 +1845,7 @@ party = [
 
 [team_rocket_grunt_22]
 id = 227
-label = "Goldenrod Tunnel Warehouse - Team Rocket Grunt 22"
+label = "Goldenrod Tunnel Warehouse - Team Rocket Grunt North of Director"
 party = [
     { species = "koffing", level = 25 },
     { species = "koffing", level = 25 },
@@ -1853,7 +1853,7 @@ party = [
 
 [team_rocket_grunt_23]
 id = 228
-label = "Goldenrod Tunnel B2F - Team Rocket Grunt 23"
+label = "Goldenrod Tunnel B2F - Team Rocket Grunt in Northwest"
 party = [
     { species = "koffing", level = 24 },
     { species = "muk", level = 24 },
@@ -2957,7 +2957,7 @@ party = [
 
 [team_rocket_grunt_24]
 id = 353
-label = "Route 24 - Team Rocket Grunt"
+label = "Route 24 - Team Rocket Grunt from Gym"
 party = [
     { species = "golbat", level = 39 },
 ]
@@ -3372,7 +3372,7 @@ party = [
 
 [team_rocket_f_grunt_5]
 id = 404
-label = "Team Rocket HQ B3F - Team Rocket Grunt 5"
+label = "Team Rocket HQ B3F - Team Rocket Grunt F Using Computer"
 party = [
     { species = "ekans", level = 18, num_moves = 4 },
     { species = "gloom", level = 18, num_moves = 4 },
@@ -4165,7 +4165,7 @@ party = [
 
 [team_rocket_grunt_25]
 id = 499
-label = "Team Rocket HQ B2F - Grunt in Double Battle with Lance"
+label = "Team Rocket HQ B2F - Team Rocket Grunt in Double Battle with Lance"
 party = [
     { species = "drowzee", level = 18, num_moves = 4 },
     { species = "grimer", level = 20, num_moves = 4 },
@@ -4983,7 +4983,7 @@ party = [
 
 [team_rocket_grunt_26]
 id = 601
-label = "Ecruteak Dance Theater - Team Rocket Grunt"
+label = "Ecruteak Dance Theater - Team Rocket Grunt on Stage"
 party = [
     { species = "koffing", level = 12 },
 ]
