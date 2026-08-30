@@ -5,9 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.5] - TBD
+## [0.0.5] - 2026-08-30
+### Added
+* `game_debug` client command.
 ### Fixed
 * Removed holdovers from Platinum in some option descriptions.
+* Fixed `legendaries` blacklist shorthand not working.
+* Fixed various minor typographical errors in some option descriptions.
+* Fixed description of `dexsanity_required` inaccurately describing the effect of the `legendaries` keyword.
+* Requirement of using Cut to access Route 14 - Item from Woman in Grass Patch after Showing Chansey has been added.
+* Fixed issues relating to New Bark East exit.
+* Fixed Kimono Girls' trainersanity locations.
+* Fixed S.S. Anne softlock if initially travelling from Vermilion.
+* Fixed the crash with the "SET TIME" menu when within the starting room, before receiving the starting items.
+* Fixed issues relating to Copycat and the Lost Item.
+* Fixed issues regarding receiving the Clear/Tidal bell in the rooms containing to their legendaries.
+* Fixed issue with Ethan/Lyra's theme after the catching tutorial.
+* Fixed hardlock when talking to NPC in Fuchsia Pokémon Center.
+* Fixed S.S. Ticket location in Prof. Elm's lab.
 
 ## [0.0.4] - 2026-08-26
 ### Fixed
@@ -34,6 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - 2026-08-23
 The first release of this project.
 
+[0.0.5]: https://github.com/ljtpetersen/apnds/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/ljtpetersen/apnds/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/ljtpetersen/apnds/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/ljtpetersen/apnds/compare/v0.0.1...v0.0.2

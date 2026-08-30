@@ -680,7 +680,7 @@ class DexsanityRequired(SpeciesBlacklist):
     Spaces should be replaced by underscores. For example,
     Mr. Mime would be mr_mime.
 
-    legendaries, all lowercase, will be interpreted as banning all legendary
+    legendaries, all lowercase, will be interpreted as requiring all legendary
     species.
     """
     display_name = "Dexsanity Required"
