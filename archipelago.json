@@ -1,6 +1,6 @@
 {
   "game": "Pokemon HeartGold and SoulSilver",
-  "world_version": "0.0.4",
+  "world_version": "0.0.5",
   "authors": ["ljtpetersen"],
   "minimum_ap_version": "0.6.7"
 }
