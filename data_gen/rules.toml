@@ -710,7 +710,7 @@ t02_tm85 = "cut | surf"
 viridian_badge_earth = "event_cinnabar_island_blue_return_viridian"
 viridian_tm92 = "event_cinnabar_island_blue_return_viridian"
 overworld_d40r0101_ultra_ball_2 = "surf"
-saffron_copycat_house_2f_pass = "lost_item"
+saffron_copycat_house_2f_pass = "event_hear_about_missing_doll & lost_item"
 overworld_d18r0102_tm12 = "strength"
 hidden_r42_max_potion = "surf"
 
