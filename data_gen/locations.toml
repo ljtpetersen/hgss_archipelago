@@ -3245,7 +3245,7 @@ check = 911
 
 [hidden_d17r1101_tinymushroom]
 original_item = "tinymushroom"
-label = "Bellchime Trail - Hidden Item in North Trees (Left)"
+label = "Bellchime Trail - Hidden Item to Left of Bell Tower"
 id = 125
 table = "hidden"
 type = "hidden"
@@ -3253,7 +3253,7 @@ check = 925
 
 [hidden_d17r1101_big_mushroom]
 original_item = "big_mushroom"
-label = "Bellchime Trail - Hidden Item in North Trees (Right)"
+label = "Bellchime Trail - Hidden Item in Front of Bell Tower"
 id = 126
 table = "hidden"
 type = "hidden"
@@ -3261,7 +3261,7 @@ check = 926
 
 [hidden_d17r1101_tinymushroom_2]
 original_item = "tinymushroom"
-label = "Bellchime Trail - Hidden Item in North Trees (Center)"
+label = "Bellchime Trail - Hidden Item in North Trees (Left)"
 id = 128
 table = "hidden"
 type = "hidden"
@@ -3269,7 +3269,7 @@ check = 928
 
 [hidden_d17r1101_big_mushroom_2]
 original_item = "big_mushroom"
-label = "Bellchime Trail - Hidden Item in Front of Bell Tower"
+label = "Bellchime Trail - Hidden Item in North Trees (Right)"
 id = 127
 table = "hidden"
 type = "hidden"
@@ -3277,7 +3277,7 @@ check = 927
 
 [hidden_d17r1101_tinymushroom_3]
 original_item = "tinymushroom"
-label = "Bellchime Trail - Hidden Item to Left of Bell Tower"
+label = "Bellchime Trail - Hidden Item in North Trees (Center)"
 id = 129
 table = "hidden"
 type = "hidden"
