@@ -24,16 +24,13 @@ from .data.species import regional_mons, species_id_to_const_name
 from .items import get_item_classification
 from .locations import raw_id_to_const_name
 from .options import Goal, RemoteItems
+from .version import version_int
 
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
 
 if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext, BizHawkClientCommandProcessor
-
-def version_int(version: str) -> int:
-    major, minor, rev = (int(s) for s in version.split('.'))
-    return (major << 16) | (minor << 8) | rev
 
 AP_MAGIC = b' AP '
 

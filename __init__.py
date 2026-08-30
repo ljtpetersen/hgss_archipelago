@@ -21,6 +21,7 @@ from .regions import create_regions
 from .rom import generate_output, PokemonHeartgoldPatch, PokemonSoulsilverPatch
 from .rules import set_rules, verify_hm_accessibility
 from .species import add_virt_specs, encounter_slot_label, fill_species, randomize_starters, randomize_trainer_parties_and_encounters
+from .version import VERSION as WORLD_VERSION
 
 class PokemonHgssSettings(settings.Group):
     class HeartgoldRomFile(settings.UserFilePath):
@@ -246,7 +247,7 @@ class PokemonHgssWorld(World):
         ret["generated_encounters"].update({f"{region}_{table}_{i}":speciesdata.species[spec].id for (region, table, i), spec in self.ool_encounters.items()})
         ret["generated_trainer_parties"] = {f"{tr}_{i}":speciesdata.species[spec].id for (tr, i), spec in self.generated_trainer_parties.items()}
         ret["added_hm_compatibility"] = {spec:[hm.name.lower() for hm in compat] for spec, compat in self.added_hm_compatibility.items()}
-        ret["world_version"] = "0.0.5"
+        ret["world_version"] = WORLD_VERSION
         pfx = "hg" if self.options.version == Version.option_heartgold else "ss"
         ret["possible_ap_struct_addresses"] = [v for k, v in AP_STRUCT_ADDRESS.items() if k.startswith(pfx)]
         return ret
