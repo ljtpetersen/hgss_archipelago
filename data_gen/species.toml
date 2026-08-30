@@ -16120,6 +16120,7 @@ hms = [
     "rock_smash",
 ]
 id = 144
+legendary = true
 label = "ARTICUNO"
 level_learnset = [
     [
@@ -16234,6 +16235,7 @@ hms = [
     "flash",
 ]
 id = 145
+legendary = true
 label = "ZAPDOS"
 level_learnset = [
     [
@@ -16348,6 +16350,7 @@ hms = [
     "rock_smash",
 ]
 id = 146
+legendary = true
 label = "MOLTRES"
 level_learnset = [
     [
@@ -16856,6 +16859,7 @@ hms = [
     "flash",
 ]
 id = 150
+legendary = true
 label = "MEWTWO"
 level_learnset = [
     [
@@ -17026,6 +17030,7 @@ hms = [
     "flash",
 ]
 id = 151
+legendary = true
 label = "MEW"
 level_learnset = [
     [
@@ -27735,6 +27740,7 @@ hms = [
     "flash",
 ]
 id = 243
+legendary = true
 label = "RAIKOU"
 level_learnset = [
     [
@@ -27849,6 +27855,7 @@ hms = [
     "flash",
 ]
 id = 244
+legendary = true
 label = "ENTEI"
 level_learnset = [
     [
@@ -27963,6 +27970,7 @@ hms = [
     "rock_climb",
 ]
 id = 245
+legendary = true
 label = "SUICUNE"
 level_learnset = [
     [
@@ -28474,6 +28482,7 @@ hms = [
     "flash",
 ]
 id = 249
+legendary = true
 label = "LUGIA"
 level_learnset = [
     [
@@ -28621,6 +28630,7 @@ hms = [
     "flash",
 ]
 id = 250
+legendary = true
 label = "HO-OH"
 level_learnset = [
     [
@@ -28759,6 +28769,7 @@ hms = [
     "flash",
 ]
 id = 251
+legendary = true
 label = "CELEBI"
 level_learnset = [
     [
@@ -43116,6 +43127,7 @@ hms = [
     "rock_climb",
 ]
 id = 377
+legendary = true
 label = "REGIROCK"
 level_learnset = [
     [
@@ -43234,6 +43246,7 @@ hms = [
     "rock_climb",
 ]
 id = 378
+legendary = true
 label = "REGICE"
 level_learnset = [
     [
@@ -43352,6 +43365,7 @@ hms = [
     "rock_climb",
 ]
 id = 379
+legendary = true
 label = "REGISTEEL"
 level_learnset = [
     [
@@ -43482,6 +43496,7 @@ hms = [
     "flash",
 ]
 id = 380
+legendary = true
 label = "LATIAS"
 level_learnset = [
     [
@@ -43624,6 +43639,7 @@ hms = [
     "flash",
 ]
 id = 381
+legendary = true
 label = "LATIOS"
 level_learnset = [
     [
@@ -43763,6 +43779,7 @@ hms = [
     "waterfall",
 ]
 id = 382
+legendary = true
 label = "KYOGRE"
 level_learnset = [
     [
@@ -43878,6 +43895,7 @@ hms = [
     "rock_climb",
 ]
 id = 383
+legendary = true
 label = "GROUDON"
 level_learnset = [
     [
@@ -44007,6 +44025,7 @@ hms = [
     "waterfall",
 ]
 id = 384
+legendary = true
 label = "RAYQUAZA"
 level_learnset = [
     [
@@ -44136,6 +44155,7 @@ hms = [
     "flash",
 ]
 id = 385
+legendary = true
 label = "JIRACHI"
 level_learnset = [
     [
@@ -44280,6 +44300,7 @@ hms = [
     "flash",
 ]
 id = 386
+legendary = true
 label = "DEOXYS"
 level_learnset = [
     [
@@ -55075,6 +55096,7 @@ hms = [
     "flash",
 ]
 id = 480
+legendary = true
 label = "UXIE"
 level_learnset = [
     [
@@ -55196,6 +55218,7 @@ hms = [
     "flash",
 ]
 id = 481
+legendary = true
 label = "MESPRIT"
 level_learnset = [
     [
@@ -55316,6 +55339,7 @@ hms = [
     "flash",
 ]
 id = 482
+legendary = true
 label = "AZELF"
 level_learnset = [
     [
@@ -55445,6 +55469,7 @@ hms = [
     "flash",
 ]
 id = 483
+legendary = true
 label = "DIALGA"
 level_learnset = [
     [
@@ -55569,6 +55594,7 @@ hms = [
     "rock_smash",
 ]
 id = 484
+legendary = true
 label = "PALKIA"
 level_learnset = [
     [
@@ -55692,6 +55718,7 @@ hms = [
     "rock_climb",
 ]
 id = 485
+legendary = true
 label = "HEATRAN"
 level_learnset = [
     [
@@ -55807,6 +55834,7 @@ hms = [
     "rock_climb",
 ]
 id = 486
+legendary = true
 label = "REGIGIGAS"
 level_learnset = [
     [
@@ -55916,6 +55944,7 @@ hms = [
     "rock_climb",
 ]
 id = 487
+legendary = true
 label = "GIRATINA"
 level_learnset = [
     [
@@ -56037,6 +56066,7 @@ hms = [
     "flash",
 ]
 id = 488
+legendary = true
 label = "CRESSELIA"
 level_learnset = [
     [
@@ -56149,6 +56179,7 @@ hms = [
     "waterfall",
 ]
 id = 489
+legendary = true
 label = "PHIONE"
 level_learnset = [
     [
@@ -56247,6 +56278,7 @@ hms = [
     "flash",
 ]
 id = 490
+legendary = true
 label = "MANAPHY"
 level_learnset = [
     [
@@ -56364,6 +56396,7 @@ hms = [
     "flash",
 ]
 id = 491
+legendary = true
 label = "DARKRAI"
 level_learnset = [
     [
@@ -56488,6 +56521,7 @@ hms = [
     "flash",
 ]
 id = 492
+legendary = true
 label = "SHAYMIN"
 level_learnset = [
     [
@@ -56595,6 +56629,7 @@ hms = [
     "flash",
 ]
 id = 493
+legendary = true
 label = "ARCEUS"
 level_learnset = [
     [
