@@ -2253,7 +2253,7 @@ check = 908
 
 [hidden_d41r0101_dire_hit]
 original_item = "dire_hit"
-label = "Mt. Silver Cave 1F - Hidden Item After First Rock Climb Slope"
+label = "Mt. Silver Cave 1F - Hidden Item after First Rock Climb Slope"
 id = 76
 table = "hidden"
 type = "hidden"
@@ -2261,7 +2261,7 @@ check = 876
 
 [hidden_d41r0101_ultra_ball]
 original_item = "ultra_ball"
-label = "Mt. Silver Cave 1F - Hidden Item Up Rock Climb Slope After First Waterfall"
+label = "Mt. Silver Cave 1F - Hidden Item Up Rock Climb Slope after First Waterfall"
 id = 77
 table = "hidden"
 type = "hidden"
@@ -4328,7 +4328,7 @@ original_item = "earth_badge"
 id = 57
 table = "base"
 type = "badge"
-label = "Viridian Gym - Earth Badge"
+label = "Viridian City Gym - Earth Badge"
 check = 382
 
 [viridian_tm92]
@@ -4336,7 +4336,7 @@ original_item = "tm92"
 id = 58
 table = "base"
 type = "npc_gift"
-label = "Viridian Gym - TM from Blue"
+label = "Viridian City Gym - TM from Blue"
 check = 382
 
 [mahogany_badge_glacier]
@@ -4536,7 +4536,7 @@ check = 2960
 
 [celadon_condominiums_4f_spell_tag]
 original_item = "spell_tag"
-label = "Celadon Condominiums 4F - Gift After Man's Scary Story"
+label = "Celadon Condominiums 4F - Gift after Man's Scary Story"
 id = 82
 table = "base"
 type = "npc_gift"
@@ -4923,7 +4923,7 @@ check = 131
 
 [r35r0101_kenya_gift]
 original_item = "hp_up"
-label = "Route 35 - Gift from Guard After Delivering Kenya"
+label = "Route 35 - Gift from Guard after Delivering Kenya"
 id = 127
 table = "base"
 type = "npc_gift"
