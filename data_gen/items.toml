@@ -3956,189 +3956,189 @@ classification = "progression"
 clas = "special"
 
 [fly_map_pallet]
-label = "Fly Region - Pallet"
+label = "Fly Unlock (Pallet Town)"
 id = 28
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_viridian]
-label = "Fly Region - Viridian"
+label = "Fly Unlock (Viridian City)"
 id = 29
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_pewter]
-label = "Fly Region - Pewter"
+label = "Fly Unlock (Pewter City)"
 id = 30
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_cerulean]
-label = "Fly Region - Cerulean"
+label = "Fly Unlock (Cerulean City)"
 id = 31
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_lavender]
-label = "Fly Region - Lavender"
+label = "Fly Unlock (Lavender Town)"
 id = 32
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_vermilion]
-label = "Fly Region - Vermilion"
+label = "Fly Unlock (Vermilion City)"
 id = 33
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_celadon]
-label = "Fly Region - Celadon"
+label = "Fly Unlock (Celadon City)"
 id = 34
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_fuchsia]
-label = "Fly Region - Fuchsia"
+label = "Fly Unlock (Fuchsia City)"
 id = 35
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_cinnabar_island]
-label = "Fly Region - Cinnabar Island"
+label = "Fly Unlock (Cinnabar Island)"
 id = 36
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_indigo_plateau]
-label = "Fly Region - Indigo Plateau"
+label = "Fly Unlock (Indigo Plateau)"
 id = 37
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_saffron]
-label = "Fly Region - Saffron"
+label = "Fly Unlock (Saffron City)"
 id = 38
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_new_bark]
-label = "Fly Region - New Bark"
+label = "Fly Unlock (New Bark Town)"
 id = 39
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_cherrygrove]
-label = "Fly Region - Cherrygrove"
+label = "Fly Unlock (Cherrygrove City)"
 id = 40
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_violet]
-label = "Fly Region - Violet"
+label = "Fly Unlock (Violet City)"
 id = 41
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_azalea]
-label = "Fly Region - Azalea"
+label = "Fly Unlock (Azalea Town)"
 id = 42
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_cianwood]
-label = "Fly Region - Cianwood"
+label = "Fly Unlock (Cianwood City)"
 id = 43
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_goldenrod]
-label = "Fly Region - Goldenrod"
+label = "Fly Unlock (Goldenrod City)"
 id = 44
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_olivine]
-label = "Fly Region - Olivine"
+label = "Fly Unlock (Olivine City)"
 id = 45
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_ecruteak]
-label = "Fly Region - Ecruteak"
+label = "Fly Unlock (Ecruteak City)"
 id = 46
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_mahogany]
-label = "Fly Region - Mahogany"
+label = "Fly Unlock (Mahogany Town)"
 id = 47
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_blackthorn]
-label = "Fly Region - Blackthorn"
+label = "Fly Unlock (Blackthorn City)"
 id = 48
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_lake_of_rage]
-label = "Fly Region - Lake Of Rage"
+label = "Fly Unlock (Lake of Rage)"
 id = 49
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_mount_silver]
-label = "Fly Region - Mount Silver"
+label = "Fly Unlock (Mt. Silver)"
 id = 50
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_safari_zone_gate]
-label = "Fly Region - Safari Zone Gate"
+label = "Fly Unlock (Safari Zone Gate)"
 id = 51
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_battle_frontier]
-label = "Fly Region - Battle Frontier"
+label = "Fly Unlock (Battle Frontier)"
 id = 52
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_national_park]
-label = "Fly Region - National Park"
+label = "Fly Unlock (National Park)"
 id = 53
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_victory_road_1f]
-label = "Fly Region - Victory Road 1F"
+label = "Fly Unlock (Victory Road)"
 group = "fly_item"
 classification = "progression"
 clas = "special"
