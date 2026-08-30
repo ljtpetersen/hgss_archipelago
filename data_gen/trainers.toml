@@ -1637,7 +1637,7 @@ party = [
 
 [poke_maniac_andrew]
 id = 201
-label = "Union Cave B1F - Poke Maniac Andrew"
+label = "Union Cave B1F Pathway - Poke Maniac Andrew"
 party = [
     { species = "marowak", level = 24 },
     { species = "marowak", level = 24 },
@@ -1645,7 +1645,7 @@ party = [
 
 [poke_maniac_calvin]
 id = 202
-label = "Union Cave B1F - Poke Maniac Calvin"
+label = "Union Cave B1F Pathway - Poke Maniac Calvin"
 party = [
     { species = "kangaskhan", level = 26 },
 ]
