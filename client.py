@@ -18,7 +18,7 @@ import Utils
 from .apnds import rom as ndsrom
 
 from .data.event_checks import event_checks
-from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, VarCheck
+from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, VarCheck, maximal_required_locations
 from .data.trainers import trainers, trainer_id_to_trainer_const_name, TrainerCheck
 from .data.species import regional_mons, species_id_to_const_name
 from .items import get_item_classification
@@ -33,6 +33,55 @@ if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext, BizHawkClientCommandProcessor
 
 AP_MAGIC = b' AP '
+
+TRACKED_EVENTS = [
+    "event_beat_sprout_tower",
+    "event_burned_tower_disperse_legendary_dogs",
+    "event_cerulean_meet_kanto_grunt",
+    "event_cinnabar_island_blue_return_viridian",
+    "event_clear_mahogany_hideout",
+    "clear_pokemon_league",
+    "event_clear_rocket_tower",
+    "event_clear_slowpoke_well",
+    "event_cure_amphy",
+    "event_cure_miltank",
+    "event_defeat_blaine",
+    "event_defeat_blue",
+    "event_defeat_brock",
+    "event_defeat_bugsy",
+    "event_defeat_chuck",
+    "event_defeat_clair",
+    "event_defeat_erika",
+    "event_defeat_falkner",
+    "event_defeat_janine",
+    "event_defeat_jasmine",
+    "event_defeat_lance_clair_dragons_den",
+    "event_defeat_lt_surge",
+    "event_defeat_misty",
+    "event_defeat_morty",
+    "event_defeat_pryce",
+    "defeat_red",
+    "event_defeat_sabrina",
+    "event_defeat_whitney",
+    "event_ecruteak_dance_theater_defeat_team_rocket",
+    "event_elms_lab_get_master_ball",
+    "event_farfetchd_rescue",
+    "event_get_kenya",
+    "event_get_mystery_egg",
+    "event_get_togepi_egg",
+    "event_give_kenya",
+    "event_meet_ho_oh",
+    "event_meet_lugia",
+    "event_radio_quiz",
+    "event_restore_power",
+    "event_route_24_defeat_kanto_grunt", 
+    "event_ruin_mistys_date",
+    "event_shiny_gyarados",
+    "event_talk_plant_manager",
+    "event_talk_to_kurt",
+]
+TRACKED_HEIGHT_MAP_HEADERS = frozenset()
+TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS = maximal_required_locations
 
 prev_version_data: "VersionData" = None # type: ignore
 
@@ -231,6 +280,14 @@ class PokemonHgssClient(BizHawkClient):
     previous_death_link: float
     ignore_next_death_link: bool
 
+    current_map: int
+    current_x: int
+    current_y: int
+    current_z: int
+    local_tracked_events: int
+    local_tracked_unrandomized_prog_locs: int
+    local_seen_pokemon: bytearray
+    local_caught_pokemon: bytearray
     notify_setup_complete: bool
 
     player_name: str | None
@@ -253,6 +310,13 @@ class PokemonHgssClient(BizHawkClient):
         self.previous_death_link = 0
         self.ignore_next_death_link = False
 
+        self.current_map = 0
+        self.current_x = -1
+        self.current_z = -1
+        self.local_tracked_events = 0
+        self.local_tracked_unrandomized_prog_locs = 0
+        self.local_seen_pokemon = bytearray(64)
+        self.local_caught_pokemon = bytearray(64)
         self.notify_setup_complete = False
 
         self.loaded_death_link = False
@@ -470,6 +534,11 @@ class PokemonHgssClient(BizHawkClient):
             vars_flags = VarsFlags(flags=flags_bytes, vars=vars_bytes, trainersanity_flags=read_result[2])
             pokedex = Pokedex(data=read_result[1])
 
+            local_tracked_events = 0
+            local_tracked_unrandomized_prog_locs = 0
+            local_seen_pokemon = bytearray(64)
+            local_caught_pokemon = bytearray(64)
+
             local_checked_locations = set()
             game_clear = vars_flags.is_checked(self.goal_check)
 
@@ -485,6 +554,20 @@ class PokemonHgssClient(BizHawkClient):
                     loc = locations[raw_id_to_const_name[k]]
                     if vars_flags.is_checked(loc.check):
                         local_checked_locations.add(k)
+
+            for k, event in enumerate(TRACKED_EVENTS):
+                if vars_flags.is_checked(event_checks[event]):
+                    local_tracked_events |= 1 << k
+
+            for k, loc in enumerate(TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS):
+                if vars_flags.is_checked(locations[loc].check):
+                    local_tracked_unrandomized_prog_locs |= 1 << k
+
+            for i in range(0, 493):
+                if pokedex.has_seen(i + 1):
+                    local_seen_pokemon[i >> 3] |= 1 << (i & 7)
+                if pokedex.has_caught(i + 1):
+                    local_caught_pokemon[i >> 3] |= 1 << (i & 7)
 
             if local_checked_locations != self.local_checked_locations:
                 await ctx.check_locations(local_checked_locations)
@@ -545,12 +628,78 @@ class PokemonHgssClient(BizHawkClient):
                 for v in to_print:
                     logger.info(v)
 
+            packages = []
+
+            if local_seen_pokemon != self.local_seen_pokemon:
+                seq = dex_bytearray_to_seq(local_seen_pokemon)
+                packages.append({
+                    "cmd": "Set",
+                    "key": f"pokemon_platinum_seen_pokemon_{ctx.team}_{ctx.slot}",
+                    "default": [],
+                    "want_reply": False,
+                    "operations": [{"operation": "replace", "value": seq}]
+                })
+
+            if local_caught_pokemon != self.local_caught_pokemon:
+                seq = dex_bytearray_to_seq(local_caught_pokemon)
+                packages.append({
+                    "cmd": "Set",
+                    "key": f"pokemon_platinum_caught_pokemon_{ctx.team}_{ctx.slot}",
+                    "default": [],
+                    "want_reply": False,
+                    "operations": [{"operation": "replace", "value": seq}]
+                })
+
+            if packages:
+                await ctx.send_msgs(packages)
+
+                self.local_seen_pokemon = local_seen_pokemon
+                self.local_caught_pokemon = local_caught_pokemon
+
+            if local_tracked_events != self.local_tracked_events:
+                await ctx.send_msgs([{
+                    "cmd": "Set",
+                    "key": f"pokemon_platinum_tracked_events_{ctx.team}_{ctx.slot}",
+                    "default": 0,
+                    "want_reply": False,
+                    "operations": [{"operation": "or", "value": local_tracked_events}]
+                }])
+                self.local_tracked_events = local_tracked_events
+
+            if local_tracked_unrandomized_prog_locs != self.local_tracked_unrandomized_prog_locs:
+                for chunk in range((len(TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS) + 31) // 32):
+                    await ctx.send_msgs([{
+                        "cmd": "Set",
+                        "key": f"pokemon_platinum_tracked_unrandomized_required_locations_{ctx.team}_{ctx.slot}_{chunk}",
+                        "default": 0,
+                        "want_reply": False,
+                        "operations": [{"operation": "or", "value": (local_tracked_unrandomized_prog_locs >> (chunk * 32)) & 0xFFFFFFFF}]
+                    }])
+                self.local_tracked_unrandomized_prog_locs = local_tracked_unrandomized_prog_locs
+
             if not ctx.finished_game and game_clear:
                 ctx.finished_game = True
                 await ctx.send_msgs([{
                     "cmd": "StatusUpdate",
                     "status": ClientStatus.CLIENT_GOAL,
                 }])
+
+            current_x, current_y, current_z, current_map, pos_lock = unpack_from("<3IHB", read_result[0])
+            if current_map not in TRACKED_HEIGHT_MAP_HEADERS:
+                current_y = 0
+            if pos_lock == 0 and (current_map != self.current_map or current_x != self.current_x or current_y != self.current_y or current_z != self.current_z):
+                self.current_map = current_map
+                self.current_x = current_x
+                self.current_y = current_y
+                self.current_z = current_z
+                message = [{"cmd": "Bounce", "slots": [ctx.slot],
+                           "data": {
+                               "mapNumber": current_map,
+                               "matrixX": current_x,
+                               "matrixZ": current_z,
+                               "playerY": current_y,
+                           }}]
+                await ctx.send_msgs(message)
 
         except bizhawk.RequestFailedError:
             pass
@@ -683,7 +832,7 @@ def parse_int_including_base(s: str) -> int:
         return int(s)
 
 def cmd_game_debug(self: "BizHawkClientCommandProcessor", *args) -> None:
-    """Game debug. Enter without arguments to print the usage."""
+    """Game debug. Enter without arguments to print the usage. DO NOT USE IF YOU DON'T KNOW WHAT IT DOES."""
     from CommonClient import logger
 
     handler: PokemonHgssClient = self.ctx.client_handler # type: ignore
