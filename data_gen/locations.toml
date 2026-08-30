@@ -429,7 +429,7 @@ check = 1066
 
 [overworld_r32_tm09]
 original_item = "tm09"
-label = "Route 32 - Item on Hill Before Pokémon Center"
+label = "Route 32 - Item on Hill Before Pokemon Center"
 id = 31
 table = "overworld"
 type = "overworld"
@@ -2853,7 +2853,7 @@ check = 938
 
 [hidden_r03_hyper_potion]
 original_item = "hyper_potion"
-label = "Route 3 - Hidden Item Behind Breakable Rocks by Pokémon Center"
+label = "Route 3 - Hidden Item Behind Breakable Rocks by Pokemon Center"
 id = 139
 table = "hidden"
 type = "hidden"
@@ -3853,7 +3853,7 @@ check = 841
 
 [hidden_d47_tinymushroom_2]
 original_item = "tinymushroom"
-label = "Safari Zone Gate - Hidden Item East of Pokémon Center"
+label = "Safari Zone Gate - Hidden Item East of Pokemon Center"
 id = 130
 table = "hidden"
 type = "hidden"
