@@ -3461,7 +3461,7 @@ check = 934
 
 [hidden_d11r0103_pearl]
 original_item = "pearl"
-label = "Seafoam Islands B2F - Hidden Item by Northeast Ice Patch"
+label = "Seafoam Islands B2F - Hidden Item by Northwest Ice Patch"
 id = 90
 table = "hidden"
 type = "hidden"
@@ -4280,7 +4280,7 @@ original_item = "volcano_badge"
 id = 51
 table = "base"
 type = "badge"
-label = "Cinnabar Gym - Badge from Blaine"
+label = "Seafoam Islands Cinnabar Gym - Badge from Blaine"
 check = 381
 
 [cinnabar_tm50]
@@ -4288,7 +4288,7 @@ original_item = "tm50"
 id = 52
 table = "base"
 type = "npc_gift"
-label = "Cinnabar Gym - Gift from Blaine"
+label = "Seafoam Islands Cinnabar Gym - Gift from Blaine"
 check = 381
 
 [pewter_badge_boulder]
@@ -4427,7 +4427,7 @@ original_item = "old_rod"
 id = 69
 table = "base"
 type = "rod"
-label = "Route 32 - Item from Fishing Guru in Pokemon Center"
+label = "Route 32 Pokemon Center - Item from Fishing Guru"
 check = 117
 
 [route_12_fishing_brother_house_super_rod]
@@ -4643,7 +4643,7 @@ check = 2962
 
 [violet_route_31_gate_house_vs_recorder]
 original_item = "vs__recorder"
-label = "Route 31 - Vs. Recorder from Lyra/Ethan at Violet Gate"
+label = "Route 31 Gate to Violet City - Vs. Recorder from Lyra/Ethan at Violet Gate"
 id = 94
 table = "base"
 type = "key_item"

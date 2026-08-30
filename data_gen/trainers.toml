@@ -2136,7 +2136,7 @@ party = [
 
 [leader_blaine_blaine]
 id = 259
-label = "Cinnabar Gym - Leader Blaine"
+label = "Seafoam Islands Cinnabar Gym - Leader Blaine"
 party = [
     { species = "magcargo", level = 54, num_moves = 4 },
     { species = "magmar", level = 54, num_moves = 4 },
@@ -5734,42 +5734,42 @@ party = [
 
 [super_nerd_cary]
 id = 689
-label = "Cinnabar Gym - Super Nerd Cary"
+label = "Seafoam Islands Cinnabar Gym - Super Nerd Cary"
 party = [
     { species = "torkoal", level = 53, num_moves = 4 },
 ]
 
 [super_nerd_waldo]
 id = 690
-label = "Cinnabar Gym - Super Nerd Waldo"
+label = "Seafoam Islands Cinnabar Gym - Super Nerd Waldo"
 party = [
     { species = "numel", level = 53, num_moves = 4 },
 ]
 
 [super_nerd_merle]
 id = 691
-label = "Cinnabar Gym - Super Nerd Merle"
+label = "Seafoam Islands Cinnabar Gym - Super Nerd Merle"
 party = [
     { species = "magcargo", level = 53, num_moves = 4 },
 ]
 
 [scientist_gs_lowell]
 id = 692
-label = "Cinnabar Gym - Scientist Lowell"
+label = "Seafoam Islands Cinnabar Gym - Scientist Lowell"
 party = [
     { species = "arcanine", level = 50, num_moves = 4 },
 ]
 
 [scientist_gs_linden]
 id = 693
-label = "Cinnabar Gym - Scientist Linden"
+label = "Seafoam Islands Cinnabar Gym - Scientist Linden"
 party = [
     { species = "magmar", level = 50, num_moves = 4 },
 ]
 
 [scientist_gs_daniel]
 id = 694
-label = "Cinnabar Gym - Scientist Daniel"
+label = "Seafoam Islands Cinnabar Gym - Scientist Daniel"
 party = [
     { species = "ninetales", level = 50, num_moves = 4 },
 ]
