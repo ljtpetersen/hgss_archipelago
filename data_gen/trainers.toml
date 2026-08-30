@@ -100,7 +100,7 @@ party = [
 
 [team_rocket_grunt]
 id = 12
-label = "SLOWPOKE Well B1F - Team Rocket Grunt"
+label = "Slowpoke Well B1F - Team Rocket Grunt"
 party = [
     { species = "rattata", level = 7 },
     { species = "zubat", level = 9 },
@@ -109,7 +109,7 @@ party = [
 
 [team_rocket_f_grunt]
 id = 13
-label = "SLOWPOKE Well B1F - Team Rocket Grunt F"
+label = "Slowpoke Well B1F - Team Rocket Grunt F"
 party = [
     { species = "zubat", level = 9 },
     { species = "ekans", level = 11 },
@@ -823,7 +823,7 @@ party = [
 
 [team_rocket_grunt_2]
 id = 101
-label = "SLOWPOKE Well B1F - Team Rocket Grunt 2"
+label = "Slowpoke Well B1F - Team Rocket Grunt 2"
 party = [
     { species = "rattata", level = 9 },
     { species = "rattata", level = 9 },
