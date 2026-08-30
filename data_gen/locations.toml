@@ -4280,7 +4280,7 @@ original_item = "volcano_badge"
 id = 51
 table = "base"
 type = "badge"
-label = "Seafoam Gym - Badge from Blaine"
+label = "Cinnabar Gym - Badge from Blaine"
 check = 381
 
 [cinnabar_tm50]
@@ -4288,7 +4288,7 @@ original_item = "tm50"
 id = 52
 table = "base"
 type = "npc_gift"
-label = "Seafoam Gym - Gift from Blaine"
+label = "Cinnabar Gym - Gift from Blaine"
 check = 381
 
 [pewter_badge_boulder]
