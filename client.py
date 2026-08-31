@@ -684,7 +684,18 @@ class PokemonHgssClient(BizHawkClient):
                     "status": ClientStatus.CLIENT_GOAL,
                 }])
 
-            current_x, current_y, current_z, current_map, pos_lock = unpack_from("<3IHB", read_result[0])
+            read_result = await bizhawk.guarded_read(
+                ctx.bizhawk_ctx,
+                [
+                    (self.ap_struct_address + version_data.player_pos_offset, 16, "ARM9 System Bus"),
+                ],
+                [guards["AP STRUCT VALID"]]
+            )
+
+            if read_result is None:
+                return
+
+            current_x, current_y, current_z, current_map, pos_lock = unpack_from("<3iHB", read_result[0])
             if current_map not in TRACKED_HEIGHT_MAP_HEADERS:
                 current_y = 0
             if pos_lock == 0 and (current_map != self.current_map or current_x != self.current_x or current_y != self.current_y or current_z != self.current_z):
