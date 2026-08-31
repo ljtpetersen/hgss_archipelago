@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Event, position, species tracking to the client.
 ### Fixed
 * Removed references to Pokémon Platinum in a few places.
+* Night fishing encounters are now properly handled.
 
 ## [0.0.5] - 2026-08-30
 ### Added
