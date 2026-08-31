@@ -47,3 +47,6 @@ event_ruin_mistys_date = { id = 0x4088, value = 2, op = "ge" }
 event_shiny_gyarados = 0xC9
 event_talk_plant_manager = 0x120
 event_talk_to_kurt = 0x77
+event_defeated_rival_mount_moon = 0x25C
+event_get_hm08 = 0x185
+event_hear_about_missing_doll = 0x119

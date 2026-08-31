@@ -79,6 +79,9 @@ TRACKED_EVENTS = [
     "event_shiny_gyarados",
     "event_talk_plant_manager",
     "event_talk_to_kurt",
+    "event_defeated_rival_mount_moon",
+    "event_get_hm08",
+    "event_hear_about_missing_doll",
 ]
 TRACKED_HEIGHT_MAP_HEADERS = frozenset()
 TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS = maximal_required_locations
@@ -363,7 +366,7 @@ class PokemonHgssClient(BizHawkClient):
             rom_name_bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(0, 12, "ROM")]))[0]
             rom_name = bytes([byte for byte in rom_name_bytes if byte != 0]).decode("ascii")
             if rom_name == "POKEMON HG" or rom_name == "POKEMON SS":
-                logger.info("ERROR: You appear to be running an unpatched version of Pokémon Platinum. "
+                logger.info("ERROR: You appear to be running an unpatched version of Pokémon HeartGold or SoulSilver. "
                             "You need to generate a patch file and use it to create a patched ROM.")
                 remove_commands()
                 return False
@@ -634,7 +637,7 @@ class PokemonHgssClient(BizHawkClient):
                 seq = dex_bytearray_to_seq(local_seen_pokemon)
                 packages.append({
                     "cmd": "Set",
-                    "key": f"pokemon_platinum_seen_pokemon_{ctx.team}_{ctx.slot}",
+                    "key": f"pokemon_hgss_seen_pokemon_{ctx.team}_{ctx.slot}",
                     "default": [],
                     "want_reply": False,
                     "operations": [{"operation": "replace", "value": seq}]
@@ -644,7 +647,7 @@ class PokemonHgssClient(BizHawkClient):
                 seq = dex_bytearray_to_seq(local_caught_pokemon)
                 packages.append({
                     "cmd": "Set",
-                    "key": f"pokemon_platinum_caught_pokemon_{ctx.team}_{ctx.slot}",
+                    "key": f"pokemon_hgss_caught_pokemon_{ctx.team}_{ctx.slot}",
                     "default": [],
                     "want_reply": False,
                     "operations": [{"operation": "replace", "value": seq}]
@@ -657,20 +660,21 @@ class PokemonHgssClient(BizHawkClient):
                 self.local_caught_pokemon = local_caught_pokemon
 
             if local_tracked_events != self.local_tracked_events:
-                await ctx.send_msgs([{
-                    "cmd": "Set",
-                    "key": f"pokemon_platinum_tracked_events_{ctx.team}_{ctx.slot}",
-                    "default": 0,
-                    "want_reply": False,
-                    "operations": [{"operation": "or", "value": local_tracked_events}]
-                }])
+                for chunk in range((len(TRACKED_EVENTS) + 31) // 32):
+                    await ctx.send_msgs([{
+                        "cmd": "Set",
+                        "key": f"pokemon_hgss_tracked_events_{ctx.team}_{ctx.slot}_{chunk}",
+                        "default": 0,
+                        "want_reply": False,
+                        "operations": [{"operation": "or", "value": (local_tracked_events >> (chunk * 32)) & 0xFFFFFFFF}]
+                    }])
                 self.local_tracked_events = local_tracked_events
 
             if local_tracked_unrandomized_prog_locs != self.local_tracked_unrandomized_prog_locs:
                 for chunk in range((len(TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS) + 31) // 32):
                     await ctx.send_msgs([{
                         "cmd": "Set",
-                        "key": f"pokemon_platinum_tracked_unrandomized_required_locations_{ctx.team}_{ctx.slot}_{chunk}",
+                        "key": f"pokemon_hgss_tracked_unrandomized_required_locations_{ctx.team}_{ctx.slot}_{chunk}",
                         "default": 0,
                         "want_reply": False,
                         "operations": [{"operation": "or", "value": (local_tracked_unrandomized_prog_locs >> (chunk * 32)) & 0xFFFFFFFF}]

@@ -43,7 +43,7 @@ class PokemonHgssWebWorld(WebWorld):
 
     setup_en = Tutorial(
         'Multiworld Setup Guide',
-        'A guide to playing Pokémon Platinum with Archipelago',
+        'A guide to playing Pokémon HeartGold and SoulSilver with Archipelago',
         'English',
         'setup_en.md',
         'setup/en',
