@@ -340,7 +340,7 @@ party = [
 
 [guitarist_clyde]
 id = 41
-label = "S.S. Aqua 1F Northeast Rooms - Guitarist Clyde"
+label = "S.S. Aqua (Westbound) 1F Northeast Rooms - Guitarist Clyde"
 party = [
     { species = "electabuzz", level = 42 },
 ]
@@ -642,7 +642,7 @@ party = [
 
 [bug_catcher_ken]
 id = 79
-label = "S.S. Aqua 1F Northeast Rooms - Bug Catcher Ken"
+label = "S.S. Aqua (Westbound) 1F Northeast Rooms - Bug Catcher Ken"
 party = [
     { species = "ariados", level = 39 },
     { species = "pinsir", level = 40 },
@@ -1048,7 +1048,7 @@ party = [
 
 [fisherman_jonah]
 id = 128
-label = "S.S. Aqua B1F - Fisherman Jonah"
+label = "S.S. Aqua (Eastbound) B1F - Fisherman Jonah"
 party = [
     { species = "shellder", level = 33 },
     { species = "octillery", level = 37 },
@@ -1088,7 +1088,7 @@ party = [
 
 [poke_maniac_morgan]
 id = 133
-label = "S.S. Aqua 1F Southwest Rooms - Poke Maniac Morgan"
+label = "S.S. Aqua (Westbound) 1F Southwest Rooms - Poke Maniac Morgan"
 party = [
     { species = "rhyhorn", level = 39 },
     { species = "rhydon", level = 39 },
@@ -1701,7 +1701,7 @@ party = [
 
 [beauty_cassie]
 id = 209
-label = "S.S. Aqua 1F Northeast Rooms - Beauty Cassie"
+label = "S.S. Aqua (Eastbound) 1F Northeast Rooms - Beauty Cassie"
 party = [
     { species = "vileplume", level = 36 },
     { species = "butterfree", level = 42 },
@@ -1877,7 +1877,7 @@ party = [
 
 [gentleman_edward]
 id = 231
-label = "S.S. Aqua 1F Southeast Rooms - Gentleman Edward"
+label = "S.S. Aqua (Eastbound) 1F Southeast Rooms - Gentleman Edward"
 party = [
     { species = "persian", level = 41 },
 ]
@@ -1918,7 +1918,7 @@ party = [
 
 [ace_trainer_m_shaye]
 id = 236
-label = "S.S. Aqua 1F Southwest Rooms - Ace Trainer Shaye"
+label = "S.S. Aqua (Eastbound) 1F Southwest Rooms - Ace Trainer Shaye"
 party = [
     { species = "jolteon", level = 43, num_moves = 4 },
     { species = "tangela", level = 43, num_moves = 4 },
@@ -1927,7 +1927,7 @@ party = [
 
 [ace_trainer_f_carol]
 id = 237
-label = "S.S. Aqua 1F Southwest Rooms - Ace Trainer Carol"
+label = "S.S. Aqua (Eastbound) 1F Southwest Rooms - Ace Trainer Carol"
 party = [
     { species = "electrode", level = 43, num_moves = 4 },
     { species = "starmie", level = 43, num_moves = 4 },
@@ -1953,14 +1953,14 @@ party = [
 
 [sailor_garrett]
 id = 240
-label = "S.S. Aqua B1F - Sailor Garrett"
+label = "S.S. Aqua (Eastbound) B1F - Sailor Garrett"
 party = [
     { species = "kingler", level = 42 },
 ]
 
 [sailor_kenneth]
 id = 241
-label = "S.S. Aqua B1F - Sailor Kenneth"
+label = "S.S. Aqua (Westbound) B1F - Sailor Kenneth"
 party = [
     { species = "machop", level = 36 },
     { species = "machop", level = 36 },
@@ -2373,7 +2373,7 @@ party = [
 
 [burglar_corey]
 id = 284
-label = "S.S. Aqua 1F Southeast Rooms - Burglar Corey"
+label = "S.S. Aqua (Westbound) 1F Southeast Rooms - Burglar Corey"
 party = [
     { species = "koffing", level = 33 },
     { species = "magmar", level = 36 },
@@ -2844,7 +2844,7 @@ party = [
 
 [black_belt_wai]
 id = 339
-label = "S.S. Aqua B1F - Black Belt Wai"
+label = "S.S. Aqua (Eastbound) B1F - Black Belt Wai"
 party = [
     { species = "machoke", level = 38 },
     { species = "machoke", level = 40 },
@@ -2946,7 +2946,7 @@ party = [
 
 [pokefan_georgia]
 id = 352
-label = "S.S. Aqua 1F Northwest Rooms - Pokefan Georgia"
+label = "S.S. Aqua (Westbound) 1F Northwest Rooms - Pokefan Georgia"
 party = [
     { species = "sentret", level = 31 },
     { species = "sentret", level = 31 },
@@ -3070,7 +3070,7 @@ party = [
 
 [super_nerd_shawn]
 id = 367
-label = "S.S. Aqua 1F Northwest Rooms - Super Nerd Shawn"
+label = "S.S. Aqua (Eastbound) 1F Northwest Rooms - Super Nerd Shawn"
 party = [
     { species = "magnemite", level = 39 },
     { species = "muk", level = 41 },
@@ -3517,7 +3517,7 @@ party = [
 
 [psychic_m_rodney]
 id = 422
-label = "S.S. Aqua 1F Northwest Rooms - Psychic Rodney"
+label = "S.S. Aqua (Eastbound) 1F Northwest Rooms - Psychic Rodney"
 party = [
     { species = "chingling", level = 37 },
     { species = "hypno", level = 41 },
@@ -3525,7 +3525,7 @@ party = [
 
 [pokefan_m_jeremy]
 id = 423
-label = "S.S. Aqua 1F Northwest Rooms - Pokefan Jeremy"
+label = "S.S. Aqua (Westbound) 1F Northwest Rooms - Pokefan Jeremy"
 party = [
     { species = "meowth", level = 36 },
     { species = "meowth", level = 36 },
@@ -3557,7 +3557,7 @@ party = [
 
 [teacher_shirley]
 id = 427
-label = "S.S. Aqua B1F - Teacher Shirley"
+label = "S.S. Aqua (Westbound) B1F - Teacher Shirley"
 party = [
     { species = "chatot", level = 43 },
     { species = "jigglypuff", level = 43 },
@@ -3565,7 +3565,7 @@ party = [
 
 [school_kid_m_nate]
 id = 428
-label = "S.S. Aqua B1F - School Kid Nate"
+label = "S.S. Aqua (Westbound) B1F - School Kid Nate"
 party = [
     { species = "ledian", level = 40 },
     { species = "exeggutor", level = 40 },
@@ -3573,7 +3573,7 @@ party = [
 
 [school_kid_m_ricky]
 id = 429
-label = "S.S. Aqua B1F - School Kid Ricky"
+label = "S.S. Aqua (Westbound) B1F - School Kid Ricky"
 party = [
     { species = "aipom", level = 40 },
     { species = "ditto", level = 40 },

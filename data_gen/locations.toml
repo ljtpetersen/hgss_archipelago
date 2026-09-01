@@ -5083,7 +5083,7 @@ check = 327
 
 [ss_aqua_metal_coat]
 original_item = "metal_coat"
-label = "S.S. Aqua - Metal Coat from Grandpa"
+label = "S.S. Aqua 1F Northwest Rooms - Metal Coat from Grandpa"
 id = 145
 table = "base"
 type = "npc_gift"
@@ -5091,7 +5091,7 @@ check = 2972
 
 [ss_aqua_nugget]
 original_item = "nugget"
-label = "S.S. Aqua - Nugget from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Nugget from Captain"
 id = 146
 table = "base"
 type = "npc_gift"
@@ -5103,7 +5103,7 @@ op = "ge"
 
 [ss_aqua_plate_flame]
 original_item = "flame_plate"
-label = "S.S. Aqua - Flame Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Flame Plate from Captain"
 id = 147
 table = "base"
 type = "npc_gift"
@@ -5115,7 +5115,7 @@ op = "ge"
 
 [ss_aqua_plate_splash]
 original_item = "splash_plate"
-label = "S.S. Aqua - Splash Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Splash Plate from Captain"
 id = 148
 table = "base"
 type = "npc_gift"
@@ -5127,7 +5127,7 @@ op = "ge"
 
 [ss_aqua_plate_zap]
 original_item = "zap_plate"
-label = "S.S. Aqua - Zap Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Zap Plate from Captain"
 id = 149
 table = "base"
 type = "npc_gift"
@@ -5139,7 +5139,7 @@ op = "ge"
 
 [ss_aqua_plate_meadow]
 original_item = "meadow_plate"
-label = "S.S. Aqua - Meadow Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Meadow Plate from Captain"
 id = 150
 table = "base"
 type = "npc_gift"
@@ -5151,7 +5151,7 @@ op = "ge"
 
 [ss_aqua_plate_icicle]
 original_item = "icicle_plate"
-label = "S.S. Aqua - Icicle Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Icicle Plate from Captain"
 id = 151
 table = "base"
 type = "npc_gift"
@@ -5163,7 +5163,7 @@ op = "ge"
 
 [ss_aqua_plate_fist]
 original_item = "fist_plate"
-label = "S.S. Aqua - Fist Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Fist Plate from Captain"
 id = 152
 table = "base"
 type = "npc_gift"
@@ -5175,7 +5175,7 @@ op = "ge"
 
 [ss_aqua_plate_toxic]
 original_item = "toxic_plate"
-label = "S.S. Aqua - Toxic Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Toxic Plate from Captain"
 id = 153
 table = "base"
 type = "npc_gift"
@@ -5187,7 +5187,7 @@ op = "ge"
 
 [ss_aqua_plate_earth]
 original_item = "earth_plate"
-label = "S.S. Aqua - Earth Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Earth Plate from Captain"
 id = 154
 table = "base"
 type = "npc_gift"
@@ -5199,7 +5199,7 @@ op = "ge"
 
 [ss_aqua_plate_sky]
 original_item = "sky_plate"
-label = "S.S. Aqua - Sky Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Sky Plate from Captain"
 id = 155
 table = "base"
 type = "npc_gift"
@@ -5211,7 +5211,7 @@ op = "ge"
 
 [ss_aqua_plate_mind]
 original_item = "mind_plate"
-label = "S.S. Aqua - Mind Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Mind Plate from Captain"
 id = 156
 table = "base"
 type = "npc_gift"
@@ -5223,7 +5223,7 @@ op = "ge"
 
 [ss_aqua_plate_insect]
 original_item = "insect_plate"
-label = "S.S. Aqua - Insect Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Insect Plate from Captain"
 id = 157
 table = "base"
 type = "npc_gift"
@@ -5235,7 +5235,7 @@ op = "ge"
 
 [ss_aqua_plate_stone]
 original_item = "stone_plate"
-label = "S.S. Aqua - Stone Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Stone Plate from Captain"
 id = 158
 table = "base"
 type = "npc_gift"
@@ -5247,7 +5247,7 @@ op = "ge"
 
 [ss_aqua_plate_spooky]
 original_item = "spooky_plate"
-label = "S.S. Aqua - Spooky Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Spooky Plate from Captain"
 id = 159
 table = "base"
 type = "npc_gift"
@@ -5259,7 +5259,7 @@ op = "ge"
 
 [ss_aqua_plate_draco]
 original_item = "draco_plate"
-label = "S.S. Aqua - Draco Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Draco Plate from Captain"
 id = 160
 table = "base"
 type = "npc_gift"
@@ -5271,7 +5271,7 @@ op = "ge"
 
 [ss_aqua_plate_dread]
 original_item = "dread_plate"
-label = "S.S. Aqua - Dread Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Dread Plate from Captain"
 id = 161
 table = "base"
 type = "npc_gift"
@@ -5283,7 +5283,7 @@ op = "ge"
 
 [ss_aqua_plate_iron]
 original_item = "iron_plate"
-label = "S.S. Aqua - Iron Plate from Captain"
+label = "S.S. Aqua 1F Captain's Cabin - Iron Plate from Captain"
 id = 162
 table = "base"
 type = "npc_gift"
