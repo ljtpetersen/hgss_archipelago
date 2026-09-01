@@ -4069,7 +4069,7 @@ check = 2950
 
 [fly_map_battle_frontier]
 original_item = "fly_map_battle_frontier"
-label = "Battle Frontier Gatehouse/Viridian Trainer House B1F - First Visit"
+label = "Battle Frontier Gatehouse or Viridian Trainer House B1F - First Visit"
 id = 25
 table = "base"
 type = "fly_location_johto"
