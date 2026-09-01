@@ -4643,7 +4643,7 @@ check = 2962
 
 [violet_route_31_gate_house_vs_recorder]
 original_item = "vs__recorder"
-label = "Route 31 Gate to Violet City - Vs. Recorder from Lyra/Ethan at Violet Gate"
+label = "Route 31 Gate to Violet City - Vs. Recorder from Lyra/Ethan"
 id = 94
 table = "base"
 type = "key_item"
