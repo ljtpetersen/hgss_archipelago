@@ -4479,7 +4479,7 @@ original_item = "dowsing_mchn"
 id = 75
 table = "base"
 type = "key_item"
-label = "Ecruteak Dowsing MCHN House - Gift"
+label = "Ecruteak Dowsing Machine House - Gift"
 check = 163
 
 [new_bark_elms_lab_1f_potions]
