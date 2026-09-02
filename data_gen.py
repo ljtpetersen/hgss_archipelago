@@ -214,6 +214,7 @@ class MiscData:
     nonreusable_evo_items: Sequence[str]
     types: Sequence[str]
     tm_moves: Sequence[str]
+    world_events: Sequence[str]
 
 @dataclass(frozen=True)
 class PreEvolution:
@@ -680,7 +681,7 @@ class ParserState:
         return ret
 
     def get_item_set(self) -> Set[str]:
-        return self.items.keys() | {event for region in self.regions.values() for event in region.events} | {f"mon_{spec}" for spec in self.species}
+        return self.items.keys() | {event for region in self.regions.values() for event in region.events} | {f"mon_{spec}" for spec in self.species} | set(self.misc_data.world_events)
 
     def item_name_map(self, name: str) -> str:
         if name in self.items:

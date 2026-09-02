@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 * Removed references to Pokémon Platinum in a few places.
 * Night fishing encounters are now properly handled.
+* HM accessibility is now properly checked.
 
 ## [0.0.5] - 2026-08-30
 ### Added
