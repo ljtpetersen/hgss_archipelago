@@ -622,10 +622,15 @@ class ParserState:
             rule.add_dependent_items(item_conds)
         for rule in self.rules.events.values():
             rule.add_dependent_items(item_conds)
+
         item_conds.add_all(self.misc_data.hm.values())
         item_conds.add_all(self.misc_data.hm_badge.values())
+        item_conds.add_all(k for k, v in self.items.items() if "badges" in v.group)
+
+        # TODO: refine itemconditions for these
         item_conds.add_all(self.misc_data.reusable_evo_items)
         item_conds.add_all(self.misc_data.nonreusable_evo_items)
+
         item_conds.restrict(self.items.keys())
         return item_conds
 
