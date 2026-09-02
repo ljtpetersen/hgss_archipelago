@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Removed references to Pokémon Platinum in a few places.
 * Night fishing encounters are now properly handled.
 * HM accessibility is now properly checked.
+* NPCs in Goldenrod Tunnel B1F are now accessible during the Team Rocket Radio Tower Event.
+* Trainers in S.S. Aqua that originally disappeared after the first voyage now remain.
 
 ## [0.0.5] - 2026-08-30
 ### Added
