@@ -216,3 +216,15 @@ tm_moves = [
     "waterfall",
     "rock_climb",
 ]
+
+world_events = [
+    "use_cut",
+    "use_fly",
+    "use_surf",
+    "use_strength",
+    "use_whirlpool",
+    "use_rock_smash",
+    "use_waterfall",
+    "use_rock_climb",
+    "use_flash",
+]

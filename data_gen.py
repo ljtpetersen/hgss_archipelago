@@ -214,6 +214,7 @@ class MiscData:
     nonreusable_evo_items: Sequence[str]
     types: Sequence[str]
     tm_moves: Sequence[str]
+    world_events: Sequence[str]
 
 @dataclass(frozen=True)
 class PreEvolution:
@@ -456,7 +457,7 @@ class ParserState:
                     assert slot.accessibility != {"morning", "day", "night"}, "accessibility is not morning day night"
                     assert slot.species in self.species, f"{slot.species} is a species"
                     for acc in slot.accessibility:
-                        assert acc in {"morning", "day", "night", "hoenn", "sinnoh", "surf", "old_rod", "good_rod", "super_rod", "surf_swarms", "fishing_swarms", "land_swarms", "fishing_night"}, f"{acc} is an encounter slot accessibility"
+                        assert acc in {"morning", "day", "night", "hoenn", "sinnoh", "surf", "old_rod", "good_rod", "super_rod", "surf_swarms", "fishing_swarms", "land_swarms", "fishing_night", "good_rod_notnight", "super_rod_notnight"}, f"{acc} is an encounter slot accessibility"
 
         location_labels = set()
         for loc in self.locations.values():
@@ -680,7 +681,7 @@ class ParserState:
         return ret
 
     def get_item_set(self) -> Set[str]:
-        return self.items.keys() | {event for region in self.regions.values() for event in region.events} | {f"mon_{spec}" for spec in self.species}
+        return self.items.keys() | {event for region in self.regions.values() for event in region.events} | {f"mon_{spec}" for spec in self.species} | set(self.misc_data.world_events)
 
     def item_name_map(self, name: str) -> str:
         if name in self.items:

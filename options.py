@@ -382,7 +382,18 @@ class InLogicEncounters(OptionSet):
 
     def methods(self) -> Set[str]:
         if self.cached_methods is None:
-            self.cached_methods = {v for s in self.value for v in ENCOUNTER_METHOD_MAP.get(s, {s})} | {"surf"}
+            ret = {"surf"}
+            if "time" in self:
+                ret |= {"morning", "day", "night"}
+                if "rods" in self:
+                    ret |= {"fishing_night", "good_rod_notnight", "super_rod_notnight"}
+            if "rods" in self:
+                ret |= {"good_rod", "super_rod", "old_rod"}
+            if "rock_smash" in self:
+                ret.add("rock_smash")
+            if "sounds" in self:
+                ret |= {"hoenn", "sinnoh"}
+            self.cached_methods = frozenset(ret)
         return self.cached_methods
 
 
