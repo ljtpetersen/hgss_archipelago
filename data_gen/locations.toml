@@ -4983,7 +4983,7 @@ check = 305
 
 [lake_of_rage_ether_fishing_guru_gift]
 original_item = "ether"
-label = "Lake of Rage - Item from Fishing Guru"
+label = "Lake of Rage - Item from Fishing Guru for showing Magikarp"
 id = 134
 table = "base"
 type = "npc_gift"
@@ -5358,7 +5358,7 @@ value = 5
 
 [route_14_lucky_punch]
 original_item = "lucky_punch"
-label = "Route 14 - Item from Woman in Grass Patch after Showing Chansey"
+label = "Route 14 - Item from Woman in Grass Patch for Showing Chansey"
 id = 169
 table = "base"
 type = "npc_gift"
