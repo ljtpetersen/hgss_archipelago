@@ -26,6 +26,7 @@ from .trainerdata import patch_trainer_parties
 from ..items import raw_id_to_const_name
 from ..locations import location_types
 from ..options import TMHMCompatibility
+from ..version import VERSION_INT as WORLD_VERSION
 
 from ..apnds.rom import Rom
 
@@ -40,9 +41,6 @@ from ..data.species import species, evolutions, other_learnsets, PokemonType
 
 if TYPE_CHECKING:
     from .. import PokemonHgssWorld
-
-WORLD_VERSION = "0.0.5"
-WORLD_VERSION_NUM = sum(int(v) << s for v, s in zip(WORLD_VERSION.split('.'), (16, 8, 0)))
 
 HEARTGOLD_US_HASH = "258cea3a62ac0d6eb04b5a0fd764d788"
 SOULSILVER_US_HASH = "8a6c8888bed9e1dce952f840351b73f2"
@@ -697,7 +695,7 @@ def generate_output(world: "PokemonHgssWorld", output_directory: str, patch: Pok
     if move_patches:
         patch.write_file("move_patches.json", json.dumps(move_patches).encode('utf-8'))
 
-    patch.write_file("world_version.bin", WORLD_VERSION_NUM.to_bytes(4, 'little'))
+    patch.write_file("world_version.bin", WORLD_VERSION.to_bytes(4, 'little'))
 
     out_file_name = world.multiworld.get_out_file_name_base(world.player)
     patch.write(os.path.join(output_directory, f"{out_file_name}{patch.patch_file_ending}"))

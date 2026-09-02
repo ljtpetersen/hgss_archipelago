@@ -6,7 +6,7 @@
 from collections import defaultdict
 from collections.abc import Mapping, MutableMapping, MutableSequence, MutableSet, Sequence
 from typing import Any, ClassVar, Optional, Tuple
-from BaseClasses import CollectionState, ItemClassification, MultiWorld, Tutorial
+from BaseClasses import CollectionState, Item, ItemClassification, MultiWorld, Tutorial
 import settings
 import pkgutil
 from worlds.AutoWorld import WebWorld, World
@@ -21,6 +21,7 @@ from .regions import create_regions
 from .rom import generate_output, PokemonHeartgoldPatch, PokemonSoulsilverPatch
 from .rules import set_rules, verify_hm_accessibility
 from .species import add_virt_specs, encounter_slot_label, fill_species, randomize_starters, randomize_trainer_parties_and_encounters
+from .version import VERSION as WORLD_VERSION
 
 class PokemonHgssSettings(settings.Group):
     class HeartgoldRomFile(settings.UserFilePath):
@@ -42,7 +43,7 @@ class PokemonHgssWebWorld(WebWorld):
 
     setup_en = Tutorial(
         'Multiworld Setup Guide',
-        'A guide to playing Pokémon Platinum with Archipelago',
+        'A guide to playing Pokémon HeartGold and SoulSilver with Archipelago',
         'English',
         'setup_en.md',
         'setup/en',
@@ -246,7 +247,7 @@ class PokemonHgssWorld(World):
         ret["generated_encounters"].update({f"{region}_{table}_{i}":speciesdata.species[spec].id for (region, table, i), spec in self.ool_encounters.items()})
         ret["generated_trainer_parties"] = {f"{tr}_{i}":speciesdata.species[spec].id for (tr, i), spec in self.generated_trainer_parties.items()}
         ret["added_hm_compatibility"] = {spec:[hm.name.lower() for hm in compat] for spec, compat in self.added_hm_compatibility.items()}
-        ret["world_version"] = "0.0.5"
+        ret["world_version"] = WORLD_VERSION
         pfx = "hg" if self.options.version == Version.option_heartgold else "ss"
         ret["possible_ap_struct_addresses"] = [v for k, v in AP_STRUCT_ADDRESS.items() if k.startswith(pfx)]
         return ret
@@ -313,3 +314,23 @@ class PokemonHgssWorld(World):
                      for mon, locations in encounters_per_pokemon.items()]
             lines.sort()
             spoiler_handle.writelines(lines)
+
+    def collect(self, state: CollectionState, item: Item) -> bool:
+        changed = super().collect(state, item)
+        if not changed:
+            return False
+        item_name = item.name
+        if item_name.startswith("mon_"):
+            state.prog_items[self.player].update(f"use_{hm.name.lower()}" for hm in speciesdata.species[item_name[4:]].hms)
+            state.prog_items[self.player].update(f"use_{hm.name.lower()}" for hm in self.added_hm_compatibility.get(item_name[4:], []))
+        return True
+
+    def remove(self, state: CollectionState, item: Item) -> bool:
+        changed = super().remove(state, item)
+        if not changed:
+            return False
+        item_name = item.name
+        if item_name.startswith("mon_"):
+            state.prog_items[self.player].subtract(f"use_{hm.name.lower()}" for hm in speciesdata.species[item_name[4:]].hms)
+            state.prog_items[self.player].subtract(f"use_{hm.name.lower()}" for hm in self.added_hm_compatibility.get(item_name[4:], []))
+        return True

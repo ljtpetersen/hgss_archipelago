@@ -5,12 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.6] - TBD
+## [0.0.7] - TBD
 ### Changed
 * Standardized Fly Region item names with FireRed/LeafGreen.
 * Improved clarity of Fly Region location names.
+
+## [0.0.6] - 2026-09-02
+### Added
+* Event, position, species tracking to the client.
 ### Fixed
 * Fixed a part of the setup guide mentioning Platinum instead of HeartGold/SoulSilver.
+* Removed references to Pokémon Platinum in a few places.
+* Night fishing encounters are now properly handled.
+* HM accessibility is now properly checked.
+* NPCs in Goldenrod Tunnel B1F are now accessible during the Team Rocket Radio Tower Event.
+* Trainers in S.S. Aqua that originally disappeared after the first voyage now remain.
 
 ## [0.0.5] - 2026-08-30
 ### Added
@@ -56,6 +65,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - 2026-08-23
 The first release of this project.
 
+[0.0.6]: https://github.com/ljtpetersen/apnds/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/ljtpetersen/apnds/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/ljtpetersen/apnds/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/ljtpetersen/apnds/compare/v0.0.2...v0.0.3
