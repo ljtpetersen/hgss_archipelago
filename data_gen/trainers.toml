@@ -5828,7 +5828,7 @@ party = [
 
 [champion_lance_2]
 id = 701
-label = "Pokemon League - Champion Lance (Rematch)"
+label = "Pokemon League - Champion Lance Rematch"
 party = [
     { species = "salamence", level = 72, num_moves = 4 },
     { species = "gyarados", level = 68, num_moves = 4 },
@@ -5840,7 +5840,7 @@ party = [
 
 [elite_four_will_will_2]
 id = 702
-label = "Pokemon League - Elite Four Will (Rematch)"
+label = "Pokemon League - Elite Four Will Rematch"
 party = [
     { species = "bronzong", level = 58, num_moves = 4 },
     { species = "jynx", level = 60, num_moves = 4 },
@@ -5852,7 +5852,7 @@ party = [
 
 [elite_four_koga_koga_2]
 id = 703
-label = "Pokemon League - Elite Four Koga (Rematch)"
+label = "Pokemon League - Elite Four Koga Rematch"
 party = [
     { species = "skuntank", level = 61, num_moves = 4 },
     { species = "venomoth", level = 63, num_moves = 4 },
@@ -5864,7 +5864,7 @@ party = [
 
 [elite_four_bruno_bruno_2]
 id = 704
-label = "Pokemon League - Elite Four Bruno (Rematch)"
+label = "Pokemon League - Elite Four Bruno Rematch"
 party = [
     { species = "hitmontop", level = 62, num_moves = 4 },
     { species = "hitmonlee", level = 61, num_moves = 4 },
@@ -5876,7 +5876,7 @@ party = [
 
 [elite_four_karen_karen_2]
 id = 705
-label = "Pokemon League - Elite Four Karen (Rematch)"
+label = "Pokemon League - Elite Four Karen Rematch"
 party = [
     { species = "weavile", level = 62, num_moves = 4 },
     { species = "spiritomb", level = 62, num_moves = 4 },
