@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 * Event, position, species tracking to the client.
 ### Fixed
+* Fixed a part of the setup guide mentioning Platinum instead of HeartGold/SoulSilver.
 * Removed references to Pokémon Platinum in a few places.
 * Night fishing encounters are now properly handled.
 * HM accessibility is now properly checked.
