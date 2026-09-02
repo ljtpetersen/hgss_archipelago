@@ -5,3 +5,48 @@
 
 clear_pokemon_league = 0x964
 defeat_red = { id = 0x40FD, value = 1 }
+event_beat_sprout_tower = 118
+event_burned_tower_disperse_legendary_dogs = { id = 0x40A1, value = 1 }
+event_cerulean_meet_kanto_grunt = { id = 0x411C, value = 1, op = "ge" }
+event_cinnabar_island_blue_return_viridian = 0x2F8
+event_clear_mahogany_hideout = 0xCA
+event_clear_rocket_tower = 0xC6
+event_clear_slowpoke_well = 0x7B
+event_cure_amphy = { id = 0x40A5, value = 2, op = "ge" }
+event_cure_miltank = 0xAA
+event_defeat_blaine = 0x17D
+event_defeat_blue = 0x17E
+event_defeat_brock = 0x17F
+event_defeat_bugsy = 0x7F
+event_defeat_chuck = 0xBA
+event_defeat_clair = 0xD1
+event_defeat_erika = 0x124
+event_defeat_falkner = 0x73
+event_defeat_janine = 0x12D
+event_defeat_jasmine = 0xC2
+event_defeat_lance_clair_dragons_den = { id = 0x40FC, value = 2, op = "ge" }
+event_defeat_lt_surge = 0x181
+event_defeat_misty = 0x180
+event_defeat_morty = 0xA6
+event_defeat_pryce = 0xD2
+event_defeat_sabrina = 0x182
+event_defeat_whitney = 0x85
+event_ecruteak_dance_theater_defeat_team_rocket = 0x23A
+event_elms_lab_get_master_ball = 0xB8F
+event_farfetchd_rescue = 0x80
+event_get_kenya = { id = 0x4114, value = 1, op = "ge" }
+event_get_mystery_egg = { id = 0x4107, value = 1, op = "ge" }
+event_get_togepi_egg = 0x70
+event_give_kenya = { id = 0x4114, value = 2, op = "ge" }
+event_meet_ho_oh = 0x108
+event_meet_lugia = 0x109
+event_radio_quiz = 138
+event_restore_power = 0x118
+event_route_24_defeat_kanto_grunt = { id = 0x4087, value = 3, op = "ge" }
+event_ruin_mistys_date = { id = 0x4088, value = 2, op = "ge" }
+event_shiny_gyarados = 0xC9
+event_talk_plant_manager = 0x120
+event_talk_to_kurt = 0x77
+event_defeated_rival_mount_moon = 0x25C
+event_get_hm08 = 0x185
+event_hear_about_missing_doll = 0x119
