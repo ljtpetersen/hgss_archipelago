@@ -3733,7 +3733,7 @@ check = 862
 
 [hidden_d05r0102_max_potion]
 original_item = "max_potion"
-label = "Rock Tunnel B1F - Item Behind Southeast Breakable Rocks"
+label = "Rock Tunnel B1F - Hidden Item Behind Southeast Breakable Rocks"
 id = 61
 table = "hidden"
 type = "hidden"
