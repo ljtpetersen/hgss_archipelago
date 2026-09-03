@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.7] - TBD
+### Changed
+* Added move names to the labels of TMs and HMs that can be used in the field.
+* Added an item group containing TMs with moves that can be used in the field.
+* Added an item group containing all HMs.
+* Added item groups for each TM and HM, one matching the corresponding TM/HM number and one matching the move name.
+
 ## [0.0.6] - 2026-09-02
 ### Added
 * Event, position, species tracking to the client.
