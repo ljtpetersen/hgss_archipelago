@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.7] - TBD
 ### Fixed
 * Fixed the Fly Region for Safari Zone Gate being shuffled with Kanto fly unlocks instead of Johto.
+* Fixed the hidden item on Route 30 missing a rule requiring the player to deliver the Mystery Egg or use Cut.
 
 ## [0.0.6] - 2026-09-02
 ### Added

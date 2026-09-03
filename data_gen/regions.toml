@@ -309,7 +309,6 @@ encounters = "r30"
 header = "route_30"
 locs = [
     "route_30_apricorn_box",
-    "hidden_r30_potion",
     "overworld_r30_antidote",
     "overworld_r30_potion",
 ]
@@ -324,6 +323,9 @@ exits = [
 ]
 encounters = "r30"
 header = "route_30"
+locs = [
+    "hidden_r30_potion",
+]
 trainers = [
     "youngster_mikey",
     "bug_catcher_don",
