@@ -285,6 +285,9 @@ exits = [
     "victory_road_1f_entrance",
 ]
 header = "route_22_pokemon_league_reception_gate"
+locs = [
+    "fly_map_victory_road_1f",
+]
 
 [cherrygrove_pokemart]
 exits = [
@@ -555,7 +558,6 @@ exits = [
 encounters = "d43r0101"
 header = "victory_road_1f"
 locs = [
-    "fly_map_victory_road_1f",
     "hidden_d43r0101_full_heal",
     "hidden_d43r0101_max_potion",
     "overworld_d43r0101_max_revive",
@@ -2305,7 +2307,6 @@ exits = [
 encounters = "d22r0101"
 header = "national_park"
 locs = [
-    "fly_map_national_park",
     "hidden_d22r0101_d22r0102_full_heal",
     "hidden_d22r0101_d22r0102_full_heal_2",
     "overworld_d22r0101_soothe_bell",
@@ -3015,6 +3016,9 @@ exits = [
     "pokeathlon_dome_interior_b1f_solidarity_room",
 ]
 header = "pokeathlon_dome_interior_1f"
+locs = [
+    "fly_map_national_park",
+]
 
 [route_34_daycare]
 exits = [
@@ -4946,7 +4950,6 @@ exits = [
     "frontier_access_pokecenter_1f",
     "frontier_access_pokemart",
     "route_40_battle_frontier_gatehouse",
-    "virt_fly_map_battle_frontier",
 ]
 header = "battle_frontier_frontier_access"
 locs = [
@@ -5307,6 +5310,7 @@ events = [
 exits = [
     "battle_frontier",
     "battle_frontier_frontier_access",
+    "virt_fly_map_battle_frontier",
 ]
 header = "battle_frontier_frontier_access_gatehouse"
 
