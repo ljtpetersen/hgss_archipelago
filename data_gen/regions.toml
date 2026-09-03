@@ -144,7 +144,7 @@ header = "route_29_route_46_gatehouse"
 
 [route_26]
 exits = [
-    "route_22_pokemon_league_reception_gate",
+    "route_22_pokemon_league_reception_gate_south",
     "route_26_north_house",
     "route_26_week_siblings_house",
     "route_27_east",
@@ -280,9 +280,16 @@ header = "route_26_week_siblings_house"
 [route_22_pokemon_league_reception_gate]
 exits = [
     "route_22",
-    "route_26",
+    "route_22_pokemon_league_reception_gate_south",
     "route_28_south",
     "victory_road_1f_entrance",
+]
+header = "route_22_pokemon_league_reception_gate"
+
+[route_22_pokemon_league_reception_gate_south]
+exits = [
+    "route_22_pokemon_league_reception_gate",
+    "route_26",
 ]
 header = "route_22_pokemon_league_reception_gate"
 locs = [
