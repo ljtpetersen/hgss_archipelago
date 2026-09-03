@@ -3877,7 +3877,7 @@ check = 864
 
 [fly_map_pallet]
 original_item = "fly_map_pallet"
-label = "Fly Region - Pallet Town"
+label = "Pallet Town - First Visit"
 id = 1
 table = "base"
 type = "fly_location_kanto"
@@ -3885,7 +3885,7 @@ check = 2927
 
 [fly_map_viridian]
 original_item = "fly_map_viridian"
-label = "Fly Region - Viridian City"
+label = "Viridian City - First Visit"
 id = 2
 table = "base"
 type = "fly_location_kanto"
@@ -3893,7 +3893,7 @@ check = 2928
 
 [fly_map_pewter]
 original_item = "fly_map_pewter"
-label = "Fly Region - Pewter City"
+label = "Pewter City - First Visit"
 id = 3
 table = "base"
 type = "fly_location_kanto"
@@ -3901,7 +3901,7 @@ check = 2929
 
 [fly_map_cerulean]
 original_item = "fly_map_cerulean"
-label = "Fly Region - Cerulean City"
+label = "Cerulean City - First Visit"
 id = 4
 table = "base"
 type = "fly_location_kanto"
@@ -3909,7 +3909,7 @@ check = 2930
 
 [fly_map_lavender]
 original_item = "fly_map_lavender"
-label = "Fly Region - Lavender Town"
+label = "Lavender Town - First Visit"
 id = 5
 table = "base"
 type = "fly_location_kanto"
@@ -3917,7 +3917,7 @@ check = 2931
 
 [fly_map_vermilion]
 original_item = "fly_map_vermilion"
-label = "Fly Region - Vermilion City"
+label = "Vermilion City - First Visit"
 id = 6
 table = "base"
 type = "fly_location_kanto"
@@ -3925,7 +3925,7 @@ check = 2932
 
 [fly_map_celadon]
 original_item = "fly_map_celadon"
-label = "Fly Region - Celadon City"
+label = "Celadon City - First Visit"
 id = 7
 table = "base"
 type = "fly_location_kanto"
@@ -3933,7 +3933,7 @@ check = 2933
 
 [fly_map_fuchsia]
 original_item = "fly_map_fuchsia"
-label = "Fly Region - Fuchsia City"
+label = "Fuchsia City - First Visit"
 id = 8
 table = "base"
 type = "fly_location_kanto"
@@ -3941,7 +3941,7 @@ check = 2934
 
 [fly_map_cinnabar_island]
 original_item = "fly_map_cinnabar_island"
-label = "Fly Region - Cinnabar Island"
+label = "Cinnabar Island - First Visit"
 id = 9
 table = "base"
 type = "fly_location_kanto"
@@ -3949,7 +3949,7 @@ check = 2935
 
 [fly_map_indigo_plateau]
 original_item = "fly_map_indigo_plateau"
-label = "Fly Region - Indigo Plateau"
+label = "Indigo Plateau - First Visit"
 id = 10
 table = "base"
 type = "fly_location_pokemon_league"
@@ -3957,7 +3957,7 @@ check = 2936
 
 [fly_map_saffron]
 original_item = "fly_map_saffron"
-label = "Fly Region - Saffron City"
+label = "Saffron City - First Visit"
 id = 11
 table = "base"
 type = "fly_location_kanto"
@@ -3965,7 +3965,7 @@ check = 2937
 
 [fly_map_new_bark]
 original_item = "fly_map_new_bark"
-label = "Fly Region - New Bark Town"
+label = "New Bark Town - First Visit"
 id = 12
 table = "base"
 type = "fly_location_johto"
@@ -3973,7 +3973,7 @@ check = 2938
 
 [fly_map_cherrygrove]
 original_item = "fly_map_cherrygrove"
-label = "Fly Region - Cherrygrove City"
+label = "Cherrygrove City - First Visit"
 id = 13
 table = "base"
 type = "fly_location_johto"
@@ -3981,7 +3981,7 @@ check = 2939
 
 [fly_map_violet]
 original_item = "fly_map_violet"
-label = "Fly Region - Violet City"
+label = "Violet City - First Visit"
 id = 14
 table = "base"
 type = "fly_location_johto"
@@ -3989,7 +3989,7 @@ check = 2940
 
 [fly_map_azalea]
 original_item = "fly_map_azalea"
-label = "Fly Region - Azalea Town"
+label = "Azalea Town - First Visit"
 id = 15
 table = "base"
 type = "fly_location_johto"
@@ -3997,7 +3997,7 @@ check = 2941
 
 [fly_map_cianwood]
 original_item = "fly_map_cianwood"
-label = "Fly Region - Cianwood City"
+label = "Cianwood City - First Visit"
 id = 16
 table = "base"
 type = "fly_location_johto"
@@ -4005,7 +4005,7 @@ check = 2942
 
 [fly_map_goldenrod]
 original_item = "fly_map_goldenrod"
-label = "Fly Region - Goldenrod City"
+label = "Goldenrod City - First Visit"
 id = 17
 table = "base"
 type = "fly_location_johto"
@@ -4013,7 +4013,7 @@ check = 2943
 
 [fly_map_olivine]
 original_item = "fly_map_olivine"
-label = "Fly Region - Olivine City"
+label = "Olivine City - First Visit"
 id = 18
 table = "base"
 type = "fly_location_johto"
@@ -4021,7 +4021,7 @@ check = 2944
 
 [fly_map_ecruteak]
 original_item = "fly_map_ecruteak"
-label = "Fly Region - Ecruteak City"
+label = "Ecruteak City - First Visit"
 id = 19
 table = "base"
 type = "fly_location_johto"
@@ -4029,7 +4029,7 @@ check = 2945
 
 [fly_map_mahogany]
 original_item = "fly_map_mahogany"
-label = "Fly Region - Mahogany Town"
+label = "Mahogany Town - First Visit"
 id = 20
 table = "base"
 type = "fly_location_johto"
@@ -4037,7 +4037,7 @@ check = 2946
 
 [fly_map_blackthorn]
 original_item = "fly_map_blackthorn"
-label = "Fly Region - Blackthorn City"
+label = "Blackthorn City - First Visit"
 id = 21
 table = "base"
 type = "fly_location_johto"
@@ -4045,7 +4045,7 @@ check = 2947
 
 [fly_map_lake_of_rage]
 original_item = "fly_map_lake_of_rage"
-label = "Fly Region - Lake Of Rage"
+label = "Lake of Rage - First Visit"
 id = 22
 table = "base"
 type = "fly_location_johto"
@@ -4053,7 +4053,7 @@ check = 2948
 
 [fly_map_mount_silver]
 original_item = "fly_map_mount_silver"
-label = "Fly Region - Mt. Silver"
+label = "Mt. Silver - First Visit"
 id = 23
 table = "base"
 type = "fly_location_silver_cave"
@@ -4061,7 +4061,7 @@ check = 2949
 
 [fly_map_safari_zone_gate]
 original_item = "fly_map_safari_zone_gate"
-label = "Fly Region - Safari Zone Gate"
+label = "Safari Zone Gate - First Visit"
 id = 24
 table = "base"
 type = "fly_location_kanto"
@@ -4069,7 +4069,7 @@ check = 2950
 
 [fly_map_battle_frontier]
 original_item = "fly_map_battle_frontier"
-label = "Fly Region - Battle Frontier"
+label = "Battle Frontier Gatehouse or Viridian Trainer House B1F - First Visit"
 id = 25
 table = "base"
 type = "fly_location_johto"
@@ -4077,7 +4077,7 @@ check = 2951
 
 [fly_map_national_park]
 original_item = "fly_map_national_park"
-label = "Fly Region - National Park"
+label = "Pokeathlon Dome Building - First Visit"
 id = 26
 table = "base"
 type = "fly_location_johto"
@@ -4085,7 +4085,7 @@ check = 2952
 
 [fly_map_victory_road_1f]
 original_item = "fly_map_victory_road_1f"
-label = "Fly Region - Victory Road 1F"
+label = "Pokemon League Reception Gate - First Visit"
 id = 27
 table = "base"
 type = "fly_location_pokemon_league"
