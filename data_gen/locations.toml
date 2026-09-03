@@ -4707,7 +4707,7 @@ check = 463
 
 [r43r0201_tm36]
 original_item = "tm36"
-label = "Route 43 - Gift from Mid-Route Guard"
+label = "Route 43 Southeast Gatehouse - Gift from Mid-Route Guard"
 id = 101
 table = "base"
 type = "npc_gift"
@@ -4915,7 +4915,7 @@ check = 110
 
 [r34r0201_tm12]
 original_item = "tm12"
-label = "Route 34 - Gift from Woman With Butterfree"
+label = "Route 34 Gate to Ilex Forest - Gift from Woman With Butterfree"
 id = 126
 table = "base"
 type = "npc_gift"
@@ -4923,7 +4923,7 @@ check = 131
 
 [r35r0101_kenya_gift]
 original_item = "hp_up"
-label = "Route 35 - Gift from Guard after Delivering Kenya"
+label = "Route 35 Gate to Goldenrod City - Gift from Guard after Delivering Kenya"
 id = 127
 table = "base"
 type = "npc_gift"
