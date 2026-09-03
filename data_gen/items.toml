@@ -2692,7 +2692,7 @@ data_id = 374
 [tm70]
 label = "TM70 Flash"
 id = 397
-group = ["tmhms", "field_moves", "tm70", "flash"]
+group = ["tmhms", "field_moves", "hms", "tm70", "flash"]
 clas = "specialbagitem"
 data_id = 375
 classification = "progression"
