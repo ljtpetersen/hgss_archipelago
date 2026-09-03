@@ -3181,7 +3181,7 @@ check = 1012
 
 [hidden_d36r0101_big_mushroom]
 original_item = "big_mushroom"
-label = "Ilex Forest - Item West of Pond"
+label = "Ilex Forest - Hidden Item West of Pond"
 id = 213
 table = "hidden"
 type = "hidden"
