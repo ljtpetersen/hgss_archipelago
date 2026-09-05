@@ -2717,7 +2717,7 @@ check = 999
 
 [hidden_t03_max_revive]
 original_item = "max_revive"
-label = "Pewter City - Southeast Hidden Item Behind Fence"
+label = "Pewter City - Southwest Hidden Item Behind Fence"
 id = 227
 table = "hidden"
 type = "hidden"
