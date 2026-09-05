@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 * Improved clarity and consistency of the names of many locations.
 ### Fixed
+* Fixed the Fly Region for Safari Zone Gate being shuffled with Kanto fly unlocks instead of Johto.
+* Fixed the hidden item on Route 30 missing a rule requiring the player to deliver the Mystery Egg or use Cut.
+* Fixed some Fly Region locations having incorrect access rules.
 * Fixed certain location names being inaccurate descriptions.
 
 ## [0.0.6] - 2026-09-02
@@ -21,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * HM accessibility is now properly checked.
 * NPCs in Goldenrod Tunnel B1F are now accessible during the Team Rocket Radio Tower Event.
 * Trainers in S.S. Aqua that originally disappeared after the first voyage now remain.
+* OOL encounters in slot data are now filled correctly.
+* Seeds with unrandomized badges now generate properly.
 
 ## [0.0.5] - 2026-08-30
 ### Added

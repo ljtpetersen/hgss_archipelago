@@ -144,7 +144,7 @@ header = "route_29_route_46_gatehouse"
 
 [route_26]
 exits = [
-    "route_22_pokemon_league_reception_gate",
+    "route_22_pokemon_league_reception_gate_south",
     "route_26_north_house",
     "route_26_week_siblings_house",
     "route_27_east",
@@ -280,11 +280,21 @@ header = "route_26_week_siblings_house"
 [route_22_pokemon_league_reception_gate]
 exits = [
     "route_22",
-    "route_26",
+    "route_22_pokemon_league_reception_gate_south",
     "route_28_south",
     "victory_road_1f_entrance",
 ]
 header = "route_22_pokemon_league_reception_gate"
+
+[route_22_pokemon_league_reception_gate_south]
+exits = [
+    "route_22_pokemon_league_reception_gate",
+    "route_26",
+]
+header = "route_22_pokemon_league_reception_gate"
+locs = [
+    "fly_map_victory_road_1f",
+]
 
 [cherrygrove_pokemart]
 exits = [
@@ -309,7 +319,6 @@ encounters = "r30"
 header = "route_30"
 locs = [
     "route_30_apricorn_box",
-    "hidden_r30_potion",
     "overworld_r30_antidote",
     "overworld_r30_potion",
 ]
@@ -324,6 +333,9 @@ exits = [
 ]
 encounters = "r30"
 header = "route_30"
+locs = [
+    "hidden_r30_potion",
+]
 trainers = [
     "youngster_mikey",
     "bug_catcher_don",
@@ -553,7 +565,6 @@ exits = [
 encounters = "d43r0101"
 header = "victory_road_1f"
 locs = [
-    "fly_map_victory_road_1f",
     "hidden_d43r0101_full_heal",
     "hidden_d43r0101_max_potion",
     "overworld_d43r0101_max_revive",
@@ -2306,7 +2317,6 @@ exits = [
 encounters = "d22r0101"
 header = "national_park"
 locs = [
-    "fly_map_national_park",
     "hidden_d22r0101_d22r0102_full_heal",
     "hidden_d22r0101_d22r0102_full_heal_2",
     "overworld_d22r0101_soothe_bell",
@@ -3016,6 +3026,9 @@ exits = [
     "pokeathlon_dome_interior_b1f_solidarity_room",
 ]
 header = "pokeathlon_dome_interior_1f"
+locs = [
+    "fly_map_national_park",
+]
 
 [route_34_daycare]
 exits = [
@@ -4947,7 +4960,6 @@ exits = [
     "frontier_access_pokecenter_1f",
     "frontier_access_pokemart",
     "route_40_battle_frontier_gatehouse",
-    "virt_fly_map_battle_frontier",
 ]
 header = "battle_frontier_frontier_access"
 locs = [
@@ -5308,6 +5320,7 @@ events = [
 exits = [
     "battle_frontier",
     "battle_frontier_frontier_access",
+    "virt_fly_map_battle_frontier",
 ]
 header = "battle_frontier_frontier_access_gatehouse"
 

@@ -244,7 +244,7 @@ cinnabar_island = "surf"
 route_22 = "event_unlock_west_kanto_exit"
 route_28_south = "event_get_hm08"
 
-[exits.route_26]
+[exits.route_22_pokemon_league_reception_gate_south]
 route_22_pokemon_league_reception_gate = "johto_badges(8)"
 
 [exits.route_27_west]

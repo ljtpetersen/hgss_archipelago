@@ -4064,7 +4064,7 @@ original_item = "fly_map_safari_zone_gate"
 label = "Fly Region - Safari Zone Gate"
 id = 24
 table = "base"
-type = "fly_location_kanto"
+type = "fly_location_johto"
 check = 2950
 
 [fly_map_battle_frontier]
