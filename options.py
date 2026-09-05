@@ -95,11 +95,11 @@ class RandomizePokedex(Toggle):
     display_name = "Randomize Pokedex"
 
 class RandomizeTimeItems(DefaultOnToggle):
-    """Adds the time items to the item pool. If set to false, they are precollected."""
+    """Adds the different times of day (morning, day, night) as items to the item pool. If set to false, they are precollected."""
     display_name = "Randomize Time Items"
 
 class RandomizeSoundsItems(DefaultOnToggle):
-    """Adds the sound items to the item pool. If set to false, they are precollected."""
+    """Adds different radio music as sound items to the item pool. If set to false, they are precollected."""
     display_name = "Randomize Sound Items"
 
 class RemoveBadgeRequirement(OptionSet):
