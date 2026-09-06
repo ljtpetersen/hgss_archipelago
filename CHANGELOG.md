@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fixed the Fly Region for Safari Zone Gate being shuffled with Kanto fly unlocks instead of Johto.
 * Fixed the hidden item on Route 30 missing a rule requiring the player to deliver the Mystery Egg or use Cut.
 * Fixed some Fly Region locations having incorrect access rules.
+* Ariana now shows up in the Radio Tower before defeating Archer.
+* Team Rocket no longer overrides the radio.
+* Hold A to advance now works properly for certain locations.
+* Night fishing now depends on AP time rather than emulator time.
 
 ## [0.0.6] - 2026-09-02
 ### Added
