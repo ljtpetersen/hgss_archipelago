@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Team Rocket no longer overrides the radio.
 * Hold A to advance now works properly for certain locations.
 * Night fishing now depends on AP time rather than emulator time.
+* Fly Region logic connections now accurately reflect the exact maps you fly to.
 
 ## [0.0.6] - 2026-09-02
 ### Added
