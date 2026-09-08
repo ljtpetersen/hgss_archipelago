@@ -1445,7 +1445,7 @@ clas = "bagitem"
 data_id = 198
 
 [kings_rock]
-label = "King’s Rock"
+label = "King's Rock"
 id = 221
 group = "items"
 clas = "specialbagitem"
