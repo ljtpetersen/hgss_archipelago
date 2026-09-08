@@ -426,8 +426,8 @@ blackthorn = "fly_map_blackthorn"
 lake_of_rage = "fly_map_lake_of_rage"
 mount_silver = "fly_map_mount_silver"
 safari_zone_gate = "fly_map_safari_zone_gate"
-battle_frontier = "fly_map_battle_frontier"
-national_park = "fly_map_national_park"
+battle_frontier_frontier_access = "fly_map_battle_frontier"
+pokeathlon_dome = "fly_map_national_park"
 route_26 = "fly_map_victory_road_1f"
 
 [exits.whirl_islands_b2f]
