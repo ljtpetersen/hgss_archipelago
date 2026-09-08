@@ -4831,7 +4831,7 @@ check = 2967
 
 [goldenrod_radio_tower_2f_blue_card]
 original_item = "blue_card"
-label = "Goldenrod Radio Tower 2F - Gift from Lady at Desk"
+label = "Goldenrod Radio Tower 2F - Gift from Buena"
 id = 116
 table = "base"
 type = "key_item"
