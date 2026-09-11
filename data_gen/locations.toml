@@ -325,7 +325,7 @@ check = 1241
 
 [overworld_r02_elixir]
 original_item = "elixir"
-label = "Route 2 - Item by Southeast Cut Trees"
+label = "Route 2 South - Item by Southeast Cut Trees"
 id = 213
 table = "overworld"
 type = "overworld"
@@ -517,7 +517,7 @@ check = 1198
 
 [overworld_r02r0101_carbos]
 original_item = "carbos"
-label = "Route 2 - Item Behind Diglett's Cave"
+label = "Route 2 North - Item Behind Diglett's Cave"
 id = 212
 table = "overworld"
 type = "overworld"
@@ -5366,7 +5366,7 @@ check = 348
 
 [route_2_house_nugget]
 original_item = "nugget"
-label = "Route 2 - Nugget from Man in House"
+label = "Route 2 North - Nugget from Man in House"
 id = 170
 table = "base"
 type = "npc_gift"

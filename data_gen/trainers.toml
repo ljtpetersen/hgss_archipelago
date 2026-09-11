@@ -394,7 +394,7 @@ party = [
 
 [bug_catcher_rob]
 id = 48
-label = "Route 2 - Bug Catcher Rob"
+label = "Route 2 South - Bug Catcher Rob"
 party = [
     { species = "beedrill", level = 40 },
     { species = "butterfree", level = 39 },
@@ -1145,7 +1145,7 @@ party = [
 
 [bug_catcher_doug]
 id = 140
-label = "Route 2 - Bug Catcher Doug"
+label = "Route 2 South - Bug Catcher Doug"
 party = [
     { species = "butterfree", level = 39 },
     { species = "ariados", level = 37 },
@@ -2031,7 +2031,7 @@ party = [
 
 [bug_catcher_ed]
 id = 248
-label = "Route 2 - Bug Catcher Ed"
+label = "Route 2 North - Bug Catcher Ed"
 party = [
     { species = "burmy", level = 43 },
     { species = "butterfree", level = 43 },
