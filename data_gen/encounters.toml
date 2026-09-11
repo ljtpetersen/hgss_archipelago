@@ -6036,7 +6036,7 @@ accessibility = [
 
 [r02]
 id = 112
-label = "Route 2"
+label = "Route 2 South"
 
 [[r02.land]]
 species = "ledyba"
@@ -7722,7 +7722,7 @@ accessibility = [
 
 [r02r0101]
 id = 136
-label = "Route 2 East"
+label = "Route 2 North"
 
 [[r02r0101.land]]
 species = "ledyba"
