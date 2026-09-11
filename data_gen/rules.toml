@@ -234,7 +234,7 @@ route_19_from_fuchia = "event_defeat_blaine"
 [exits.route_2]
 route_2_southeast = "cut"
 
-[exits.rule_2_northwest]
+[exits.route_2_northwest]
 route_2_northeast = "cut"
 
 [exits.route_2_northeast]
