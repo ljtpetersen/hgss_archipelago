@@ -591,17 +591,15 @@ class PokemonHgssClient(BizHawkClient):
                     case "flag_set":
                         to_print.append(f"setting flag {data['id_str']}")
                         flag = data["id"]
-                        print(f"{flag // 8}, {len(flags_bytes)}")
                         if flag // 8 < len(flags_bytes):
-                            print(f"old: {vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8]:08b}")
                             vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8] |= 1 << (flag & 7)
-                            print(f"new: {vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8]:08b}")
                             wrote = True
                     case "flag_clear":
                         to_print.append(f"clearing flag {data['id_str']}")
                         flag = data["id"]
                         if flag // 8 < len(flags_bytes):
                             vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8] &= ~(1 << (flag & 7))
+                            wrote = True
                     case "var_check":
                         to_print.append(f"variable {data['id_str']}'s value is {vars_flags.get_var(data['id'])}")
                     case "var_set":

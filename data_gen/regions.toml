@@ -937,15 +937,24 @@ trainers = [
 exits = [
     "route_2_viridian_forest_south_gatehouse",
     "viridian",
-    "pewter",
-    "route_2_east",
-    "route_2_viridian_forest_north_gatehouse",
+    "route_2_southeast",
 ]
 encounters = "r02"
 header = "route_2"
 trainers = [
     "bug_catcher_rob",
     "bug_catcher_doug",
+]
+
+[route_2_northwest]
+exits = [
+    "pewter",
+    "route_2_viridian_forest_north_gatehouse",
+    "route_2_northeast",
+]
+encounters = "r02r0101"
+header = "route_2_east"
+trainers = [
     "bug_catcher_ed",
 ]
 
@@ -1451,7 +1460,8 @@ trainers = [
 
 [route_2_southeast_gatehouse]
 exits = [
-    "route_2_east",
+    "route_2_northeast",
+    "route_2_southeast"
 ]
 header = "route_2_southeast_gatehouse"
 locs = [
@@ -1489,10 +1499,10 @@ exits = [
 ]
 header = "mahogany_souvenir_shop"
 
-[route_2_east]
+[route_2_northeast]
 exits = [
     "diglett_cave",
-    "route_2",
+    "route_2_northwest",
     "route_2_house",
     "route_2_southeast_gatehouse",
 ]
@@ -1500,6 +1510,17 @@ encounters = "r02r0101"
 header = "route_2_east"
 locs = [
     "overworld_r02r0101_carbos",
+]
+accessible_encounters = []
+
+[route_2_southeast]
+exits = [
+    "route_2",
+    "route_2_southeast_gatehouse",
+]
+encounters = "r02"
+header = "route_2"
+locs = [
     "overworld_r02_elixir",
 ]
 accessible_encounters = []
@@ -1860,7 +1881,7 @@ header = "ruins_of_alph_underground_hall_sinjoh_event_2"
 
 [route_2_viridian_forest_north_gatehouse]
 exits = [
-    "route_2",
+    "route_2_northwest",
     "viridian_forest",
 ]
 header = "route_2_viridian_forest_north_gatehouse"
@@ -1908,7 +1929,7 @@ trainers = [
 [diglett_cave]
 exits = [
     "route_11",
-    "route_2_east",
+    "route_2_northeast",
 ]
 encounters = "d01r0101"
 header = "diglett_cave"
@@ -2158,7 +2179,7 @@ header = "route_32_pokecenter_b1f"
 
 [route_2_house]
 exits = [
-    "route_2_east",
+    "route_2_northeast",
 ]
 header = "route_2_house"
 locs = [
@@ -2182,7 +2203,7 @@ exits = [
     "pewter_pokecenter_1f",
     "pewter_pokemart",
     "pewter_southwest_house",
-    "route_2",
+    "route_2_northwest",
     "route_3",
 ]
 header = "pewter"
@@ -5939,8 +5960,8 @@ exits = [
     "lake_of_rage",
     "mount_silver",
     "safari_zone_gate",
-    "battle_frontier",
-    "national_park",
+    "battle_frontier_frontier_access",
+    "pokeathlon_dome",
     "route_26",
 ]
 

@@ -232,9 +232,15 @@ route_19 = "event_defeat_blaine & surf"
 route_19_from_fuchia = "event_defeat_blaine"
 
 [exits.route_2]
-route_2_east = "cut"
+route_2_southeast = "cut"
 
-[exits.route_2_east]
+[exits.route_2_northwest]
+route_2_northeast = "cut"
+
+[exits.route_2_northeast]
+route_2_northwest = "cut"
+
+[exits.route_2_southeast]
 route_2 = "cut"
 
 [exits.route_20_west]
@@ -426,8 +432,8 @@ blackthorn = "fly_map_blackthorn"
 lake_of_rage = "fly_map_lake_of_rage"
 mount_silver = "fly_map_mount_silver"
 safari_zone_gate = "fly_map_safari_zone_gate"
-battle_frontier = "fly_map_battle_frontier"
-national_park = "fly_map_national_park"
+battle_frontier_frontier_access = "fly_map_battle_frontier"
+pokeathlon_dome = "fly_map_national_park"
 route_26 = "fly_map_victory_road_1f"
 
 [exits.whirl_islands_b2f]
@@ -525,7 +531,7 @@ goldenrod_radio_tower_4f_brightpowder = "event_clear_rocket_tower"
 d37r0105_cardkey = "radio_tower_trigger"
 overworld_d39r0102_iron = "strength"
 hidden_d36r0101_big_mushroom = "surf"
-ilex_forest_hm01 = "event_farfetchd_rescue"
+ilex_forest_hm01 = "event_clear_slowpoke_well"
 t29_red_scale = "surf"
 hidden_t29_max_potion = "surf"
 overworld_t29_choice_specs = "surf"
