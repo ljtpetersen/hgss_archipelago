@@ -3685,7 +3685,7 @@ check = 961
 
 [hidden_t07_pp_up]
 original_item = "pp_up"
-label = "Celadon City - Hidden Item in Southwest Trees"
+label = "Celadon City - Hidden Item in Southeast Trees"
 id = 122
 table = "hidden"
 type = "hidden"
