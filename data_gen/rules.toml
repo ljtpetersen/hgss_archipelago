@@ -232,9 +232,15 @@ route_19 = "event_defeat_blaine & surf"
 route_19_from_fuchia = "event_defeat_blaine"
 
 [exits.route_2]
-route_2_east = "cut"
+route_2_southeast = "cut"
 
-[exits.route_2_east]
+[exits.route_2_northwest]
+route_2_northeast = "cut"
+
+[exits.route_2_northeast]
+route_2_northwest = "cut"
+
+[exits.route_2_southeast]
 route_2 = "cut"
 
 [exits.route_20_west]

@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Night fishing now depends on AP time rather than emulator time.
 * Fly Region logic connections now accurately reflect the exact maps you fly to.
 * Fixed flag clearing with `/game_debug`.
+* Fixed Route 2 North encounters incorrectly not being in logic.
 
 ## [0.0.6] - 2026-09-02
 ### Added
