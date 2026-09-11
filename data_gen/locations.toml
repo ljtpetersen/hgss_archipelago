@@ -2333,7 +2333,7 @@ check = 946
 
 [hidden_d24r0101_rare_candy]
 original_item = "rare_candy"
-label = "Ruins of Alph - Hidden Item Behind Northeast Breakable Rocks"
+label = "Ruins of Alph - Hidden Item Behind Northwest Breakable Rocks"
 id = 149
 table = "hidden"
 type = "hidden"
