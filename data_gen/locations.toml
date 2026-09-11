@@ -2613,7 +2613,7 @@ check = 1024
 
 [hidden_d25r0103_ultra_ball]
 original_item = "ultra_ball"
-label = "Union Cave B2F - Hidden Item on Stalagmite Beside South Ace Trainer"
+label = "Union Cave B2F - Hidden Item on Stalagmite Beside Southwest Ace Trainer"
 id = 156
 table = "hidden"
 type = "hidden"
@@ -2621,7 +2621,7 @@ check = 956
 
 [hidden_d25r0103_calcium]
 original_item = "calcium"
-label = "Union Cave B2F - Hidden Item Near North Ace Trainer"
+label = "Union Cave B2F - Hidden Item Near West Ace Trainer"
 id = 157
 table = "hidden"
 type = "hidden"
