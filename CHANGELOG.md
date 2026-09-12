@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fly Region logic connections now accurately reflect the exact maps you fly to.
 * Fixed flag clearing with `/game_debug`.
 * Fixed Route 2 North encounters incorrectly not being in logic.
+* Fixed the logic for Cinnabar Gym incorrectly connecting it to the west side of Seafoam Islands instead of east.
 
 ## [0.0.6] - 2026-09-02
 ### Added

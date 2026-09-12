@@ -4323,7 +4323,7 @@ header = "cerulean_bike_maniac_house"
 
 [seafoam_islands_cinnabar_gym]
 exits = [
-    "seafoam_islands_1f_west",
+    "seafoam_islands_1f_east",
 ]
 header = "seafoam_islands_cinnabar_gym"
 locs = [
