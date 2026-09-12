@@ -4208,7 +4208,7 @@ original_item = "master_ball"
 id = 42
 table = "base"
 type = "npc_gift"
-label = "Elm's Lab - Gift from Prof. Elm after Eight Johto Badges"
+label = "Elm's Lab - Reward from Prof. Elm for Collecting Badges"
 check = 2959
 
 [vermilion_badge_thunder]
@@ -4411,7 +4411,7 @@ original_item = "hm08"
 id = 67
 table = "base"
 type = "hm"
-label = "Oak's Lab - Gift from Prof. Oak after Eight Kanto Badges"
+label = "Oak's Lab - Reward from Prof. Oak for Collecting Badges"
 check = 389
 
 [olivine_northwest_house_good_rod]
