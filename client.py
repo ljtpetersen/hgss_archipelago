@@ -18,8 +18,8 @@ import Utils
 from .apnds import rom as ndsrom
 
 from .data.event_checks import event_checks
-from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, VarCheck, maximal_required_locations
-from .data.trainers import trainers, trainer_id_to_trainer_const_name, TrainerCheck
+from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, TrainerCheck, VarCheck, maximal_required_locations
+from .data.trainers import trainers, trainer_id_to_trainer_const_name
 from .data.species import regional_mons, species_id_to_const_name
 from .items import get_item_classification
 from .locations import raw_id_to_const_name

@@ -20,6 +20,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fixed flag clearing with `/game_debug`.
 * Fixed Route 2 North encounters incorrectly not being in logic.
 * Fixed the logic for Cinnabar Gym incorrectly connecting it to the west side of Seafoam Islands instead of east.
+* Blue now leaves Cinnabar Island correctly if you talk to him after defeating Red.
+* Prof. Oak now appears in Olivine if you defeat Red before clearing the Pokémon League.
+* The Pokémon League event is not set if you defeat Red.
+* The rules are now adjusted for defeating Red instead of clearing the Pokémon League.
+* The Battle Frontier fly exit now accounts for obtaining the vanilla fly region from the trainer house.
 
 ## [0.0.6] - 2026-09-02
 ### Added
