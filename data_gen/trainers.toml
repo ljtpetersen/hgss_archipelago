@@ -891,7 +891,7 @@ party = [
 
 [ace_trainer_m_alton]
 id = 109
-label = "Lake of Rage - Ace Trainer Alton"
+label = "Lake of Rage Low Tide - Ace Trainer Alton"
 party = [
     { species = "ivysaur", level = 24 },
     { species = "charmeleon", level = 24 },

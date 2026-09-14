@@ -4875,7 +4875,7 @@ check = 290
 
 [t29_wesley_gift]
 original_item = "black_belt"
-label = "Lake of Rage - Low Tide Gift from Wesley"
+label = "Lake of Rage Low Tide - Gift from Wesley"
 id = 121
 table = "base"
 type = "npc_gift"
@@ -5059,7 +5059,7 @@ check = 2970
 
 [lake_of_rage_low_tide_full_heal]
 original_item = "full_heal"
-label = "Lake of Rage - Low Tide Item West of Old Man"
+label = "Lake of Rage Low Tide - Item West of Old Man"
 id = 142
 table = "base"
 type = "overworld"
@@ -5067,7 +5067,7 @@ check = 326
 
 [lake_of_rage_low_tide_full_restore]
 original_item = "full_restore"
-label = "Lake of Rage - Low Tide Item in Northeast of Tree Maze"
+label = "Lake of Rage Low Tide - Item in Northeast of Tree Maze"
 id = 143
 table = "base"
 type = "overworld"
@@ -5075,7 +5075,7 @@ check = 328
 
 [lake_of_rage_low_tide_max_revive]
 original_item = "max_revive"
-label = "Lake of Rage - Low Tide Item in West of Tree Maze"
+label = "Lake of Rage Low Tide - Item in West of Tree Maze"
 id = 144
 table = "base"
 type = "overworld"
