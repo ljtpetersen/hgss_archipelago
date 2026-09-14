@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fixed flag clearing with `/game_debug`.
 * Fixed Route 2 North encounters incorrectly not being in logic.
 * Fixed the logic for Cinnabar Gym incorrectly connecting it to the west side of Seafoam Islands instead of east.
+* Fixed the logic for the hidden item in Cliff Edge Gate incorrectly requiring the roadblock to be removed.
 
 ## [0.0.6] - 2026-09-02
 ### Added
