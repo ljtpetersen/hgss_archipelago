@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * The rules are now adjusted for defeating Red instead of clearing the Pokémon League.
 * The Battle Frontier fly exit now accounts for obtaining the vanilla fly region from the trainer house.
 * Ho-Oh no longer appears after clearing the Pokémon League in HeartGold.
+* Fixed the logic for the hidden item in Cliff Edge Gate incorrectly requiring the roadblock to be removed.
 
 ## [0.0.6] - 2026-09-02
 ### Added

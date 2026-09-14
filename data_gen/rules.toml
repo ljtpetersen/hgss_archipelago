@@ -66,7 +66,7 @@ cerulean_cave_2f = "surf"
 cerulean_cave_b1f = "surf"
 
 [exits.cianwood]
-cliff_edge_gate = "event_cure_amphy"
+cliff_edge_gate = "event_call_from_baoba"
 route_41 = "surf"
 
 [exits.cinnabar_island]
@@ -74,7 +74,7 @@ route_20_west = "surf"
 route_21 = "surf"
 
 [exits.cliff_edge_gate]
-cianwood = "event_cure_amphy"
+cianwood = "event_call_from_baoba"
 
 [exits.dark_cave_route_31_side_north]
 dark_cave_route_31_side_west = "surf"
@@ -504,7 +504,7 @@ hidden_t09_star_piece = "rock_climb"
 hidden_t09_w21_rare_candy = "rock_climb"
 hidden_t09_iron = "rock_climb"
 overworld_t09_magmarizer = "rock_climb"
-hidden_d48r0101_big_pearl = "surf & rock_climb & event_call_from_baoba"
+hidden_d48r0101_big_pearl = "surf & rock_climb"
 overworld_d42r0102_hyper_potion = "rock_smash"
 overworld_d42r0102_black_flute = "surf"
 d42r0101_blackglasses = "surf"
