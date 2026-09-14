@@ -297,7 +297,7 @@ route_36_southwest = "squirtbottle"
 route_41 = "surf"
 
 [exits.route_40_battle_frontier_gatehouse]
-battle_frontier_frontier_access = "event_clear_pokemon_league"
+battle_frontier_frontier_access = "event_clear_pokemon_league | event_defeat_red"
 
 [exits.route_41]
 cianwood = "surf"
@@ -432,7 +432,7 @@ blackthorn = "fly_map_blackthorn"
 lake_of_rage = "fly_map_lake_of_rage"
 mount_silver = "fly_map_mount_silver"
 safari_zone_gate = "fly_map_safari_zone_gate"
-battle_frontier_frontier_access = "fly_map_battle_frontier"
+battle_frontier_frontier_access = "fly_map_battle_frontier if require_fly_items_for_flight else fly_map_battle_frontier | event_fly_battle_frontier"
 pokeathlon_dome = "fly_map_national_park"
 route_26 = "fly_map_victory_road_1f"
 
@@ -576,7 +576,7 @@ overworld_d41r0102_dawn_stone = "rock_climb"
 overworld_d22r0101_shiny_stone = "rock_climb"
 hidden_t20_potion = "event_get_mystery_egg"
 new_bark_elms_lab_1f_everstone = "event_get_togepi_egg"
-new_bark_elms_lab_1f_ss_ticket = "event_clear_pokemon_league"
+new_bark_elms_lab_1f_ss_ticket = "event_clear_pokemon_league | event_defeat_red"
 new_bark_elms_lab_1f_master_ball = "johto_badges(8) & event_ecruteak_dance_theater_defeat_team_rocket & event_burned_tower_disperse_legendary_dogs"
 hidden_t26_rare_candy = "rock_climb"
 overworld_t26_tm57 = "surf"

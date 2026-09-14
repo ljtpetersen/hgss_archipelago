@@ -6022,6 +6022,9 @@ exits = []
 locs = [
     "fly_map_battle_frontier",
 ]
+events = [
+    "event_fly_battle_frontier",
+]
 
 [virt_vitamins]
 header = "virt"
