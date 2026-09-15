@@ -1293,7 +1293,7 @@ check = 1096
 
 [overworld_r12_calcium]
 original_item = "calcium"
-label = "Route 12 - Item Behind North Cut Tree"
+label = "Route 12 - Item Behind Cut Tree Southwest of House"
 id = 207
 table = "overworld"
 type = "overworld"
@@ -1301,7 +1301,7 @@ check = 1228
 
 [overworld_r12_yellow_flute]
 original_item = "yellow_flute"
-label = "Route 12 - Item Behind South Cut Tree"
+label = "Route 12 - Item Behind Southwest Cut Tree Across Water"
 id = 208
 table = "overworld"
 type = "overworld"
