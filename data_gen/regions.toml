@@ -4862,6 +4862,9 @@ locs = [
     "hidden_d03r0102_pp_up",
     "hidden_d03r0102_big_pearl",
 ]
+accessible_encounters = [
+    "land",
+]
 
 [fuchsia_southwest_house]
 exits = [
