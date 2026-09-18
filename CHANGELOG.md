@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Ho-Oh no longer appears after clearing the Pokémon League in HeartGold.
 * Fixed the logic for the hidden item in Cliff Edge Gate incorrectly requiring the roadblock to be removed.
 * Fixed the logic for the catching tutorial gift not requiring the player to deliver the Mystery Egg.
+* Fixed various encounter labels unnecessarily or inaccurately specifying cardinal directions.
 
 ## [0.0.6] - 2026-09-02
 ### Added
