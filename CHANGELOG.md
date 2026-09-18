@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fixed the logic for the hidden item in Cliff Edge Gate incorrectly requiring the roadblock to be removed.
 * Fixed the logic for the catching tutorial gift not requiring the player to deliver the Mystery Egg.
 * Fixed various encounter labels unnecessarily or inaccurately specifying cardinal directions.
+* Fixed the inaccessible water encounter tables in Cerulean Cave 2F being in logic.
 
 ## [0.0.6] - 2026-09-02
 ### Added
