@@ -2894,7 +2894,7 @@ classification = "progression"
 [hm06]
 label = "HM06 Rock Smash"
 id = 425
-group = ["tmhms", "field_moves", "hms", "hm06", "rock_climb"]
+group = ["tmhms", "field_moves", "hms", "hm06", "rock_smash"]
 clas = "bagitem"
 data_id = 403
 classification = "progression"
