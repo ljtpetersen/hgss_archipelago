@@ -6,9 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.0.7] - TBD
+### Added
+* The tide state of the Lake of Rage is now reported in the player position bounce packet.
 ### Changed
 * Ilex Forest - Item from Charcoal Maker now logically requires clearing Slowpoke Well to look better on the PopTracker.
 * Improved clarity and consistency of the names of many locations.
+* When patching, patches generated with compatible previous versions may use the new base patches.
 ### Fixed
 * Fixed the Fly Region for Safari Zone Gate being shuffled with Kanto fly unlocks instead of Johto.
 * Fixed the hidden item on Route 30 missing a rule requiring the player to deliver the Mystery Egg or use Cut.
@@ -21,6 +24,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fixed flag clearing with `/game_debug`.
 * Fixed Route 2 North encounters incorrectly not being in logic.
 * Fixed certain location names being inaccurate descriptions.
+* Fixed the logic for Cinnabar Gym incorrectly connecting it to the west side of Seafoam Islands instead of east.
+* Blue now leaves Cinnabar Island correctly if you talk to him after defeating Red.
+* Prof. Oak now appears in Olivine if you defeat Red before clearing the Pokémon League.
+* The Pokémon League event is not set if you defeat Red.
+* The rules are now adjusted for defeating Red instead of clearing the Pokémon League.
+* The Battle Frontier fly exit now accounts for obtaining the vanilla fly region from the trainer house.
+* Ho-Oh no longer appears after clearing the Pokémon League in HeartGold.
+* Fixed the logic for the hidden item in Cliff Edge Gate incorrectly requiring the roadblock to be removed.
+* Fixed the logic for the catching tutorial gift not requiring the player to deliver the Mystery Egg.
+* Fixed various encounter labels unnecessarily or inaccurately specifying cardinal directions.
+* Fixed the unused water encounter tables in Cerulean Cave 2F being in logic.
+* Kanto battle music now plays even if the player has not yet reached Vermilion.
+* The correct Pokémon name is buffered when using field moves.
+* The rival in the Pokémon League will be present on every week day.
 
 ## [0.0.6] - 2026-09-02
 ### Added

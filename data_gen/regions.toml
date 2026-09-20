@@ -4326,7 +4326,7 @@ header = "cerulean_bike_maniac_house"
 
 [seafoam_islands_cinnabar_gym]
 exits = [
-    "seafoam_islands_1f_west",
+    "seafoam_islands_1f_east",
 ]
 header = "seafoam_islands_cinnabar_gym"
 locs = [
@@ -4864,6 +4864,9 @@ locs = [
     "hidden_d03r0102_ultra_ball",
     "hidden_d03r0102_pp_up",
     "hidden_d03r0102_big_pearl",
+]
+accessible_encounters = [
+    "land",
 ]
 
 [fuchsia_southwest_house]
@@ -6024,6 +6027,9 @@ header = "virt"
 exits = []
 locs = [
     "fly_map_battle_frontier",
+]
+events = [
+    "event_fly_battle_frontier",
 ]
 
 [virt_vitamins]

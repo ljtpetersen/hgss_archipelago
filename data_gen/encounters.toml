@@ -1171,7 +1171,7 @@ accessibility = [
 
 [d36r0101]
 id = 20
-label = "Ilex Forest South"
+label = "Ilex Forest"
 
 [[d36r0101.land]]
 species = "weedle"
@@ -1541,7 +1541,7 @@ label = "D22r0102"
 
 [r36]
 id = 25
-label = "Route 36 North"
+label = "Route 36"
 
 [[r36.land]]
 species = "nidoran_f"
@@ -2821,7 +2821,7 @@ accessibility = [
 
 [d38r0102]
 id = 54
-label = "Mount Mortar 1F Back South"
+label = "Mount Mortar 1F Back"
 
 [[d38r0102.land]]
 species = "geodude"
@@ -2933,7 +2933,7 @@ accessibility = [
 
 [d38r0104]
 id = 56
-label = "Mount Mortar B1F South"
+label = "Mount Mortar B1F"
 
 [[d38r0104.land]]
 species = "zubat"
@@ -3555,7 +3555,7 @@ rock_smash = [
     { species = "dunsparce" },
     { species = "geodude" },
 ]
-label = "Dark Cave Route 31 Side West"
+label = "Dark Cave Route 31 Side"
 
 [[d42r0102.land]]
 species = "geodude"
@@ -3846,7 +3846,7 @@ accessibility = [
 
 [d11r0101]
 id = 74
-label = "Seafoam Islands 1F West"
+label = "Seafoam Islands 1F"
 
 [[d11r0101.land]]
 species = "zubat"
@@ -4843,7 +4843,7 @@ accessibility = [
 
 [d41r0102]
 id = 89
-label = "Mount Silver Cave Upper Mountainside North"
+label = "Mount Silver Cave Upper Mountainside"
 
 [[d41r0102.land]]
 species = "sneasel"
@@ -5072,7 +5072,7 @@ accessibility = [
 
 [w20]
 id = 94
-label = "Route 20 West"
+label = "Route 20"
 
 [[w20.water]]
 species = "tentacool"
@@ -5539,7 +5539,7 @@ accessibility = [
 
 [r27]
 id = 104
-label = "Route 27 West"
+label = "Route 27"
 
 [[r27.land]]
 species = "doduo"
@@ -5652,7 +5652,7 @@ accessibility = [
 
 [r28]
 id = 105
-label = "Route 28 South"
+label = "Route 28"
 
 [[r28.land]]
 species = "tangela"
@@ -7044,7 +7044,7 @@ accessibility = [
 
 [r16r0301]
 id = 125
-label = "Route 16 East"
+label = "Route 16"
 
 [[r16r0301.land]]
 species = "grimer"
@@ -7513,7 +7513,7 @@ accessibility = [
 
 [d45r0101]
 id = 132
-label = "Tohjo Falls West"
+label = "Tohjo Falls"
 
 [[d45r0101.land]]
 species = "zubat"

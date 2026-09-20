@@ -18,8 +18,8 @@ import Utils
 from .apnds import rom as ndsrom
 
 from .data.event_checks import event_checks
-from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, VarCheck, maximal_required_locations
-from .data.trainers import trainers, trainer_id_to_trainer_const_name, TrainerCheck
+from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, TrainerCheck, VarCheck, maximal_required_locations
+from .data.trainers import trainers, trainer_id_to_trainer_const_name
 from .data.species import regional_mons, species_id_to_const_name
 from .items import get_item_classification
 from .locations import raw_id_to_const_name
@@ -85,6 +85,8 @@ TRACKED_EVENTS = [
 ]
 TRACKED_HEIGHT_MAP_HEADERS = frozenset()
 TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS = maximal_required_locations
+LAKE_OF_RAGE_ENVIRONS_MAPS = frozenset({45, 88})
+LAKE_OF_RAGE_TIDE_CHECK = "lake_of_rage_low_tide"
 
 prev_version_data: "VersionData" = None # type: ignore
 
@@ -142,6 +144,7 @@ AP_VERSION_DATA: Mapping[int, VersionData] = {
     version_int("0.0.4"): prev_version_data,
     version_int("0.0.5"): prev_version_data,
     version_int("0.0.6"): prev_version_data,
+    version_int("0.0.7"): prev_version_data,
 }
 
 @dataclass(frozen=True)
@@ -706,13 +709,15 @@ class PokemonHgssClient(BizHawkClient):
                 self.current_x = current_x
                 self.current_y = current_y
                 self.current_z = current_z
-                message = [{"cmd": "Bounce", "slots": [ctx.slot],
-                           "data": {
-                               "mapNumber": current_map,
-                               "matrixX": current_x,
-                               "matrixZ": current_z,
-                               "playerY": current_y,
-                           }}]
+                data = {
+                    "mapNumber": current_map,
+                    "matrixX": current_x,
+                    "matrixZ": current_z,
+                    "playerY": current_y,
+                }
+                if current_map in LAKE_OF_RAGE_ENVIRONS_MAPS:
+                    data["lakeOfRageTide"] = "low" if vars_flags.is_checked(event_checks[LAKE_OF_RAGE_TIDE_CHECK]) else "high"
+                message = [{"cmd": "Bounce", "slots": [ctx.slot], "data": data}]
                 await ctx.send_msgs(message)
 
         except bizhawk.RequestFailedError:

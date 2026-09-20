@@ -3,11 +3,11 @@
 # Copyright (C) 2026 James Petersen <m@jamespetersen.ca>
 # Licensed under MIT. See LICENSE
 
-clear_pokemon_league = 0x964
-defeat_red = { id = 0x40FD, value = 1 }
+clear_pokemon_league = { id = 244, trainer = true }
+defeat_red = { id = 260, trainer = true }
 event_beat_sprout_tower = 118
 event_burned_tower_disperse_legendary_dogs = { id = 0x40A1, value = 1 }
-event_cerulean_meet_kanto_grunt = { id = 0x411C, value = 1, op = "ge" }
+event_cerulean_meet_kanto_grunt = { id = 0x411C, value = 2, op = "ge" }
 event_cinnabar_island_blue_return_viridian = 0x2F8
 event_clear_mahogany_hideout = 0xCA
 event_clear_rocket_tower = 0xC6
@@ -50,3 +50,4 @@ event_talk_to_kurt = 0x77
 event_defeated_rival_mount_moon = 0x25C
 event_get_hm08 = 0x185
 event_hear_about_missing_doll = 0x119
+lake_of_rage_low_tide = 0xB94
