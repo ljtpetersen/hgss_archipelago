@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * The tide state of the Lake of Rage is now reported in the player position bounce packet.
 ### Changed
 * Ilex Forest - Item from Charcoal Maker now logically requires clearing Slowpoke Well to look better on the PopTracker.
+* Improved clarity and consistency of the names of many locations.
 * When patching, patches generated with compatible previous versions may use the new base patches.
 ### Fixed
 * Fixed the Fly Region for Safari Zone Gate being shuffled with Kanto fly unlocks instead of Johto.
@@ -22,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Fly Region logic connections now accurately reflect the exact maps you fly to.
 * Fixed flag clearing with `/game_debug`.
 * Fixed Route 2 North encounters incorrectly not being in logic.
+* Fixed certain location names being inaccurate descriptions.
 * Fixed the logic for Cinnabar Gym incorrectly connecting it to the west side of Seafoam Islands instead of east.
 * Blue now leaves Cinnabar Island correctly if you talk to him after defeating Red.
 * Prof. Oak now appears in Olivine if you defeat Red before clearing the Pokémon League.
