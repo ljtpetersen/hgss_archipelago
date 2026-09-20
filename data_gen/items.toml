@@ -2396,9 +2396,9 @@ clas = "bagitem"
 data_id = 332
 
 [tm28]
-label = "TM28"
+label = "TM28 Dig"
 id = 355
-group = "tmhms"
+group = ["tmhms", "field_moves", "tm28", "dig"]
 clas = "bagitem"
 data_id = 333
 
@@ -2690,9 +2690,9 @@ clas = "bagitem"
 data_id = 374
 
 [tm70]
-label = "TM70"
+label = "TM70 Flash"
 id = 397
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "tm70", "flash"]
 clas = "specialbagitem"
 data_id = 375
 classification = "progression"
@@ -2852,65 +2852,65 @@ clas = "bagitem"
 data_id = 397
 
 [hm01]
-label = "HM01"
+label = "HM01 Cut"
 id = 420
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm01", "cut"]
 clas = "bagitem"
 data_id = 398
 classification = "progression"
 
 [hm02]
-label = "HM02"
+label = "HM02 Fly"
 id = 421
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm02", "fly"]
 clas = "bagitem"
 data_id = 399
 classification = "progression"
 
 [hm03]
-label = "HM03"
+label = "HM03 Surf"
 id = 422
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm03", "surf"]
 clas = "specialbagitem"
 data_id = 400
 classification = "progression"
 
 [hm04]
-label = "HM04"
+label = "HM04 Strength"
 id = 423
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm04", "strength"]
 clas = "bagitem"
 data_id = 401
 classification = "progression"
 
 [hm05]
-label = "HM05"
+label = "HM05 Whirlpool"
 id = 424
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm05", "whirlpool"]
 clas = "bagitem"
 data_id = 402
 classification = "progression"
 
 [hm06]
-label = "HM06"
+label = "HM06 Rock Smash"
 id = 425
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm06", "rock_climb"]
 clas = "bagitem"
 data_id = 403
 classification = "progression"
 
 [hm07]
-label = "HM07"
+label = "HM07 Waterfall"
 id = 426
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm07", "waterfall"]
 clas = "bagitem"
 data_id = 404
 classification = "progression"
 
 [hm08]
-label = "HM08"
+label = "HM08 Rock Climb"
 id = 427
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm08", "rock_climb"]
 clas = "bagitem"
 data_id = 405
 classification = "progression"

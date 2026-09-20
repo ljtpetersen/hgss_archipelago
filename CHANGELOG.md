@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.7] - TBD
 ### Added
 * The tide state of the Lake of Rage is now reported in the player position bounce packet.
+* There are now item groups containing all HMs and Field Moves.
+* The names of notable TMs and HMs now contain the name of the move in addition to the TM/HM number.
+* TMs and HMs can now be hinted for by either move name (i.e. "Surf", "Flash") or TM/HM number (i.e. "HM03", "TM70").
 ### Changed
 * Ilex Forest - Item from Charcoal Maker now logically requires clearing Slowpoke Well to look better on the PopTracker.
 * Improved clarity and consistency of the names of many locations.
