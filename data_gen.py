@@ -125,12 +125,15 @@ class Encounters:
 @dataclass(frozen=True)
 class Check:
     id: int
+    trainer: bool = False
     value: int | None = None
     op: str = "eq"
     invert: bool = False
 
     def __str__(self) -> str:
-        if self.value is None:
+        if self.trainer:
+            return f"TrainerCheck(id=0x{self.id:X})"
+        elif self.value is None:
             ret = f"FlagCheck(id=0x{self.id:X}"
             if self.invert:
                 ret += ", invert=True"
@@ -428,7 +431,7 @@ class ParserState:
         encounter_types = {"land", "water", "rock_smash"}
         events = set()
         used_locs = set()
-        for region in self.regions.values():
+        for k, region in self.regions.items():
             for loc in region.locs:
                 assert loc in self.locations, f"{loc} is a location"
                 assert loc not in used_locs, f"{loc} is repeated"
@@ -444,7 +447,7 @@ class ParserState:
                 assert exit not in cur, f"{exit} is repeated"
                 cur.add(exit)
             for event in region.events:
-                assert event not in events, f"{event} is a unique event"
+                assert event not in events, f"{event} is a unique event (region {k})"
                 events.add(event)
             for trainer in region.trainers:
                 if not trainer.startswith("rival_"):
@@ -622,10 +625,15 @@ class ParserState:
             rule.add_dependent_items(item_conds)
         for rule in self.rules.events.values():
             rule.add_dependent_items(item_conds)
+
         item_conds.add_all(self.misc_data.hm.values())
         item_conds.add_all(self.misc_data.hm_badge.values())
+        item_conds.add_all(k for k, v in self.items.items() if "badges" in v.group)
+
+        # TODO: refine itemconditions for these
         item_conds.add_all(self.misc_data.reusable_evo_items)
         item_conds.add_all(self.misc_data.nonreusable_evo_items)
+
         item_conds.restrict(self.items.keys())
         return item_conds
 

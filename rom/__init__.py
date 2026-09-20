@@ -5,7 +5,7 @@
 
 
 from collections import Counter
-from collections.abc import Mapping, MutableMapping, MutableSequence, MutableSet, Sequence
+from collections.abc import Mapping, MutableMapping, MutableSequence, MutableSet, Sequence, Set
 import bsdiff4
 import json
 import pkgutil
@@ -26,7 +26,7 @@ from .trainerdata import patch_trainer_parties
 from ..items import raw_id_to_const_name
 from ..locations import location_types
 from ..options import TMHMCompatibility
-from ..version import VERSION_INT as WORLD_VERSION
+from ..version import VERSION_INT as WORLD_VERSION, version_int
 
 from ..apnds.rom import Rom
 
@@ -57,6 +57,8 @@ STARTER_IDX_MAP: Mapping[str, int] = {
     "feraligatr": 2,
 }
 
+COMPATIBLE_ROM_VERSIONS: Set[int] = frozenset([version_int("0.0.6")])
+
 class PokemonHeartgoldPatch(APAutoPatchInterface):
     game = "Pokemon HeartGold and SoulSilver"
     patch_file_ending = ".apheartgold"
@@ -84,9 +86,14 @@ class PokemonHeartgoldPatch(APAutoPatchInterface):
             rom_bytes = pkgutil.get_data(__name__, "../roms/hg_us.nds")
             assert rom_bytes is not None
         else:
-            data = PokemonHeartgoldPatch.get_source_data_with_cache()
+            version = int.from_bytes(self.get_file("world_version.bin"), 'little')
             patch_name = "base_patch_hg_us.bsdiff4"
-            rom_bytes = bsdiff4.patch(data, self.get_file(patch_name))
+            if version in COMPATIBLE_ROM_VERSIONS:
+                patch = pkgutil.get_data(__name__, f"../patches/{patch_name}")
+            else:
+                patch = self.get_file(patch_name)
+            data = PokemonHeartgoldPatch.get_source_data_with_cache()
+            rom_bytes = bsdiff4.patch(data, patch)
             
         self.read()
 
@@ -151,9 +158,14 @@ class PokemonSoulsilverPatch(APAutoPatchInterface):
             rom_bytes = pkgutil.get_data(__name__, "../roms/ss_us.nds")
             assert rom_bytes is not None
         else:
-            data = PokemonSoulsilverPatch.get_source_data_with_cache()
+            version = int.from_bytes(self.get_file("world_version.bin"), 'little')
             patch_name = "base_patch_ss_us.bsdiff4"
-            rom_bytes = bsdiff4.patch(data, self.get_file(patch_name))
+            if version in COMPATIBLE_ROM_VERSIONS:
+                patch = pkgutil.get_data(__name__, f"../patches/{patch_name}")
+            else:
+                patch = self.get_file(patch_name)
+            data = PokemonSoulsilverPatch.get_source_data_with_cache()
+            rom_bytes = bsdiff4.patch(data, patch)
             
         self.read()
 
