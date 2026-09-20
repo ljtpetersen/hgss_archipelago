@@ -3,12 +3,13 @@
 # Copyright (C) 2026 James Petersen <m@jamespetersen.ca>
 # Licensed under MIT. See LICENSE
 
+from collections import deque
 from collections.abc import Iterable, Mapping, Set, Sequence
 from dataclasses import dataclass
 from itertools import batched, chain
 from NetUtils import ClientStatus, NetworkItem
 from Options import Toggle
-from struct import unpack_from
+from struct import pack_into, unpack_from
 import time
 from typing import Any, Optional, TYPE_CHECKING, Tuple
 
@@ -17,12 +18,13 @@ import Utils
 from .apnds import rom as ndsrom
 
 from .data.event_checks import event_checks
-from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, VarCheck
+from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, VarCheck, maximal_required_locations
 from .data.trainers import trainers, trainer_id_to_trainer_const_name, TrainerCheck
 from .data.species import regional_mons, species_id_to_const_name
 from .items import get_item_classification
 from .locations import raw_id_to_const_name
 from .options import Goal, RemoteItems
+from .version import version_int
 
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
@@ -30,8 +32,61 @@ from worlds._bizhawk.client import BizHawkClient
 if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext, BizHawkClientCommandProcessor
 
-AP_SUPPORTED_VERSIONS = {1}
 AP_MAGIC = b' AP '
+
+TRACKED_EVENTS = [
+    "event_beat_sprout_tower",
+    "event_burned_tower_disperse_legendary_dogs",
+    "event_cerulean_meet_kanto_grunt",
+    "event_cinnabar_island_blue_return_viridian",
+    "event_clear_mahogany_hideout",
+    "clear_pokemon_league",
+    "event_clear_rocket_tower",
+    "event_clear_slowpoke_well",
+    "event_cure_amphy",
+    "event_cure_miltank",
+    "event_defeat_blaine",
+    "event_defeat_blue",
+    "event_defeat_brock",
+    "event_defeat_bugsy",
+    "event_defeat_chuck",
+    "event_defeat_clair",
+    "event_defeat_erika",
+    "event_defeat_falkner",
+    "event_defeat_janine",
+    "event_defeat_jasmine",
+    "event_defeat_lance_clair_dragons_den",
+    "event_defeat_lt_surge",
+    "event_defeat_misty",
+    "event_defeat_morty",
+    "event_defeat_pryce",
+    "defeat_red",
+    "event_defeat_sabrina",
+    "event_defeat_whitney",
+    "event_ecruteak_dance_theater_defeat_team_rocket",
+    "event_elms_lab_get_master_ball",
+    "event_farfetchd_rescue",
+    "event_get_kenya",
+    "event_get_mystery_egg",
+    "event_get_togepi_egg",
+    "event_give_kenya",
+    "event_meet_ho_oh",
+    "event_meet_lugia",
+    "event_radio_quiz",
+    "event_restore_power",
+    "event_route_24_defeat_kanto_grunt", 
+    "event_ruin_mistys_date",
+    "event_shiny_gyarados",
+    "event_talk_plant_manager",
+    "event_talk_to_kurt",
+    "event_defeated_rival_mount_moon",
+    "event_get_hm08",
+    "event_hear_about_missing_doll",
+]
+TRACKED_HEIGHT_MAP_HEADERS = frozenset()
+TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS = maximal_required_locations
+
+prev_version_data: "VersionData" = None # type: ignore
 
 @dataclass(frozen=True)
 class VersionData:
@@ -54,8 +109,12 @@ class VersionData:
     remote_item_queue_size: int
     remote_item_queue_flags_offset_in_queue: int
 
+    def __post_init__(self) -> None:
+        global prev_version_data
+        prev_version_data = self
+
 AP_VERSION_DATA: Mapping[int, VersionData] = {
-    1: VersionData(
+    version_int("0.0.1"): VersionData(
         savedata_ptr_offset=16,
         deathlink_tx_offset=21,
         player_pos_offset=24,
@@ -78,6 +137,11 @@ AP_VERSION_DATA: Mapping[int, VersionData] = {
         pokedex_offset_in_save=0x12D4,
         pokedex_size=832,
     ),
+    version_int("0.0.2"): prev_version_data,
+    version_int("0.0.3"): prev_version_data,
+    version_int("0.0.4"): prev_version_data,
+    version_int("0.0.5"): prev_version_data,
+    version_int("0.0.6"): prev_version_data,
 }
 
 @dataclass(frozen=True)
@@ -220,6 +284,14 @@ class PokemonHgssClient(BizHawkClient):
     previous_death_link: float
     ignore_next_death_link: bool
 
+    current_map: int
+    current_x: int
+    current_y: int
+    current_z: int
+    local_tracked_events: int
+    local_tracked_unrandomized_prog_locs: int
+    local_seen_pokemon: bytearray
+    local_caught_pokemon: bytearray
     notify_setup_complete: bool
 
     player_name: str | None
@@ -227,6 +299,8 @@ class PokemonHgssClient(BizHawkClient):
     death_link_group: str
     death_link_state: bool
     loaded_death_link: bool
+
+    debug_queue: deque[Mapping[str, Any]]
 
     def __init__(self):
         super().__init__()
@@ -240,11 +314,20 @@ class PokemonHgssClient(BizHawkClient):
         self.previous_death_link = 0
         self.ignore_next_death_link = False
 
+        self.current_map = 0
+        self.current_x = -1
+        self.current_z = -1
+        self.local_tracked_events = 0
+        self.local_tracked_unrandomized_prog_locs = 0
+        self.local_seen_pokemon = bytearray(64)
+        self.local_caught_pokemon = bytearray(64)
         self.notify_setup_complete = False
 
         self.loaded_death_link = False
         self.death_link_group = ""
         self.death_link_state = False
+
+        self.debug_queue = deque()
 
     async def get_slot_name_and_remote_items(self, ctx: "BizHawkClientContext") -> Tuple[str | None, bool]:
         remote_items: bool = False
@@ -261,7 +344,7 @@ class PokemonHgssClient(BizHawkClient):
             ap_bin_start, = unpack_from("<I", fatb, ap_bin_id * 8)
             ap_bin_bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(ap_bin_start, 97, "ROM")]))[0]
             name_end = ap_bin_bytes[:64].find(b'\0')
-            remote_items = ap_bin_bytes[96] != 0
+            remote_items = ap_bin_bytes[64] != 0
             if name_end != -1:
                 player_name = ap_bin_bytes[:name_end].decode()
             else:
@@ -276,7 +359,7 @@ class PokemonHgssClient(BizHawkClient):
     async def validate_rom(self, ctx: "BizHawkClientContext") -> bool:
         from CommonClient import logger
         def remove_commands():
-            for command in ["death_link_state", "death_link_group"]:
+            for command in ["death_link_state", "death_link_group", "game_debug"]:
                 if command in ctx.command_processor.commands:
                     del ctx.command_processor.commands[command]
 
@@ -284,14 +367,14 @@ class PokemonHgssClient(BizHawkClient):
             rom_name_bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(0, 12, "ROM")]))[0]
             rom_name = bytes([byte for byte in rom_name_bytes if byte != 0]).decode("ascii")
             if rom_name == "POKEMON HG" or rom_name == "POKEMON SS":
-                logger.info("ERROR: You appear to be running an unpatched version of Pokémon Platinum. "
+                logger.info("ERROR: You appear to be running an unpatched version of Pokémon HeartGold or SoulSilver. "
                             "You need to generate a patch file and use it to create a patched ROM.")
                 remove_commands()
                 return False
             elif rom_name.startswith("TRB HGAP") or rom_name.startswith("TRB SSAP"):
                 version_bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(0x1000, 4, "ROM")]))[0]
                 version = int.from_bytes(version_bytes, 'little')
-                if version in AP_SUPPORTED_VERSIONS:
+                if version in AP_VERSION_DATA:
                     self.rom_version = version
                 else:
                     logger.info("ERROR: The patch file used to create this ROM is not compatible with "
@@ -373,6 +456,7 @@ class PokemonHgssClient(BizHawkClient):
                 self.death_link_state = True
             ctx.command_processor.commands["death_link_state"] = cmd_death_link_state
             ctx.command_processor.commands["death_link_group"] = cmd_death_link_group
+            ctx.command_processor.commands["game_debug"] = cmd_game_debug
 
         try:
             ap_struct_guard = (self.ap_struct_address, self.expected_header, "ARM9 System Bus")
@@ -454,6 +538,11 @@ class PokemonHgssClient(BizHawkClient):
             vars_flags = VarsFlags(flags=flags_bytes, vars=vars_bytes, trainersanity_flags=read_result[2])
             pokedex = Pokedex(data=read_result[1])
 
+            local_tracked_events = 0
+            local_tracked_unrandomized_prog_locs = 0
+            local_seen_pokemon = bytearray(64)
+            local_caught_pokemon = bytearray(64)
+
             local_checked_locations = set()
             game_clear = vars_flags.is_checked(self.goal_check)
 
@@ -470,12 +559,128 @@ class PokemonHgssClient(BizHawkClient):
                     if vars_flags.is_checked(loc.check):
                         local_checked_locations.add(k)
 
+            for k, event in enumerate(TRACKED_EVENTS):
+                if vars_flags.is_checked(event_checks[event]):
+                    local_tracked_events |= 1 << k
+
+            for k, loc in enumerate(TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS):
+                if vars_flags.is_checked(locations[loc].check):
+                    local_tracked_unrandomized_prog_locs |= 1 << k
+
+            for i in range(0, 493):
+                if pokedex.has_seen(i + 1):
+                    local_seen_pokemon[i >> 3] |= 1 << (i & 7)
+                if pokedex.has_caught(i + 1):
+                    local_caught_pokemon[i >> 3] |= 1 << (i & 7)
+
             if local_checked_locations != self.local_checked_locations:
                 await ctx.check_locations(local_checked_locations)
 
                 self.local_checked_locations = local_checked_locations
 
 
+            vf_bytearr = bytearray(vars_flags_bytes)
+            wrote = False
+            old_queue = deque(self.debug_queue)
+            to_print = []
+            while len(self.debug_queue) > 0:
+                data = self.debug_queue.popleft()
+                match data["operation"]:
+                    case "flag_check":
+                        to_print.append(f"flag {data['id_str']} is {'set' if vars_flags.get_flag(data['id']) else 'cleared'}")
+                    case "flag_set":
+                        to_print.append(f"setting flag {data['id_str']}")
+                        flag = data["id"]
+                        print(f"{flag // 8}, {len(flags_bytes)}")
+                        if flag // 8 < len(flags_bytes):
+                            print(f"old: {vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8]:08b}")
+                            vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8] |= 1 << (flag & 7)
+                            print(f"new: {vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8]:08b}")
+                            wrote = True
+                    case "flag_clear":
+                        to_print.append(f"clearing flag {data['id_str']}")
+                        flag = data["id"]
+                        if flag // 8 < len(flags_bytes):
+                            vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8] &= ~(1 << (flag & 7))
+                    case "var_check":
+                        to_print.append(f"variable {data['id_str']}'s value is {vars_flags.get_var(data['id'])}")
+                    case "var_set":
+                        to_print.append(f"setting variable {data['id_str']}")
+                        var = data["id"]
+                        if var - 0x4000 < len(vars_bytes) // 2:
+                            pack_into("<H", vf_bytearr, (var - 0x4000) * 2, data["value"])
+                            wrote = True
+
+            if wrote:
+                print("writing changed debug")
+                if await bizhawk.guarded_write(
+                    ctx.bizhawk_ctx,
+                    [(savedata_ptr + version_data.vars_flags_offset_in_save, bytes(vf_bytearr), "ARM9 System Bus")],
+                    [
+                        guards["AP STRUCT VALID"],
+                        guards["SAVEDATA PTR"],
+                        (savedata_ptr + version_data.vars_flags_offset_in_save, vars_flags_bytes, "ARM9 System Bus"),
+                    ]
+                ):
+                    from CommonClient import logger
+                    for v in to_print:
+                        logger.info(v)
+                else:
+                    self.debug_queue = old_queue
+            else:
+                from CommonClient import logger
+                for v in to_print:
+                    logger.info(v)
+
+            packages = []
+
+            if local_seen_pokemon != self.local_seen_pokemon:
+                seq = dex_bytearray_to_seq(local_seen_pokemon)
+                packages.append({
+                    "cmd": "Set",
+                    "key": f"pokemon_hgss_seen_pokemon_{ctx.team}_{ctx.slot}",
+                    "default": [],
+                    "want_reply": False,
+                    "operations": [{"operation": "replace", "value": seq}]
+                })
+
+            if local_caught_pokemon != self.local_caught_pokemon:
+                seq = dex_bytearray_to_seq(local_caught_pokemon)
+                packages.append({
+                    "cmd": "Set",
+                    "key": f"pokemon_hgss_caught_pokemon_{ctx.team}_{ctx.slot}",
+                    "default": [],
+                    "want_reply": False,
+                    "operations": [{"operation": "replace", "value": seq}]
+                })
+
+            if packages:
+                await ctx.send_msgs(packages)
+
+                self.local_seen_pokemon = local_seen_pokemon
+                self.local_caught_pokemon = local_caught_pokemon
+
+            if local_tracked_events != self.local_tracked_events:
+                for chunk in range((len(TRACKED_EVENTS) + 31) // 32):
+                    await ctx.send_msgs([{
+                        "cmd": "Set",
+                        "key": f"pokemon_hgss_tracked_events_{ctx.team}_{ctx.slot}_{chunk}",
+                        "default": 0,
+                        "want_reply": False,
+                        "operations": [{"operation": "or", "value": (local_tracked_events >> (chunk * 32)) & 0xFFFFFFFF}]
+                    }])
+                self.local_tracked_events = local_tracked_events
+
+            if local_tracked_unrandomized_prog_locs != self.local_tracked_unrandomized_prog_locs:
+                for chunk in range((len(TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS) + 31) // 32):
+                    await ctx.send_msgs([{
+                        "cmd": "Set",
+                        "key": f"pokemon_hgss_tracked_unrandomized_required_locations_{ctx.team}_{ctx.slot}_{chunk}",
+                        "default": 0,
+                        "want_reply": False,
+                        "operations": [{"operation": "or", "value": (local_tracked_unrandomized_prog_locs >> (chunk * 32)) & 0xFFFFFFFF}]
+                    }])
+                self.local_tracked_unrandomized_prog_locs = local_tracked_unrandomized_prog_locs
 
             if not ctx.finished_game and game_clear:
                 ctx.finished_game = True
@@ -483,6 +688,34 @@ class PokemonHgssClient(BizHawkClient):
                     "cmd": "StatusUpdate",
                     "status": ClientStatus.CLIENT_GOAL,
                 }])
+
+            read_result = await bizhawk.guarded_read(
+                ctx.bizhawk_ctx,
+                [
+                    (self.ap_struct_address + version_data.player_pos_offset, 16, "ARM9 System Bus"),
+                ],
+                [guards["AP STRUCT VALID"]]
+            )
+
+            if read_result is None:
+                return
+
+            current_x, current_y, current_z, current_map, pos_lock = unpack_from("<3iHB", read_result[0])
+            if current_map not in TRACKED_HEIGHT_MAP_HEADERS:
+                current_y = 0
+            if pos_lock == 0 and (current_map != self.current_map or current_x != self.current_x or current_y != self.current_y or current_z != self.current_z):
+                self.current_map = current_map
+                self.current_x = current_x
+                self.current_y = current_y
+                self.current_z = current_z
+                message = [{"cmd": "Bounce", "slots": [ctx.slot],
+                           "data": {
+                               "mapNumber": current_map,
+                               "matrixX": current_x,
+                               "matrixZ": current_z,
+                               "playerY": current_y,
+                           }}]
+                await ctx.send_msgs(message)
 
         except bizhawk.RequestFailedError:
             pass
@@ -602,3 +835,59 @@ def parse_ap_struct_address(xmap: Sequence[str]) -> int:
         if all(c in HEXNUMS for c in l[2:10]):
             return int(l[2:10], 16)
     raise ValueError("ap global not present in xmap")
+
+def parse_int_including_base(s: str) -> int:
+    s = s.lower().strip()
+    if s.startswith("0x"):
+        return int(s[2:], 16)
+    elif s.startswith("0o"):
+        return int(s[2:], 8)
+    elif s.startswith("0b"):
+        return int(s[2:], 2)
+    else:
+        return int(s)
+
+def cmd_game_debug(self: "BizHawkClientCommandProcessor", *args) -> None:
+    """Game debug. Enter without arguments to print the usage. DO NOT USE IF YOU DON'T KNOW WHAT IT DOES."""
+    from CommonClient import logger
+
+    handler: PokemonHgssClient = self.ctx.client_handler # type: ignore
+
+    assert isinstance(handler, PokemonHgssClient)
+    if len(args) == 0:
+        logger.info("/game_debug [flag/var id] [flag: check/set/clear, var: check/set] [var set value]")
+        return
+    try:
+        id = parse_int_including_base(args[0])
+    except ValueError:
+        logger.error("first parameter of game debug is not an integer")
+        return
+    if id < 0x4000:
+        # flag
+        if len(args) == 1:
+            handler.debug_queue.append({"operation": "flag_check", "id": id, "id_str": args[0]})
+        elif len(args) != 2:
+            logger.error("unexpected extra parameter(s) passed to game debug")
+        else:
+            op = args[1].lower().strip()
+            if op in {"check", "set", "clear"}:
+                handler.debug_queue.append({"operation": "flag_" + op, "id": id, "id_str": args[0]})
+            else:
+                logger.error("unexpected flag operation: " + args[1].strip())
+    else:
+        # var
+        if len(args) == 1:
+            handler.debug_queue.append({"operation": "var_check", "id": id, "id_str": args[0]})
+        elif len(args) != 2:
+            if args[1].lower().strip() == "set":
+                try:
+                    handler.debug_queue.append({"operation": "var_set", "id": id, "value": parse_int_including_base(args[2]), "id_str": args[0]})
+                except ValueError:
+                    logger.error("parameter of game debug variable set is not an integer")
+            else:
+                logger.error("unexpected extra parameter(s) passed to game debug")
+        else:
+            if args[1].lower().strip() == "check":
+                handler.debug_queue.append({"operation": "var_check", "id": id, "id_str": args[0]})
+            else:
+                logger.error("unexpected variable operation: " + args[1].strip())

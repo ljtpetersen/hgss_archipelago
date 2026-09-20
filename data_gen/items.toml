@@ -25,14 +25,14 @@ clas = "bagitem"
 data_id = 3
 
 [poke_ball]
-label = "Poké Ball"
+label = "Poke Ball"
 id = 4
 group = "balls"
 clas = "bagitem"
 data_id = 4
 
 [poke_ball_x5]
-label = "Poké Ball x5"
+label = "Poke Ball x5"
 id = 4
 group = "balls"
 clas = "bagitem"
@@ -464,7 +464,7 @@ clas = "bagitem"
 data_id = 62
 
 [poke_doll]
-label = "Poké Doll"
+label = "Poke Doll"
 id = 63
 group = "battle_items"
 clas = "bagitem"
@@ -2930,7 +2930,7 @@ clas = "bagitem"
 data_id = 407
 
 [poke_radar]
-label = "Poké Radar"
+label = "Poke Radar"
 id = 431
 group = "key_items"
 clas = "bagitem"

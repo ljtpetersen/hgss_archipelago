@@ -64,12 +64,13 @@ def fill_unrandomized_encounters(world: "PokemonHgssWorld") -> None:
                 world.generated_encounters[(rd.encounters, type, i)] = slot.species
 
     # fill OOL encounters
+    v = {"hg" if world.options.version == Version.option_heartgold else "ss", None}
     world.ool_encounters = {
         (header, type, i):slot.species
         for header, encs in encounterdata.items()
         for type in encounter_types
         for i, slot in enumerate(getattr(encs, type))
-        if (header, type, i) not in world.generated_encounters
+        if (header, type, i) not in world.generated_encounters and slot.version in v
     }
 
 def fill_unrandomized_trainer_parties(world: "PokemonHgssWorld") -> None:
@@ -101,12 +102,13 @@ def randomize_encounters(world: "PokemonHgssWorld", req_specs: Set[str]) -> None
 
     # fill OOL encounters
     enc_pool = list(set(speciesdata) - world.options.encounter_species_blacklist.blacklist())
+    v = {"hg" if world.options.version == Version.option_heartgold else "ss", None}
     world.ool_encounters = {
         (header, type, i):world.random.choice(enc_pool)
         for header, encs in encounterdata.items()
         for type in encounter_types
-        for i in range(len(getattr(encs, type)))
-        if (header, type, i) not in world.generated_encounters
+        for i, slot in enumerate(getattr(encs, type))
+        if (header, type, i) not in world.generated_encounters and slot.version in v
     }
 
 def randomize_trainer_parties(world: "PokemonHgssWorld") -> None:

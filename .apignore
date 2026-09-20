@@ -12,6 +12,7 @@
 !/regions.py
 !/rules.py
 !/species.py
+!/version.py
 !/rom/__init__.py
 !/rom/encounterdata.py
 !/rom/eventdata.py

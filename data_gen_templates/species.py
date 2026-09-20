@@ -32,7 +32,7 @@ class SpeciesData:
     pre_evolution: PreEvolution | None = None
 
     def other_learnset(self) -> Sequence[str]:
-        ret = [tm_moves[i] for i in self.tm_learnset]
+        ret = [tm_moves[i - 1] for i in self.tm_learnset]
         ret.extend(self.tutor_learnset)
         return ret
 
