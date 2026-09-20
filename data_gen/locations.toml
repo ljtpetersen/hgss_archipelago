@@ -2853,7 +2853,7 @@ check = 938
 
 [hidden_r03_hyper_potion]
 original_item = "hyper_potion"
-label = "Route 3 - Hidden Item Behind Breakable Rocks by Pokemon Center"
+label = "Route 3 - Hidden Item Behind Breakable Rocks By Pokemon Center"
 id = 139
 table = "hidden"
 type = "hidden"
