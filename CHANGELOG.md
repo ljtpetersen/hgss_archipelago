@@ -8,12 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.7] - TBD
 ### Added
 * The tide state of the Lake of Rage is now reported in the player position bounce packet.
-* There are now item groups containing all HMs, and all TMs/HMs that can be used in the field.
-* Added item groups for each TM and HM, one matching the corresponding TM/HM number and one matching the move name.
+* There are now item groups containing all HMs and Field Moves.
+* The names of notable TMs and HMs now contain the name of the move in addition to the TM/HM number.
+* TMs and HMs can now be hinted for by either move name (i.e. "Surf", "Flash") or TM/HM number (i.e. "HM03", "TM70").
 ### Changed
 * Ilex Forest - Item from Charcoal Maker now logically requires clearing Slowpoke Well to look better on the PopTracker.
 * When patching, patches generated with compatible previous versions may use the new base patches.
-* Added move names to the labels of TMs and HMs that can be used in the field.
 ### Fixed
 * Fixed the Fly Region for Safari Zone Gate being shuffled with Kanto fly unlocks instead of Johto.
 * Fixed the hidden item on Route 30 missing a rule requiring the player to deliver the Mystery Egg or use Cut.
