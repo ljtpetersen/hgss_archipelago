@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Ilex Forest - Item from Charcoal Maker now logically requires clearing Slowpoke Well to look better on the PopTracker.
 * Improved clarity and consistency of the names of many locations.
 * When patching, patches generated with compatible previous versions may use the new base patches.
+* Standardized Fly Region item names with FireRed/LeafGreen.
+* Improved clarity of Fly Region location names.
 ### Fixed
 * Fixed the Fly Region for Safari Zone Gate being shuffled with Kanto fly unlocks instead of Johto.
 * Fixed the hidden item on Route 30 missing a rule requiring the player to deliver the Mystery Egg or use Cut.
