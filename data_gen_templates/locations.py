@@ -20,6 +20,10 @@ class LocationCheck:
     pass
 
 @dataclass(frozen=True)
+class TrainerCheck(LocationCheck):
+    id: int
+
+@dataclass(frozen=True)
 class VarCheck(LocationCheck):
     id: int
     value: int

@@ -10,10 +10,6 @@ from .locations import LocationCheck, VarCheck, FlagCheck, LocationTable
 from .regions import regions
 
 @dataclass(frozen=True)
-class TrainerCheck(LocationCheck):
-    id: int
-
-@dataclass(frozen=True)
 class PartyMember:
     species: str
     level: int

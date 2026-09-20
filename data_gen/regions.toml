@@ -144,7 +144,7 @@ header = "route_29_route_46_gatehouse"
 
 [route_26]
 exits = [
-    "route_22_pokemon_league_reception_gate",
+    "route_22_pokemon_league_reception_gate_south",
     "route_26_north_house",
     "route_26_week_siblings_house",
     "route_27_east",
@@ -280,11 +280,21 @@ header = "route_26_week_siblings_house"
 [route_22_pokemon_league_reception_gate]
 exits = [
     "route_22",
-    "route_26",
+    "route_22_pokemon_league_reception_gate_south",
     "route_28_south",
     "victory_road_1f_entrance",
 ]
 header = "route_22_pokemon_league_reception_gate"
+
+[route_22_pokemon_league_reception_gate_south]
+exits = [
+    "route_22_pokemon_league_reception_gate",
+    "route_26",
+]
+header = "route_22_pokemon_league_reception_gate"
+locs = [
+    "fly_map_victory_road_1f",
+]
 
 [cherrygrove_pokemart]
 exits = [
@@ -309,7 +319,6 @@ encounters = "r30"
 header = "route_30"
 locs = [
     "route_30_apricorn_box",
-    "hidden_r30_potion",
     "overworld_r30_antidote",
     "overworld_r30_potion",
 ]
@@ -324,6 +333,9 @@ exits = [
 ]
 encounters = "r30"
 header = "route_30"
+locs = [
+    "hidden_r30_potion",
+]
 trainers = [
     "youngster_mikey",
     "bug_catcher_don",
@@ -553,7 +565,6 @@ exits = [
 encounters = "d43r0101"
 header = "victory_road_1f"
 locs = [
-    "fly_map_victory_road_1f",
     "hidden_d43r0101_full_heal",
     "hidden_d43r0101_max_potion",
     "overworld_d43r0101_max_revive",
@@ -926,15 +937,24 @@ trainers = [
 exits = [
     "route_2_viridian_forest_south_gatehouse",
     "viridian",
-    "pewter",
-    "route_2_east",
-    "route_2_viridian_forest_north_gatehouse",
+    "route_2_southeast",
 ]
 encounters = "r02"
 header = "route_2"
 trainers = [
     "bug_catcher_rob",
     "bug_catcher_doug",
+]
+
+[route_2_northwest]
+exits = [
+    "pewter",
+    "route_2_viridian_forest_north_gatehouse",
+    "route_2_northeast",
+]
+encounters = "r02r0101"
+header = "route_2_east"
+trainers = [
     "bug_catcher_ed",
 ]
 
@@ -1440,7 +1460,8 @@ trainers = [
 
 [route_2_southeast_gatehouse]
 exits = [
-    "route_2_east",
+    "route_2_northeast",
+    "route_2_southeast"
 ]
 header = "route_2_southeast_gatehouse"
 locs = [
@@ -1478,10 +1499,10 @@ exits = [
 ]
 header = "mahogany_souvenir_shop"
 
-[route_2_east]
+[route_2_northeast]
 exits = [
     "diglett_cave",
-    "route_2",
+    "route_2_northwest",
     "route_2_house",
     "route_2_southeast_gatehouse",
 ]
@@ -1489,6 +1510,17 @@ encounters = "r02r0101"
 header = "route_2_east"
 locs = [
     "overworld_r02r0101_carbos",
+]
+accessible_encounters = []
+
+[route_2_southeast]
+exits = [
+    "route_2",
+    "route_2_southeast_gatehouse",
+]
+encounters = "r02"
+header = "route_2"
+locs = [
     "overworld_r02_elixir",
 ]
 accessible_encounters = []
@@ -1846,7 +1878,7 @@ header = "ruins_of_alph_underground_hall_sinjoh_event_2"
 
 [route_2_viridian_forest_north_gatehouse]
 exits = [
-    "route_2",
+    "route_2_northwest",
     "viridian_forest",
 ]
 header = "route_2_viridian_forest_north_gatehouse"
@@ -1894,7 +1926,7 @@ trainers = [
 [diglett_cave]
 exits = [
     "route_11",
-    "route_2_east",
+    "route_2_northeast",
 ]
 encounters = "d01r0101"
 header = "diglett_cave"
@@ -2144,7 +2176,7 @@ header = "route_32_pokecenter_b1f"
 
 [route_2_house]
 exits = [
-    "route_2_east",
+    "route_2_northeast",
 ]
 header = "route_2_house"
 locs = [
@@ -2168,7 +2200,7 @@ exits = [
     "pewter_pokecenter_1f",
     "pewter_pokemart",
     "pewter_southwest_house",
-    "route_2",
+    "route_2_northwest",
     "route_3",
 ]
 header = "pewter"
@@ -2303,7 +2335,6 @@ exits = [
 encounters = "d22r0101"
 header = "national_park"
 locs = [
-    "fly_map_national_park",
     "hidden_d22r0101_d22r0102_full_heal",
     "hidden_d22r0101_d22r0102_full_heal_2",
     "overworld_d22r0101_soothe_bell",
@@ -3013,6 +3044,9 @@ exits = [
     "pokeathlon_dome_interior_b1f_solidarity_room",
 ]
 header = "pokeathlon_dome_interior_1f"
+locs = [
+    "fly_map_national_park",
+]
 
 [route_34_daycare]
 exits = [
@@ -4289,7 +4323,7 @@ header = "cerulean_bike_maniac_house"
 
 [seafoam_islands_cinnabar_gym]
 exits = [
-    "seafoam_islands_1f_west",
+    "seafoam_islands_1f_east",
 ]
 header = "seafoam_islands_cinnabar_gym"
 locs = [
@@ -4828,6 +4862,9 @@ locs = [
     "hidden_d03r0102_pp_up",
     "hidden_d03r0102_big_pearl",
 ]
+accessible_encounters = [
+    "land",
+]
 
 [fuchsia_southwest_house]
 exits = [
@@ -4944,7 +4981,6 @@ exits = [
     "frontier_access_pokecenter_1f",
     "frontier_access_pokemart",
     "route_40_battle_frontier_gatehouse",
-    "virt_fly_map_battle_frontier",
 ]
 header = "battle_frontier_frontier_access"
 locs = [
@@ -5305,6 +5341,7 @@ events = [
 exits = [
     "battle_frontier",
     "battle_frontier_frontier_access",
+    "virt_fly_map_battle_frontier",
 ]
 header = "battle_frontier_frontier_access_gatehouse"
 
@@ -5923,8 +5960,8 @@ exits = [
     "lake_of_rage",
     "mount_silver",
     "safari_zone_gate",
-    "battle_frontier",
-    "national_park",
+    "battle_frontier_frontier_access",
+    "pokeathlon_dome",
     "route_26",
 ]
 
@@ -5987,6 +6024,9 @@ header = "virt"
 exits = []
 locs = [
     "fly_map_battle_frontier",
+]
+events = [
+    "event_fly_battle_frontier",
 ]
 
 [virt_vitamins]

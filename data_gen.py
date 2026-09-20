@@ -125,12 +125,15 @@ class Encounters:
 @dataclass(frozen=True)
 class Check:
     id: int
+    trainer: bool = False
     value: int | None = None
     op: str = "eq"
     invert: bool = False
 
     def __str__(self) -> str:
-        if self.value is None:
+        if self.trainer:
+            return f"TrainerCheck(id=0x{self.id:X})"
+        elif self.value is None:
             ret = f"FlagCheck(id=0x{self.id:X}"
             if self.invert:
                 ret += ", invert=True"
@@ -428,7 +431,7 @@ class ParserState:
         encounter_types = {"land", "water", "rock_smash"}
         events = set()
         used_locs = set()
-        for region in self.regions.values():
+        for k, region in self.regions.items():
             for loc in region.locs:
                 assert loc in self.locations, f"{loc} is a location"
                 assert loc not in used_locs, f"{loc} is repeated"
@@ -444,7 +447,7 @@ class ParserState:
                 assert exit not in cur, f"{exit} is repeated"
                 cur.add(exit)
             for event in region.events:
-                assert event not in events, f"{event} is a unique event"
+                assert event not in events, f"{event} is a unique event (region {k})"
                 events.add(event)
             for trainer in region.trainers:
                 if not trainer.startswith("rival_"):
