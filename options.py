@@ -104,7 +104,7 @@ class RandomizeSoundsItems(DefaultOnToggle):
 
 class RemoveBadgeRequirement(OptionSet):
     """
-    Specify which HMs do not require a badge to use outside of battle. This overrides the HM Badge Requirements setting.
+    Specify which HMs do not require a badge to use outside of battle.
 
     HMs should be provided in the form: "fly", "waterfall", "rock_smash", etc.
     "all" specifies that all hms have their requirement removed.

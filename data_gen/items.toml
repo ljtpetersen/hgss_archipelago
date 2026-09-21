@@ -3943,14 +3943,14 @@ data_id = 516
 
 [town_map]
 id = 26
-label = "Town Map Pokegear Card"
+label = "Map Card"
 group = "card"
 classification = "useful"
 clas = "special"
 
 [radio]
 id = 27
-label = "Upgradable Radio Pokegear Card"
+label = "Upgradable Radio Card"
 group = "card"
 classification = "progression"
 clas = "special"

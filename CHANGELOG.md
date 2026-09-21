@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * When patching, patches generated with compatible previous versions may use the new base patches.
 * Standardized Fly Region item names with FireRed/LeafGreen.
 * Improved clarity of Fly Region location names.
+* Pokegear card item names have been simplified.
 ### Fixed
 * Fixed the Fly Region for Safari Zone Gate being shuffled with Kanto fly unlocks instead of Johto.
 * Fixed the hidden item on Route 30 missing a rule requiring the player to deliver the Mystery Egg or use Cut.
@@ -43,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Kanto battle music now plays even if the player has not yet reached Vermilion.
 * The correct Pokémon name is buffered when using field moves.
 * The rival in the Pokémon League will be present on every week day.
+* The description of `remove_badge_requirements` no longer mentions the nonexistent HM Badge Requirements option.
 
 ## [0.0.6] - 2026-09-02
 ### Added
