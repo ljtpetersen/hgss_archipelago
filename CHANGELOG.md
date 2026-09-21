@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.7] - TBD
+## [0.0.7] - 2026-09-20
 ### Added
 * The tide state of the Lake of Rage is now reported in the player position bounce packet.
 * There are now item groups containing all HMs and Field Moves.

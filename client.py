@@ -17,6 +17,7 @@ import Utils
 
 from .apnds import rom as ndsrom
 
+from .data import AP_STRUCT_ADDRESS, VersionEnum
 from .data.event_checks import event_checks
 from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, TrainerCheck, VarCheck, maximal_required_locations
 from .data.trainers import trainers, trainer_id_to_trainer_const_name
@@ -24,7 +25,7 @@ from .data.species import regional_mons, species_id_to_const_name
 from .items import get_item_classification
 from .locations import raw_id_to_const_name
 from .options import Goal, RemoteItems
-from .version import version_int
+from .version import version_int, VERSION_INT as WORLD_VERSION
 
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
@@ -277,6 +278,7 @@ class PokemonHgssClient(BizHawkClient):
     game = "Pokemon HeartGold and SoulSilver"
     system = "NDS"
     patch_suffix = (".apheartgold", ".apsoulsilver")
+    game_version: VersionEnum
     ap_struct_address: int = 0
     rom_version: int = 0
     goal_check: LocationCheck
@@ -379,6 +381,7 @@ class PokemonHgssClient(BizHawkClient):
                 version = int.from_bytes(version_bytes, 'little')
                 if version in AP_VERSION_DATA:
                     self.rom_version = version
+                    self.game_version = VersionEnum.HEARTGOLD if rom_name.startswith("TRB HGAP") else VersionEnum.SOULSILVER
                 else:
                     logger.info("ERROR: The patch file used to create this ROM is not compatible with "
                                 "this client. Double-check your client version against the version being "
@@ -420,7 +423,9 @@ class PokemonHgssClient(BizHawkClient):
                     assert xmap_bytes is not None
                     cands.add(parse_ap_struct_address(xmap_bytes.decode("utf-8").split("\n")))
             else:
-                cands = ctx.slot_data["possible_ap_struct_addresses"]
+                cands = list(ctx.slot_data["possible_ap_struct_addresses"])
+                if self.rom_version == WORLD_VERSION:
+                    cands.append(AP_STRUCT_ADDRESS["hg_us" if self.game_version == VersionEnum.HEARTGOLD else "ss_us"])
             for addr in cands:
                 if 0x2000000 < addr and addr < 0x2400000:
                     header = (await bizhawk.read(ctx.bizhawk_ctx, [(addr, 16, "ARM9 System Bus")]))[0]

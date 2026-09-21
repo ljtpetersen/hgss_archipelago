@@ -84,12 +84,14 @@ class PokemonHeartgoldPatch(APAutoPatchInterface):
         self.read()
         if "HGSS_DEV_ENV" in environ:
             rom_bytes = pkgutil.get_data(__name__, "../roms/hg_us.nds")
+            version = WORLD_VERSION
             assert rom_bytes is not None
         else:
             version = int.from_bytes(self.get_file("world_version.bin"), 'little')
             patch_name = "base_patch_hg_us.bsdiff4"
             if version in COMPATIBLE_ROM_VERSIONS:
                 patch = pkgutil.get_data(__name__, f"../patches/{patch_name}")
+                version = WORLD_VERSION
             else:
                 patch = self.get_file(patch_name)
             data = PokemonHeartgoldPatch.get_source_data_with_cache()
@@ -98,7 +100,7 @@ class PokemonHeartgoldPatch(APAutoPatchInterface):
         self.read()
 
         with open(target, "wb") as f:
-            f.write(patch_common(rom_bytes, self.files, VersionEnum.HEARTGOLD))
+            f.write(patch_common(rom_bytes, self.files, VersionEnum.HEARTGOLD, version))
 
     def __init__(self, *args: Any, **kwargs: Any):
         super().__init__(*args, **kwargs)
@@ -156,12 +158,14 @@ class PokemonSoulsilverPatch(APAutoPatchInterface):
         self.read()
         if "HGSS_DEV_ENV" in environ:
             rom_bytes = pkgutil.get_data(__name__, "../roms/ss_us.nds")
+            version = WORLD_VERSION
             assert rom_bytes is not None
         else:
             version = int.from_bytes(self.get_file("world_version.bin"), 'little')
             patch_name = "base_patch_ss_us.bsdiff4"
             if version in COMPATIBLE_ROM_VERSIONS:
                 patch = pkgutil.get_data(__name__, f"../patches/{patch_name}")
+                version = WORLD_VERSION
             else:
                 patch = self.get_file(patch_name)
             data = PokemonSoulsilverPatch.get_source_data_with_cache()
@@ -170,7 +174,7 @@ class PokemonSoulsilverPatch(APAutoPatchInterface):
         self.read()
 
         with open(target, "wb") as f:
-            f.write(patch_common(rom_bytes, self.files, VersionEnum.SOULSILVER))
+            f.write(patch_common(rom_bytes, self.files, VersionEnum.SOULSILVER, version))
 
     def __init__(self, *args: Any, **kwargs: Any):
         super().__init__(*args, **kwargs)
@@ -203,12 +207,12 @@ class PokemonSoulsilverPatch(APAutoPatchInterface):
     def write_file(self, file_name: str, file: bytes) -> None:
         self.files[file_name] = file
 
-def patch_common(rom_bytes: bytes, files: Mapping[str, bytes], version: VersionEnum) -> bytes:
+def patch_common(rom_bytes: bytes, files: Mapping[str, bytes], version: VersionEnum, world_version: int) -> bytes:
     rom = Rom.from_bytes(rom_bytes)
 
     rom.files["/ap.bin"] = files["ap.bin"]
 
-    rom.header.data[0x1000:0x1004] = files["world_version.bin"]
+    rom.header.data[0x1000:0x1004] = world_version.to_bytes(4, 'little')
 
     if "item_patches.json" in files:
         item_patches = json.loads(files["item_patches.json"])
