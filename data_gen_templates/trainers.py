@@ -6,7 +6,7 @@
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 
-from .locations import LocationCheck, VarCheck, FlagCheck, LocationTable
+from .locations import LocationCheck, VarCheck, FlagCheck, LocationTable, TrainerCheck
 from .regions import regions
 
 @dataclass(frozen=True)
