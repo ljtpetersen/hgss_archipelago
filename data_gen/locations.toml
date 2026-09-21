@@ -4328,7 +4328,7 @@ original_item = "earth_badge"
 id = 57
 table = "base"
 type = "badge"
-label = "Viridian City Gym - Earth Badge"
+label = "Viridian City Gym - Badge from Blue"
 check = 382
 
 [viridian_tm92]
