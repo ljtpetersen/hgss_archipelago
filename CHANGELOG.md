@@ -44,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Kanto battle music now plays even if the player has not yet reached Vermilion.
 * The correct Pokémon name is buffered when using field moves.
 * The rival in the Pokémon League will be present on every week day.
+* The description of `remove_badge_requirements` no longer mentions the nonexistent HM Badge Requirements option.
 
 ## [0.0.6] - 2026-09-02
 ### Added
