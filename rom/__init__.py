@@ -57,7 +57,7 @@ STARTER_IDX_MAP: Mapping[str, int] = {
     "feraligatr": 2,
 }
 
-COMPATIBLE_ROM_VERSIONS: Set[int] = frozenset([version_int("0.0.6")])
+COMPATIBLE_ROM_VERSIONS: Set[int] = frozenset([version_int("0.0.6"), version_int("0.0.7")])
 
 class PokemonHeartgoldPatch(APAutoPatchInterface):
     game = "Pokemon HeartGold and SoulSilver"
@@ -90,7 +90,7 @@ class PokemonHeartgoldPatch(APAutoPatchInterface):
             version = int.from_bytes(self.get_file("world_version.bin"), 'little')
             patch_name = "base_patch_hg_us.bsdiff4"
             if version in COMPATIBLE_ROM_VERSIONS:
-                patch = pkgutil.get_data(__name__, f"../patches/{patch_name}")
+                patch = pkgutil.get_data(__name__[:__name__.rfind('.')], f"patches/{patch_name}")
                 version = WORLD_VERSION
             else:
                 patch = self.get_file(patch_name)
@@ -164,7 +164,7 @@ class PokemonSoulsilverPatch(APAutoPatchInterface):
             version = int.from_bytes(self.get_file("world_version.bin"), 'little')
             patch_name = "base_patch_ss_us.bsdiff4"
             if version in COMPATIBLE_ROM_VERSIONS:
-                patch = pkgutil.get_data(__name__, f"../patches/{patch_name}")
+                patch = pkgutil.get_data(__name__[:__name__.rfind('.')], f"patches/{patch_name}")
                 version = WORLD_VERSION
             else:
                 patch = self.get_file(patch_name)

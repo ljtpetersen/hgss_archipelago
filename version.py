@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2026 James Petersen <m@jamespetersen.ca>
 
-VERSION = "0.0.7"
+VERSION = "0.0.8"
 
 def version_int(version: str) -> int:
     major, minor, rev = (int(s) for s in version.split('.'))

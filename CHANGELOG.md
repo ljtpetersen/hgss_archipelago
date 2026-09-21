@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.8] - 2026-09-21
 ### Fixed
+* Using old patches with the new version now works.
 * Resolved a missing import that was breaking trainersanity.
 
 ## [0.0.7] - 2026-09-20
