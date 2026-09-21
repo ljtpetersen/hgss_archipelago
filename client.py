@@ -17,14 +17,15 @@ import Utils
 
 from .apnds import rom as ndsrom
 
+from .data import AP_STRUCT_ADDRESS, VersionEnum
 from .data.event_checks import event_checks
-from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, VarCheck, maximal_required_locations
-from .data.trainers import trainers, trainer_id_to_trainer_const_name, TrainerCheck
+from .data.locations import FlagCheck, LocationCheck, LocationTable, locations, TrainerCheck, VarCheck, maximal_required_locations
+from .data.trainers import trainers, trainer_id_to_trainer_const_name
 from .data.species import regional_mons, species_id_to_const_name
 from .items import get_item_classification
 from .locations import raw_id_to_const_name
 from .options import Goal, RemoteItems
-from .version import version_int
+from .version import version_int, VERSION_INT as WORLD_VERSION
 
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
@@ -85,6 +86,8 @@ TRACKED_EVENTS = [
 ]
 TRACKED_HEIGHT_MAP_HEADERS = frozenset()
 TRACKED_UNRANDOMIZED_REQUIRED_LOCATIONS = maximal_required_locations
+LAKE_OF_RAGE_ENVIRONS_MAPS = frozenset({45, 88})
+LAKE_OF_RAGE_TIDE_CHECK = "lake_of_rage_low_tide"
 
 prev_version_data: "VersionData" = None # type: ignore
 
@@ -142,6 +145,7 @@ AP_VERSION_DATA: Mapping[int, VersionData] = {
     version_int("0.0.4"): prev_version_data,
     version_int("0.0.5"): prev_version_data,
     version_int("0.0.6"): prev_version_data,
+    version_int("0.0.7"): prev_version_data,
 }
 
 @dataclass(frozen=True)
@@ -274,6 +278,7 @@ class PokemonHgssClient(BizHawkClient):
     game = "Pokemon HeartGold and SoulSilver"
     system = "NDS"
     patch_suffix = (".apheartgold", ".apsoulsilver")
+    game_version: VersionEnum
     ap_struct_address: int = 0
     rom_version: int = 0
     goal_check: LocationCheck
@@ -376,6 +381,7 @@ class PokemonHgssClient(BizHawkClient):
                 version = int.from_bytes(version_bytes, 'little')
                 if version in AP_VERSION_DATA:
                     self.rom_version = version
+                    self.game_version = VersionEnum.HEARTGOLD if rom_name.startswith("TRB HGAP") else VersionEnum.SOULSILVER
                 else:
                     logger.info("ERROR: The patch file used to create this ROM is not compatible with "
                                 "this client. Double-check your client version against the version being "
@@ -417,7 +423,9 @@ class PokemonHgssClient(BizHawkClient):
                     assert xmap_bytes is not None
                     cands.add(parse_ap_struct_address(xmap_bytes.decode("utf-8").split("\n")))
             else:
-                cands = ctx.slot_data["possible_ap_struct_addresses"]
+                cands = list(ctx.slot_data["possible_ap_struct_addresses"])
+                if self.rom_version == WORLD_VERSION:
+                    cands.append(AP_STRUCT_ADDRESS["hg_us" if self.game_version == VersionEnum.HEARTGOLD else "ss_us"])
             for addr in cands:
                 if 0x2000000 < addr and addr < 0x2400000:
                     header = (await bizhawk.read(ctx.bizhawk_ctx, [(addr, 16, "ARM9 System Bus")]))[0]
@@ -591,17 +599,15 @@ class PokemonHgssClient(BizHawkClient):
                     case "flag_set":
                         to_print.append(f"setting flag {data['id_str']}")
                         flag = data["id"]
-                        print(f"{flag // 8}, {len(flags_bytes)}")
                         if flag // 8 < len(flags_bytes):
-                            print(f"old: {vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8]:08b}")
                             vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8] |= 1 << (flag & 7)
-                            print(f"new: {vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8]:08b}")
                             wrote = True
                     case "flag_clear":
                         to_print.append(f"clearing flag {data['id_str']}")
                         flag = data["id"]
                         if flag // 8 < len(flags_bytes):
                             vf_bytearr[version_data.flags_offset_in_vars_flags + flag // 8] &= ~(1 << (flag & 7))
+                            wrote = True
                     case "var_check":
                         to_print.append(f"variable {data['id_str']}'s value is {vars_flags.get_var(data['id'])}")
                     case "var_set":
@@ -708,13 +714,15 @@ class PokemonHgssClient(BizHawkClient):
                 self.current_x = current_x
                 self.current_y = current_y
                 self.current_z = current_z
-                message = [{"cmd": "Bounce", "slots": [ctx.slot],
-                           "data": {
-                               "mapNumber": current_map,
-                               "matrixX": current_x,
-                               "matrixZ": current_z,
-                               "playerY": current_y,
-                           }}]
+                data = {
+                    "mapNumber": current_map,
+                    "matrixX": current_x,
+                    "matrixZ": current_z,
+                    "playerY": current_y,
+                }
+                if current_map in LAKE_OF_RAGE_ENVIRONS_MAPS:
+                    data["lakeOfRageTide"] = "low" if vars_flags.is_checked(event_checks[LAKE_OF_RAGE_TIDE_CHECK]) else "high"
+                message = [{"cmd": "Bounce", "slots": [ctx.slot], "data": data}]
                 await ctx.send_msgs(message)
 
         except bizhawk.RequestFailedError:

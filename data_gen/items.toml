@@ -1445,7 +1445,7 @@ clas = "bagitem"
 data_id = 198
 
 [kings_rock]
-label = "King’s Rock"
+label = "King's Rock"
 id = 221
 group = "items"
 clas = "specialbagitem"
@@ -2396,9 +2396,9 @@ clas = "bagitem"
 data_id = 332
 
 [tm28]
-label = "TM28"
+label = "TM28 Dig"
 id = 355
-group = "tmhms"
+group = ["tmhms", "field_moves", "tm28", "dig"]
 clas = "bagitem"
 data_id = 333
 
@@ -2690,9 +2690,9 @@ clas = "bagitem"
 data_id = 374
 
 [tm70]
-label = "TM70"
+label = "TM70 Flash"
 id = 397
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "tm70", "flash"]
 clas = "specialbagitem"
 data_id = 375
 classification = "progression"
@@ -2852,65 +2852,65 @@ clas = "bagitem"
 data_id = 397
 
 [hm01]
-label = "HM01"
+label = "HM01 Cut"
 id = 420
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm01", "cut"]
 clas = "bagitem"
 data_id = 398
 classification = "progression"
 
 [hm02]
-label = "HM02"
+label = "HM02 Fly"
 id = 421
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm02", "fly"]
 clas = "bagitem"
 data_id = 399
 classification = "progression"
 
 [hm03]
-label = "HM03"
+label = "HM03 Surf"
 id = 422
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm03", "surf"]
 clas = "specialbagitem"
 data_id = 400
 classification = "progression"
 
 [hm04]
-label = "HM04"
+label = "HM04 Strength"
 id = 423
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm04", "strength"]
 clas = "bagitem"
 data_id = 401
 classification = "progression"
 
 [hm05]
-label = "HM05"
+label = "HM05 Whirlpool"
 id = 424
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm05", "whirlpool"]
 clas = "bagitem"
 data_id = 402
 classification = "progression"
 
 [hm06]
-label = "HM06"
+label = "HM06 Rock Smash"
 id = 425
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm06", "rock_smash"]
 clas = "bagitem"
 data_id = 403
 classification = "progression"
 
 [hm07]
-label = "HM07"
+label = "HM07 Waterfall"
 id = 426
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm07", "waterfall"]
 clas = "bagitem"
 data_id = 404
 classification = "progression"
 
 [hm08]
-label = "HM08"
+label = "HM08 Rock Climb"
 id = 427
-group = "tmhms"
+group = ["tmhms", "field_moves", "hms", "hm08", "rock_climb"]
 clas = "bagitem"
 data_id = 405
 classification = "progression"
@@ -3202,7 +3202,7 @@ clas = "bagitem"
 data_id = 445
 
 [unown_report]
-label = "UNOWN Report"
+label = "Unown Report"
 id = 469
 group = "key_items"
 clas = "bagitem"
@@ -3943,202 +3943,202 @@ data_id = 516
 
 [town_map]
 id = 26
-label = "Town Map Pokegear Card"
+label = "Map Card"
 group = "card"
 classification = "useful"
 clas = "special"
 
 [radio]
 id = 27
-label = "Upgradable Radio Pokegear Card"
+label = "Upgradable Radio Card"
 group = "card"
 classification = "progression"
 clas = "special"
 
 [fly_map_pallet]
-label = "Fly Region - Pallet"
+label = "Fly Unlock (Pallet Town)"
 id = 28
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_viridian]
-label = "Fly Region - Viridian"
+label = "Fly Unlock (Viridian City)"
 id = 29
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_pewter]
-label = "Fly Region - Pewter"
+label = "Fly Unlock (Pewter City)"
 id = 30
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_cerulean]
-label = "Fly Region - Cerulean"
+label = "Fly Unlock (Cerulean City)"
 id = 31
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_lavender]
-label = "Fly Region - Lavender"
+label = "Fly Unlock (Lavender Town)"
 id = 32
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_vermilion]
-label = "Fly Region - Vermilion"
+label = "Fly Unlock (Vermilion City)"
 id = 33
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_celadon]
-label = "Fly Region - Celadon"
+label = "Fly Unlock (Celadon City)"
 id = 34
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_fuchsia]
-label = "Fly Region - Fuchsia"
+label = "Fly Unlock (Fuchsia City)"
 id = 35
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_cinnabar_island]
-label = "Fly Region - Cinnabar Island"
+label = "Fly Unlock (Cinnabar Island)"
 id = 36
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_indigo_plateau]
-label = "Fly Region - Indigo Plateau"
+label = "Fly Unlock (Indigo Plateau)"
 id = 37
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_saffron]
-label = "Fly Region - Saffron"
+label = "Fly Unlock (Saffron City)"
 id = 38
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_new_bark]
-label = "Fly Region - New Bark"
+label = "Fly Unlock (New Bark Town)"
 id = 39
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_cherrygrove]
-label = "Fly Region - Cherrygrove"
+label = "Fly Unlock (Cherrygrove City)"
 id = 40
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_violet]
-label = "Fly Region - Violet"
+label = "Fly Unlock (Violet City)"
 id = 41
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_azalea]
-label = "Fly Region - Azalea"
+label = "Fly Unlock (Azalea Town)"
 id = 42
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_cianwood]
-label = "Fly Region - Cianwood"
+label = "Fly Unlock (Cianwood City)"
 id = 43
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_goldenrod]
-label = "Fly Region - Goldenrod"
+label = "Fly Unlock (Goldenrod City)"
 id = 44
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_olivine]
-label = "Fly Region - Olivine"
+label = "Fly Unlock (Olivine City)"
 id = 45
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_ecruteak]
-label = "Fly Region - Ecruteak"
+label = "Fly Unlock (Ecruteak City)"
 id = 46
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_mahogany]
-label = "Fly Region - Mahogany"
+label = "Fly Unlock (Mahogany Town)"
 id = 47
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_blackthorn]
-label = "Fly Region - Blackthorn"
+label = "Fly Unlock (Blackthorn City)"
 id = 48
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_lake_of_rage]
-label = "Fly Region - Lake Of Rage"
+label = "Fly Unlock (Lake of Rage)"
 id = 49
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_mount_silver]
-label = "Fly Region - Mount Silver"
+label = "Fly Unlock (Mt. Silver)"
 id = 50
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_safari_zone_gate]
-label = "Fly Region - Safari Zone Gate"
+label = "Fly Unlock (Safari Zone Gate)"
 id = 51
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_battle_frontier]
-label = "Fly Region - Battle Frontier"
+label = "Fly Unlock (Battle Frontier)"
 id = 52
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_national_park]
-label = "Fly Region - National Park"
+label = "Fly Unlock (National Park)"
 id = 53
 group = "fly_item"
 classification = "progression"
 clas = "special"
 
 [fly_map_victory_road_1f]
-label = "Fly Region - Victory Road 1F"
+label = "Fly Unlock (Victory Road)"
 group = "fly_item"
 classification = "progression"
 clas = "special"

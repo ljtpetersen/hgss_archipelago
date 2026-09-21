@@ -5,7 +5,7 @@
 
 
 from collections import Counter
-from collections.abc import Mapping, MutableMapping, MutableSequence, MutableSet, Sequence
+from collections.abc import Mapping, MutableMapping, MutableSequence, MutableSet, Sequence, Set
 import bsdiff4
 import json
 import pkgutil
@@ -26,7 +26,7 @@ from .trainerdata import patch_trainer_parties
 from ..items import raw_id_to_const_name
 from ..locations import location_types
 from ..options import TMHMCompatibility
-from ..version import VERSION_INT as WORLD_VERSION
+from ..version import VERSION_INT as WORLD_VERSION, version_int
 
 from ..apnds.rom import Rom
 
@@ -57,6 +57,8 @@ STARTER_IDX_MAP: Mapping[str, int] = {
     "feraligatr": 2,
 }
 
+COMPATIBLE_ROM_VERSIONS: Set[int] = frozenset([version_int("0.0.6")])
+
 class PokemonHeartgoldPatch(APAutoPatchInterface):
     game = "Pokemon HeartGold and SoulSilver"
     patch_file_ending = ".apheartgold"
@@ -82,16 +84,23 @@ class PokemonHeartgoldPatch(APAutoPatchInterface):
         self.read()
         if "HGSS_DEV_ENV" in environ:
             rom_bytes = pkgutil.get_data(__name__, "../roms/hg_us.nds")
+            version = WORLD_VERSION
             assert rom_bytes is not None
         else:
-            data = PokemonHeartgoldPatch.get_source_data_with_cache()
+            version = int.from_bytes(self.get_file("world_version.bin"), 'little')
             patch_name = "base_patch_hg_us.bsdiff4"
-            rom_bytes = bsdiff4.patch(data, self.get_file(patch_name))
+            if version in COMPATIBLE_ROM_VERSIONS:
+                patch = pkgutil.get_data(__name__, f"../patches/{patch_name}")
+                version = WORLD_VERSION
+            else:
+                patch = self.get_file(patch_name)
+            data = PokemonHeartgoldPatch.get_source_data_with_cache()
+            rom_bytes = bsdiff4.patch(data, patch)
             
         self.read()
 
         with open(target, "wb") as f:
-            f.write(patch_common(rom_bytes, self.files, VersionEnum.HEARTGOLD))
+            f.write(patch_common(rom_bytes, self.files, VersionEnum.HEARTGOLD, version))
 
     def __init__(self, *args: Any, **kwargs: Any):
         super().__init__(*args, **kwargs)
@@ -149,16 +158,23 @@ class PokemonSoulsilverPatch(APAutoPatchInterface):
         self.read()
         if "HGSS_DEV_ENV" in environ:
             rom_bytes = pkgutil.get_data(__name__, "../roms/ss_us.nds")
+            version = WORLD_VERSION
             assert rom_bytes is not None
         else:
-            data = PokemonSoulsilverPatch.get_source_data_with_cache()
+            version = int.from_bytes(self.get_file("world_version.bin"), 'little')
             patch_name = "base_patch_ss_us.bsdiff4"
-            rom_bytes = bsdiff4.patch(data, self.get_file(patch_name))
+            if version in COMPATIBLE_ROM_VERSIONS:
+                patch = pkgutil.get_data(__name__, f"../patches/{patch_name}")
+                version = WORLD_VERSION
+            else:
+                patch = self.get_file(patch_name)
+            data = PokemonSoulsilverPatch.get_source_data_with_cache()
+            rom_bytes = bsdiff4.patch(data, patch)
             
         self.read()
 
         with open(target, "wb") as f:
-            f.write(patch_common(rom_bytes, self.files, VersionEnum.SOULSILVER))
+            f.write(patch_common(rom_bytes, self.files, VersionEnum.SOULSILVER, version))
 
     def __init__(self, *args: Any, **kwargs: Any):
         super().__init__(*args, **kwargs)
@@ -191,12 +207,12 @@ class PokemonSoulsilverPatch(APAutoPatchInterface):
     def write_file(self, file_name: str, file: bytes) -> None:
         self.files[file_name] = file
 
-def patch_common(rom_bytes: bytes, files: Mapping[str, bytes], version: VersionEnum) -> bytes:
+def patch_common(rom_bytes: bytes, files: Mapping[str, bytes], version: VersionEnum, world_version: int) -> bytes:
     rom = Rom.from_bytes(rom_bytes)
 
     rom.files["/ap.bin"] = files["ap.bin"]
 
-    rom.header.data[0x1000:0x1004] = files["world_version.bin"]
+    rom.header.data[0x1000:0x1004] = world_version.to_bytes(4, 'little')
 
     if "item_patches.json" in files:
         item_patches = json.loads(files["item_patches.json"])

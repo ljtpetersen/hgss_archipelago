@@ -66,7 +66,7 @@ cerulean_cave_2f = "surf"
 cerulean_cave_b1f = "surf"
 
 [exits.cianwood]
-cliff_edge_gate = "event_cure_amphy"
+cliff_edge_gate = "event_call_from_baoba"
 route_41 = "surf"
 
 [exits.cinnabar_island]
@@ -74,7 +74,7 @@ route_20_west = "surf"
 route_21 = "surf"
 
 [exits.cliff_edge_gate]
-cianwood = "event_cure_amphy"
+cianwood = "event_call_from_baoba"
 
 [exits.dark_cave_route_31_side_north]
 dark_cave_route_31_side_west = "surf"
@@ -232,9 +232,15 @@ route_19 = "event_defeat_blaine & surf"
 route_19_from_fuchia = "event_defeat_blaine"
 
 [exits.route_2]
-route_2_east = "cut"
+route_2_southeast = "cut"
 
-[exits.route_2_east]
+[exits.route_2_northwest]
+route_2_northeast = "cut"
+
+[exits.route_2_northeast]
+route_2_northwest = "cut"
+
+[exits.route_2_southeast]
 route_2 = "cut"
 
 [exits.route_20_west]
@@ -244,7 +250,7 @@ cinnabar_island = "surf"
 route_22 = "event_unlock_west_kanto_exit"
 route_28_south = "event_get_hm08"
 
-[exits.route_26]
+[exits.route_22_pokemon_league_reception_gate_south]
 route_22_pokemon_league_reception_gate = "johto_badges(8)"
 
 [exits.route_27_west]
@@ -291,7 +297,7 @@ route_36_southwest = "squirtbottle"
 route_41 = "surf"
 
 [exits.route_40_battle_frontier_gatehouse]
-battle_frontier_frontier_access = "event_clear_pokemon_league"
+battle_frontier_frontier_access = "event_clear_pokemon_league | event_defeat_red"
 
 [exits.route_41]
 cianwood = "surf"
@@ -426,8 +432,8 @@ blackthorn = "fly_map_blackthorn"
 lake_of_rage = "fly_map_lake_of_rage"
 mount_silver = "fly_map_mount_silver"
 safari_zone_gate = "fly_map_safari_zone_gate"
-battle_frontier = "fly_map_battle_frontier"
-national_park = "fly_map_national_park"
+battle_frontier_frontier_access = "fly_map_battle_frontier if require_fly_items_for_flight else fly_map_battle_frontier | event_fly_battle_frontier"
+pokeathlon_dome = "fly_map_national_park"
 route_26 = "fly_map_victory_road_1f"
 
 [exits.whirl_islands_b2f]
@@ -498,7 +504,7 @@ hidden_t09_star_piece = "rock_climb"
 hidden_t09_w21_rare_candy = "rock_climb"
 hidden_t09_iron = "rock_climb"
 overworld_t09_magmarizer = "rock_climb"
-hidden_d48r0101_big_pearl = "surf & rock_climb & event_call_from_baoba"
+hidden_d48r0101_big_pearl = "surf & rock_climb"
 overworld_d42r0102_hyper_potion = "rock_smash"
 overworld_d42r0102_black_flute = "surf"
 d42r0101_blackglasses = "surf"
@@ -525,7 +531,7 @@ goldenrod_radio_tower_4f_brightpowder = "event_clear_rocket_tower"
 d37r0105_cardkey = "radio_tower_trigger"
 overworld_d39r0102_iron = "strength"
 hidden_d36r0101_big_mushroom = "surf"
-ilex_forest_hm01 = "event_farfetchd_rescue"
+ilex_forest_hm01 = "event_clear_slowpoke_well"
 t29_red_scale = "surf"
 hidden_t29_max_potion = "surf"
 overworld_t29_choice_specs = "surf"
@@ -570,7 +576,7 @@ overworld_d41r0102_dawn_stone = "rock_climb"
 overworld_d22r0101_shiny_stone = "rock_climb"
 hidden_t20_potion = "event_get_mystery_egg"
 new_bark_elms_lab_1f_everstone = "event_get_togepi_egg"
-new_bark_elms_lab_1f_ss_ticket = "event_clear_pokemon_league"
+new_bark_elms_lab_1f_ss_ticket = "event_clear_pokemon_league | event_defeat_red"
 new_bark_elms_lab_1f_master_ball = "johto_badges(8) & event_ecruteak_dance_theater_defeat_team_rocket & event_burned_tower_disperse_legendary_dogs"
 hidden_t26_rare_candy = "rock_climb"
 overworld_t26_tm57 = "surf"
@@ -611,6 +617,7 @@ hidden_r26_r27_nugget = "surf"
 overworld_r27_tm02 = "surf & whirlpool"
 overworld_r27_rare_candy = "surf"
 r29_tuscany_gift = "zephyr_badge"
+route_29_poke_balls = "event_get_mystery_egg"
 hidden_r03_hyper_potion = "rock_smash"
 r30r0201_mr_pokemon_house_exp_share = "red_scale"
 r31_tm44 = "event_get_kenya"
