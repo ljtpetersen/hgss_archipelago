@@ -253,7 +253,7 @@ check = 1122
 
 [overworld_d43r0102_hp_up]
 original_item = "hp_up"
-label = "Victory Road 2F - Item Above Ledge North of Southern Ladder"
+label = "Victory Road 2F - Item Above Ledge North of South Ladder"
 id = 182
 table = "overworld"
 type = "overworld"
@@ -637,7 +637,7 @@ check = 1072
 
 [overworld_d25r0102_x_defense]
 original_item = "x_defense"
-label = "Union Cave B1F - Item North of Southeastern Stairs"
+label = "Union Cave B1F - Item North of Southeast Stairs"
 id = 37
 table = "overworld"
 type = "overworld"
@@ -2189,7 +2189,7 @@ check = 985
 
 [hidden_d43r0102_pp_up]
 original_item = "pp_up"
-label = "Victory Road 2F - Hidden Item Above Ledge North of Southern Ladder"
+label = "Victory Road 2F - Hidden Item Above Ledge North of South Ladder"
 id = 186
 table = "hidden"
 type = "hidden"
@@ -2485,7 +2485,7 @@ check = 871
 
 [hidden_d25r0102_x_speed]
 original_item = "x_speed"
-label = "Union Cave B1F - Hidden Item West of Southeastern Stairs"
+label = "Union Cave B1F - Hidden Item West of Southeast Stairs"
 id = 153
 table = "hidden"
 type = "hidden"
@@ -2493,7 +2493,7 @@ check = 953
 
 [hidden_d25r0102_revive]
 original_item = "revive"
-label = "Union Cave B1F - Hidden Item on Rock Northeast of Southern Hiker"
+label = "Union Cave B1F - Hidden Item on Rock Northeast of Lower Hiker"
 id = 155
 table = "hidden"
 type = "hidden"
@@ -2581,7 +2581,7 @@ check = 1018
 
 [hidden_d46r0101_tinymushroom_2]
 original_item = "tinymushroom"
-label = "Viridian Forest - Hidden Item on Wall North of Southern Entrance"
+label = "Viridian Forest - Hidden Item on Wall North of South Entrance"
 id = 219
 table = "hidden"
 type = "hidden"
@@ -3773,7 +3773,7 @@ check = 874
 
 [hidden_d40r0102_super_repel]
 original_item = "super_repel"
-label = "Whirl Islands B1F - Hidden Item on Rock North of Southern Northeast Ladder"
+label = "Whirl Islands B1F - Hidden Item on Rock North of Lower Northeast Ladder"
 id = 191
 table = "hidden"
 type = "hidden"
