@@ -146,6 +146,7 @@ AP_VERSION_DATA: Mapping[int, VersionData] = {
     version_int("0.0.5"): prev_version_data,
     version_int("0.0.6"): prev_version_data,
     version_int("0.0.7"): prev_version_data,
+    version_int("0.0.8"): prev_version_data,
 }
 
 @dataclass(frozen=True)
