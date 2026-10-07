@@ -131,14 +131,20 @@ def randomize_trainer_parties_and_encounters(world: "PokemonHgssWorld") -> None:
         chansey_pevo = speciesdata["chansey"].pre_evolution
         if chansey_pevo is not None and chansey_pevo.method in world.options.in_logic_evolution_methods.methods():
             required_mons.add(world.random.choice([chansey_pevo.species, "chansey"]))
+        else:
+            required_mons.add("chansey")
         if world.options.version == Version.option_heartgold:
             required_mons |= {"growlithe"}
             marill_pevo = speciesdata["marill"].pre_evolution
             if marill_pevo is not None and marill_pevo.method in world.options.in_logic_evolution_methods.methods():
                 required_mons.add(world.random.choice([marill_pevo.species, "marill"]))
+            else:
+                required_mons.add("marill")
             jigglypuff_pevo = speciesdata["jigglypuff"].pre_evolution
             if jigglypuff_pevo is not None and jigglypuff_pevo.method in world.options.in_logic_evolution_methods.methods():
                 required_mons.add(world.random.choice([jigglypuff_pevo.species, "jigglypuff"]))
+            else:
+                required_mons.add("jigglypuff")
         else:
             required_mons |= {"staryu", "lickitung", "vulpix"}
     if rando_encs and world.options.randomize_trainer_parties:
