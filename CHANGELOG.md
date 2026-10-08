@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.9] - TDB
 ### Fixed
 * Required species are now added to the encounter pool if their pre-evolution method is not in logic.
+* Death Links can no longer be received after obtaining the Metal Coat location on the S.S. Aqua, before exiting the port.
 
 ## [0.0.8] - 2026-09-22
 ### Fixed
