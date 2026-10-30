@@ -284,6 +284,7 @@ id = 38
 group = "medicine"
 clas = "bagitem"
 data_id = 38
+classification = "useful"
 
 [max_ether]
 label = "Max Ether"
@@ -291,6 +292,7 @@ id = 39
 group = "medicine"
 clas = "bagitem"
 data_id = 39
+classification = "useful"
 
 [elixir]
 label = "Elixir"
@@ -298,6 +300,7 @@ id = 40
 group = "medicine"
 clas = "bagitem"
 data_id = 40
+classification = "useful"
 
 [max_elixir]
 label = "Max Elixir"
@@ -305,6 +308,7 @@ id = 41
 group = "medicine"
 clas = "bagitem"
 data_id = 41
+classification = "useful"
 
 [lava_cookie]
 label = "Lava Cookie"
@@ -368,7 +372,6 @@ id = 50
 group = "medicine"
 clas = "bagitem"
 data_id = 50
-classification = "useful"
 
 [rare_candy_x15]
 label = "Rare Candy x15"
@@ -377,7 +380,6 @@ group = "medicine"
 clas = "bagitem"
 data_id = 50
 count = 15
-classification = "useful"
 
 [pp_up]
 label = "PP Up"
@@ -385,6 +387,7 @@ id = 51
 group = "medicine"
 clas = "bagitem"
 data_id = 51
+classification = "useful"
 
 [zinc]
 label = "Zinc"
@@ -399,6 +402,7 @@ id = 53
 group = "medicine"
 clas = "bagitem"
 data_id = 53
+classification = "useful"
 
 [old_gateau]
 label = "Old Gateau"
@@ -588,7 +592,7 @@ id = 80
 group = "items"
 clas = "bagitem"
 data_id = 80
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [moon_stone]
 label = "Moon Stone"
@@ -596,7 +600,7 @@ id = 81
 group = "items"
 clas = "bagitem"
 data_id = 81
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [fire_stone]
 label = "Fire Stone"
@@ -604,7 +608,7 @@ id = 82
 group = "items"
 clas = "bagitem"
 data_id = 82
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [thunderstone]
 label = "Thunderstone"
@@ -612,7 +616,7 @@ id = 83
 group = "items"
 clas = "bagitem"
 data_id = 83
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [water_stone]
 label = "Water Stone"
@@ -628,7 +632,7 @@ id = 85
 group = "items"
 clas = "bagitem"
 data_id = 85
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [tinymushroom]
 label = "TinyMushroom"
@@ -783,7 +787,7 @@ id = 107
 group = "items"
 clas = "bagitem"
 data_id = 107
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [dusk_stone]
 label = "Dusk Stone"
@@ -791,7 +795,7 @@ id = 108
 group = "items"
 clas = "bagitem"
 data_id = 108
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [dawn_stone]
 label = "Dawn Stone"
@@ -799,7 +803,7 @@ id = 109
 group = "items"
 clas = "bagitem"
 data_id = 109
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [oval_stone]
 label = "Oval Stone"
@@ -807,7 +811,7 @@ id = 110
 group = "items"
 clas = "specialbagitem"
 data_id = 110
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [odd_keystone]
 label = "Odd Keystone"
@@ -822,6 +826,7 @@ id = 112
 group = "items"
 clas = "bagitem"
 data_id = 112
+classification = "useful"
 
 [adamant_orb]
 label = "Adamant Orb"
@@ -829,6 +834,7 @@ id = 135
 group = "items"
 clas = "bagitem"
 data_id = 113
+classification = "useful"
 
 [lustrous_orb]
 label = "Lustrous Orb"
@@ -836,6 +842,7 @@ id = 136
 group = "items"
 clas = "bagitem"
 data_id = 114
+classification = "useful"
 
 [grass_mail]
 label = "Grass Mail"
@@ -1422,6 +1429,7 @@ id = 217
 group = "items"
 clas = "bagitem"
 data_id = 195
+classification = "useful"
 
 [soothe_bell]
 label = "Soothe Bell"
@@ -1429,6 +1437,7 @@ id = 218
 group = "items"
 clas = "bagitem"
 data_id = 196
+classification = "useful"
 
 [mental_herb]
 label = "Mental Herb"
@@ -1450,7 +1459,7 @@ id = 221
 group = "items"
 clas = "specialbagitem"
 data_id = 199
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [silverpowder]
 label = "SilverPowder"
@@ -1458,6 +1467,7 @@ id = 222
 group = "items"
 clas = "bagitem"
 data_id = 200
+classification = "useful"
 
 [amulet_coin]
 label = "Amulet Coin"
@@ -1465,6 +1475,7 @@ id = 223
 group = "items"
 clas = "bagitem"
 data_id = 201
+classification = "useful"
 
 [cleanse_tag]
 label = "Cleanse Tag"
@@ -1472,6 +1483,7 @@ id = 224
 group = "items"
 clas = "bagitem"
 data_id = 202
+classification = "useful"
 
 [soul_dew]
 label = "Soul Dew"
@@ -1479,6 +1491,7 @@ id = 225
 group = "items"
 clas = "bagitem"
 data_id = 203
+classification = "useful"
 
 [deepseatooth]
 label = "DeepSeaTooth"
@@ -1486,7 +1499,7 @@ id = 226
 group = "items"
 clas = "specialbagitem"
 data_id = 204
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [deepseascale]
 label = "DeepSeaScale"
@@ -1494,7 +1507,7 @@ id = 227
 group = "items"
 clas = "specialbagitem"
 data_id = 205
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [smoke_ball]
 label = "Smoke Ball"
@@ -1509,6 +1522,7 @@ id = 229
 group = "items"
 clas = "bagitem"
 data_id = 207
+classification = "useful"
 
 [focus_band]
 label = "Focus Band"
@@ -1523,6 +1537,7 @@ id = 231
 group = "items"
 clas = "bagitem"
 data_id = 209
+classification = "useful"
 
 [scope_lens]
 label = "Scope Lens"
@@ -1537,7 +1552,7 @@ id = 233
 group = "items"
 clas = "specialbagitem"
 data_id = 211
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [leftovers]
 label = "Leftovers"
@@ -1545,6 +1560,7 @@ id = 234
 group = "items"
 clas = "bagitem"
 data_id = 212
+classification = "useful"
 
 [dragon_scale]
 label = "Dragon Scale"
@@ -1552,7 +1568,7 @@ id = 235
 group = "items"
 clas = "specialbagitem"
 data_id = 213
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [light_ball]
 label = "Light Ball"
@@ -1567,6 +1583,7 @@ id = 237
 group = "items"
 clas = "bagitem"
 data_id = 215
+classification = "useful"
 
 [hard_stone]
 label = "Hard Stone"
@@ -1574,6 +1591,7 @@ id = 238
 group = "items"
 clas = "bagitem"
 data_id = 216
+classification = "useful"
 
 [miracle_seed]
 label = "Miracle Seed"
@@ -1581,6 +1599,7 @@ id = 239
 group = "items"
 clas = "bagitem"
 data_id = 217
+classification = "useful"
 
 [blackglasses]
 label = "BlackGlasses"
@@ -1588,6 +1607,7 @@ id = 240
 group = "items"
 clas = "bagitem"
 data_id = 218
+classification = "useful"
 
 [black_belt]
 label = "Black Belt"
@@ -1595,6 +1615,7 @@ id = 241
 group = "items"
 clas = "bagitem"
 data_id = 219
+classification = "useful"
 
 [magnet]
 label = "Magnet"
@@ -1602,6 +1623,7 @@ id = 242
 group = "items"
 clas = "bagitem"
 data_id = 220
+classification = "useful"
 
 [mystic_water]
 label = "Mystic Water"
@@ -1609,6 +1631,7 @@ id = 243
 group = "items"
 clas = "bagitem"
 data_id = 221
+classification = "useful"
 
 [sharp_beak]
 label = "Sharp Beak"
@@ -1616,6 +1639,7 @@ id = 244
 group = "items"
 clas = "bagitem"
 data_id = 222
+classification = "useful"
 
 [poison_barb]
 label = "Poison Barb"
@@ -1623,6 +1647,7 @@ id = 245
 group = "items"
 clas = "bagitem"
 data_id = 223
+classification = "useful"
 
 [nevermeltice]
 label = "NeverMeltIce"
@@ -1630,6 +1655,7 @@ id = 246
 group = "items"
 clas = "bagitem"
 data_id = 224
+classification = "useful"
 
 [spell_tag]
 label = "Spell Tag"
@@ -1637,6 +1663,7 @@ id = 247
 group = "items"
 clas = "bagitem"
 data_id = 225
+classification = "useful"
 
 [twistedspoon]
 label = "TwistedSpoon"
@@ -1644,6 +1671,7 @@ id = 248
 group = "items"
 clas = "bagitem"
 data_id = 226
+classification = "useful"
 
 [charcoal]
 label = "Charcoal"
@@ -1651,6 +1679,7 @@ id = 249
 group = "items"
 clas = "bagitem"
 data_id = 227
+classification = "useful"
 
 [dragon_fang]
 label = "Dragon Fang"
@@ -1658,6 +1687,7 @@ id = 250
 group = "items"
 clas = "bagitem"
 data_id = 228
+classification = "useful"
 
 [silk_scarf]
 label = "Silk Scarf"
@@ -1665,6 +1695,7 @@ id = 251
 group = "items"
 clas = "bagitem"
 data_id = 229
+classification = "useful"
 
 [upgrade]
 label = "Up-Grade"
@@ -1672,7 +1703,7 @@ id = 252
 group = "items"
 clas = "specialbagitem"
 data_id = 230
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [shell_bell]
 label = "Shell Bell"
@@ -1680,6 +1711,7 @@ id = 253
 group = "items"
 clas = "bagitem"
 data_id = 231
+classification = "useful"
 
 [sea_incense]
 label = "Sea Incense"
@@ -1995,6 +2027,7 @@ id = 298
 group = "items"
 clas = "bagitem"
 data_id = 276
+classification = "useful"
 
 [splash_plate]
 label = "Splash Plate"
@@ -2002,6 +2035,7 @@ id = 299
 group = "items"
 clas = "bagitem"
 data_id = 277
+classification = "useful"
 
 [zap_plate]
 label = "Zap Plate"
@@ -2009,6 +2043,7 @@ id = 300
 group = "items"
 clas = "bagitem"
 data_id = 278
+classification = "useful"
 
 [meadow_plate]
 label = "Meadow Plate"
@@ -2016,6 +2051,7 @@ id = 301
 group = "items"
 clas = "bagitem"
 data_id = 279
+classification = "useful"
 
 [icicle_plate]
 label = "Icicle Plate"
@@ -2023,6 +2059,7 @@ id = 302
 group = "items"
 clas = "bagitem"
 data_id = 280
+classification = "useful"
 
 [fist_plate]
 label = "Fist Plate"
@@ -2030,6 +2067,7 @@ id = 303
 group = "items"
 clas = "bagitem"
 data_id = 281
+classification = "useful"
 
 [toxic_plate]
 label = "Toxic Plate"
@@ -2037,6 +2075,7 @@ id = 304
 group = "items"
 clas = "bagitem"
 data_id = 282
+classification = "useful"
 
 [earth_plate]
 label = "Earth Plate"
@@ -2044,6 +2083,7 @@ id = 305
 group = "items"
 clas = "bagitem"
 data_id = 283
+classification = "useful"
 
 [sky_plate]
 label = "Sky Plate"
@@ -2051,6 +2091,7 @@ id = 306
 group = "items"
 clas = "bagitem"
 data_id = 284
+classification = "useful"
 
 [mind_plate]
 label = "Mind Plate"
@@ -2058,6 +2099,7 @@ id = 307
 group = "items"
 clas = "bagitem"
 data_id = 285
+classification = "useful"
 
 [insect_plate]
 label = "Insect Plate"
@@ -2065,6 +2107,7 @@ id = 308
 group = "items"
 clas = "bagitem"
 data_id = 286
+classification = "useful"
 
 [stone_plate]
 label = "Stone Plate"
@@ -2072,6 +2115,7 @@ id = 309
 group = "items"
 clas = "bagitem"
 data_id = 287
+classification = "useful"
 
 [spooky_plate]
 label = "Spooky Plate"
@@ -2079,6 +2123,7 @@ id = 310
 group = "items"
 clas = "bagitem"
 data_id = 288
+classification = "useful"
 
 [draco_plate]
 label = "Draco Plate"
@@ -2086,6 +2131,7 @@ id = 311
 group = "items"
 clas = "bagitem"
 data_id = 289
+classification = "useful"
 
 [dread_plate]
 label = "Dread Plate"
@@ -2093,6 +2139,7 @@ id = 312
 group = "items"
 clas = "bagitem"
 data_id = 290
+classification = "useful"
 
 [iron_plate]
 label = "Iron Plate"
@@ -2100,6 +2147,7 @@ id = 313
 group = "items"
 clas = "bagitem"
 data_id = 291
+classification = "useful"
 
 [odd_incense]
 label = "Odd Incense"
@@ -2156,7 +2204,7 @@ id = 321
 group = "items"
 clas = "specialbagitem"
 data_id = 299
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [electirizer]
 label = "Electirizer"
@@ -2164,7 +2212,7 @@ id = 322
 group = "items"
 clas = "specialbagitem"
 data_id = 300
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [magmarizer]
 label = "Magmarizer"
@@ -2172,7 +2220,7 @@ id = 323
 group = "items"
 clas = "specialbagitem"
 data_id = 301
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [dubious_disc]
 label = "Dubious Disc"
@@ -2180,7 +2228,7 @@ id = 324
 group = "items"
 clas = "specialbagitem"
 data_id = 302
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [reaper_cloth]
 label = "Reaper Cloth"
@@ -2188,7 +2236,7 @@ id = 325
 group = "items"
 clas = "specialbagitem"
 data_id = 303
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [razor_claw]
 label = "Razor Claw"
@@ -2196,7 +2244,7 @@ id = 326
 group = "items"
 clas = "specialbagitem"
 data_id = 304
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [razor_fang]
 label = "Razor Fang"
@@ -2204,13 +2252,14 @@ id = 327
 group = "items"
 clas = "specialbagitem"
 data_id = 305
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 
 [tm01]
 label = "TM01"
 id = 328
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 306
 
 [tm02]
@@ -2218,6 +2267,7 @@ label = "TM02"
 id = 329
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 307
 
 [tm03]
@@ -2225,6 +2275,7 @@ label = "TM03"
 id = 330
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 308
 
 [tm04]
@@ -2232,6 +2283,7 @@ label = "TM04"
 id = 331
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 309
 
 [tm05]
@@ -2239,6 +2291,7 @@ label = "TM05"
 id = 332
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 310
 
 [tm06]
@@ -2246,6 +2299,7 @@ label = "TM06"
 id = 333
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 311
 
 [tm07]
@@ -2253,6 +2307,7 @@ label = "TM07"
 id = 334
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 312
 
 [tm08]
@@ -2260,6 +2315,7 @@ label = "TM08"
 id = 335
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 313
 
 [tm09]
@@ -2267,6 +2323,7 @@ label = "TM09"
 id = 336
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 314
 
 [tm10]
@@ -2274,6 +2331,7 @@ label = "TM10"
 id = 337
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 315
 
 [tm11]
@@ -2281,6 +2339,7 @@ label = "TM11"
 id = 338
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 316
 
 [tm12]
@@ -2288,6 +2347,7 @@ label = "TM12"
 id = 339
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 317
 
 [tm13]
@@ -2295,6 +2355,7 @@ label = "TM13"
 id = 340
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 318
 
 [tm14]
@@ -2302,6 +2363,7 @@ label = "TM14"
 id = 341
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 319
 
 [tm15]
@@ -2309,6 +2371,7 @@ label = "TM15"
 id = 342
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 320
 
 [tm16]
@@ -2316,6 +2379,7 @@ label = "TM16"
 id = 343
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 321
 
 [tm17]
@@ -2323,6 +2387,7 @@ label = "TM17"
 id = 344
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 322
 
 [tm18]
@@ -2330,6 +2395,7 @@ label = "TM18"
 id = 345
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 323
 
 [tm19]
@@ -2337,6 +2403,7 @@ label = "TM19"
 id = 346
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 324
 
 [tm20]
@@ -2344,6 +2411,7 @@ label = "TM20"
 id = 347
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 325
 
 [tm21]
@@ -2351,6 +2419,7 @@ label = "TM21"
 id = 348
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 326
 
 [tm22]
@@ -2358,6 +2427,7 @@ label = "TM22"
 id = 349
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 327
 
 [tm23]
@@ -2365,6 +2435,7 @@ label = "TM23"
 id = 350
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 328
 
 [tm24]
@@ -2372,6 +2443,7 @@ label = "TM24"
 id = 351
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 329
 
 [tm25]
@@ -2379,6 +2451,7 @@ label = "TM25"
 id = 352
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 330
 
 [tm26]
@@ -2386,6 +2459,7 @@ label = "TM26"
 id = 353
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 331
 
 [tm27]
@@ -2393,6 +2467,7 @@ label = "TM27"
 id = 354
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 332
 
 [tm28]
@@ -2400,6 +2475,7 @@ label = "TM28 Dig"
 id = 355
 group = ["tmhms", "field_moves", "tm28", "dig"]
 clas = "bagitem"
+classification = "useful"
 data_id = 333
 
 [tm29]
@@ -2407,6 +2483,7 @@ label = "TM29"
 id = 356
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 334
 
 [tm30]
@@ -2414,6 +2491,7 @@ label = "TM30"
 id = 357
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 335
 
 [tm31]
@@ -2421,6 +2499,7 @@ label = "TM31"
 id = 358
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 336
 
 [tm32]
@@ -2428,6 +2507,7 @@ label = "TM32"
 id = 359
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 337
 
 [tm33]
@@ -2435,6 +2515,7 @@ label = "TM33"
 id = 360
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 338
 
 [tm34]
@@ -2442,6 +2523,7 @@ label = "TM34"
 id = 361
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 339
 
 [tm35]
@@ -2449,6 +2531,7 @@ label = "TM35"
 id = 362
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 340
 
 [tm36]
@@ -2456,6 +2539,7 @@ label = "TM36"
 id = 363
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 341
 
 [tm37]
@@ -2463,6 +2547,7 @@ label = "TM37"
 id = 364
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 342
 
 [tm38]
@@ -2470,6 +2555,7 @@ label = "TM38"
 id = 365
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 343
 
 [tm39]
@@ -2477,6 +2563,7 @@ label = "TM39"
 id = 366
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 344
 
 [tm40]
@@ -2484,6 +2571,7 @@ label = "TM40"
 id = 367
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 345
 
 [tm41]
@@ -2491,6 +2579,7 @@ label = "TM41"
 id = 368
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 346
 
 [tm42]
@@ -2498,6 +2587,7 @@ label = "TM42"
 id = 369
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 347
 
 [tm43]
@@ -2505,6 +2595,7 @@ label = "TM43"
 id = 370
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 348
 
 [tm44]
@@ -2512,6 +2603,7 @@ label = "TM44"
 id = 371
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 349
 
 [tm45]
@@ -2519,6 +2611,7 @@ label = "TM45"
 id = 372
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 350
 
 [tm46]
@@ -2526,6 +2619,7 @@ label = "TM46"
 id = 373
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 351
 
 [tm47]
@@ -2533,6 +2627,7 @@ label = "TM47"
 id = 374
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 352
 
 [tm48]
@@ -2540,6 +2635,7 @@ label = "TM48"
 id = 375
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 353
 
 [tm49]
@@ -2547,6 +2643,7 @@ label = "TM49"
 id = 376
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 354
 
 [tm50]
@@ -2554,6 +2651,7 @@ label = "TM50"
 id = 377
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 355
 
 [tm51]
@@ -2561,6 +2659,7 @@ label = "TM51"
 id = 378
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 356
 
 [tm52]
@@ -2568,6 +2667,7 @@ label = "TM52"
 id = 379
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 357
 
 [tm53]
@@ -2575,6 +2675,7 @@ label = "TM53"
 id = 380
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 358
 
 [tm54]
@@ -2582,6 +2683,7 @@ label = "TM54"
 id = 381
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 359
 
 [tm55]
@@ -2589,6 +2691,7 @@ label = "TM55"
 id = 382
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 360
 
 [tm56]
@@ -2596,6 +2699,7 @@ label = "TM56"
 id = 383
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 361
 
 [tm57]
@@ -2603,6 +2707,7 @@ label = "TM57"
 id = 384
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 362
 
 [tm58]
@@ -2610,6 +2715,7 @@ label = "TM58"
 id = 385
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 363
 
 [tm59]
@@ -2617,6 +2723,7 @@ label = "TM59"
 id = 386
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 364
 
 [tm60]
@@ -2624,6 +2731,7 @@ label = "TM60"
 id = 387
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 365
 
 [tm61]
@@ -2631,6 +2739,7 @@ label = "TM61"
 id = 388
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 366
 
 [tm62]
@@ -2638,6 +2747,7 @@ label = "TM62"
 id = 389
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 367
 
 [tm63]
@@ -2645,6 +2755,7 @@ label = "TM63"
 id = 390
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 368
 
 [tm64]
@@ -2652,6 +2763,7 @@ label = "TM64"
 id = 391
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 369
 
 [tm65]
@@ -2659,6 +2771,7 @@ label = "TM65"
 id = 392
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 370
 
 [tm66]
@@ -2666,6 +2779,7 @@ label = "TM66"
 id = 393
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 371
 
 [tm67]
@@ -2673,6 +2787,7 @@ label = "TM67"
 id = 394
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 372
 
 [tm68]
@@ -2680,6 +2795,7 @@ label = "TM68"
 id = 395
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 373
 
 [tm69]
@@ -2687,6 +2803,7 @@ label = "TM69"
 id = 396
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 374
 
 [tm70]
@@ -2702,6 +2819,7 @@ label = "TM71"
 id = 398
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 376
 
 [tm72]
@@ -2709,6 +2827,7 @@ label = "TM72"
 id = 399
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 377
 
 [tm73]
@@ -2716,6 +2835,7 @@ label = "TM73"
 id = 400
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 378
 
 [tm74]
@@ -2723,6 +2843,7 @@ label = "TM74"
 id = 401
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 379
 
 [tm75]
@@ -2730,6 +2851,7 @@ label = "TM75"
 id = 402
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 380
 
 [tm76]
@@ -2737,6 +2859,7 @@ label = "TM76"
 id = 403
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 381
 
 [tm77]
@@ -2744,6 +2867,7 @@ label = "TM77"
 id = 404
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 382
 
 [tm78]
@@ -2751,6 +2875,7 @@ label = "TM78"
 id = 405
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 383
 
 [tm79]
@@ -2758,6 +2883,7 @@ label = "TM79"
 id = 406
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 384
 
 [tm80]
@@ -2765,6 +2891,7 @@ label = "TM80"
 id = 407
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 385
 
 [tm81]
@@ -2772,6 +2899,7 @@ label = "TM81"
 id = 408
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 386
 
 [tm82]
@@ -2779,6 +2907,7 @@ label = "TM82"
 id = 409
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 387
 
 [tm83]
@@ -2786,6 +2915,7 @@ label = "TM83"
 id = 410
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 388
 
 [tm84]
@@ -2793,6 +2923,7 @@ label = "TM84"
 id = 411
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 389
 
 [tm85]
@@ -2800,6 +2931,7 @@ label = "TM85"
 id = 412
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 390
 
 [tm86]
@@ -2807,6 +2939,7 @@ label = "TM86"
 id = 413
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 391
 
 [tm87]
@@ -2814,6 +2947,7 @@ label = "TM87"
 id = 414
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 392
 
 [tm88]
@@ -2821,6 +2955,7 @@ label = "TM88"
 id = 415
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 393
 
 [tm89]
@@ -2828,6 +2963,7 @@ label = "TM89"
 id = 416
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 394
 
 [tm90]
@@ -2835,6 +2971,7 @@ label = "TM90"
 id = 417
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 395
 
 [tm91]
@@ -2842,6 +2979,7 @@ label = "TM91"
 id = 418
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 396
 
 [tm92]
@@ -2849,6 +2987,7 @@ label = "TM92"
 id = 419
 group = "tmhms"
 clas = "bagitem"
+classification = "useful"
 data_id = 397
 
 [hm01]
@@ -3703,7 +3842,7 @@ label = "Linking Cord"
 id = 538
 group = "key_items"
 clas = "bagitem"
-classification = "progression"
+classification = "progression_deprioritized_skip_balancing"
 data_id = 515
 
 [zephyr_badge]
