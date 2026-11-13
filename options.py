@@ -1088,6 +1088,8 @@ class PokemonHgssOptions(PerGameCommonOptions):
             required_mons.add("pichu")
 
         if not self.randomize_encounters:
+            if not "night" in self.in_logic_encounters.methods():
+                raise OptionError("if encounters are not randomized, then time must be an in-logic encounter method")
             in_logic_encounter_mons = expand_set_via_evolutions({slot.species
                 for rd in regions.values()
                 if rd.encounters \
